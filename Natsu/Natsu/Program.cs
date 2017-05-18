@@ -60,7 +60,7 @@ namespace Natsu
                     Global.StrBatch = a.StrBatch;
                     Global.StrRole = a.StrRole;
                     Global.StrToken = a.Token;
-                    frm_Main f = new frm_Main();
+                    FrmMain f = new FrmMain();
                     if (f.ShowDialog() == DialogResult.Yes)
                     {
                         f.Close();

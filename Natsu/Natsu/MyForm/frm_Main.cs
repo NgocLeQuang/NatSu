@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Natsu.MyForm
 {
-    public partial class frm_Main : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMain : DevExpress.XtraEditors.XtraForm
     {
-        public frm_Main()
+        public FrmMain()
         {
             InitializeComponent();
         }

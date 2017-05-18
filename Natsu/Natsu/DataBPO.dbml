@@ -49,4 +49,41 @@
     <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.GetListRole" Method="GetListRole">
+    <ElementType Name="GetListRoleResult">
+      <Column Name="RoleID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetListUser" Method="GetListUser">
+    <ElementType Name="GetListUserResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NotGoodUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateUsername" Method="UpdateUsername">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDRole" Parameter="iDRole" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDNhanVien" Parameter="iDNhanVien" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertUsername" Method="InsertUsername">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IDRole" Parameter="iDRole" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NhanVien" Parameter="nhanVien" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteUsername" Method="DeleteUsername">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

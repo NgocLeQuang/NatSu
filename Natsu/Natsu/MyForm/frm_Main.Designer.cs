@@ -1,6 +1,6 @@
 ﻿namespace Natsu.MyForm
 {
-    partial class frm_Main
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 599);
-            this.Name = "frm_Main";
+            this.Name = "FrmMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

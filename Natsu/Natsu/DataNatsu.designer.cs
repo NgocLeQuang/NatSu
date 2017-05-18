@@ -30,27 +30,24 @@ namespace Natsu
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Inserttbl_MissImageCheck(tbl_MissImageCheck instance);
-    partial void Updatetbl_MissImageCheck(tbl_MissImageCheck instance);
-    partial void Deletetbl_MissImageCheck(tbl_MissImageCheck instance);
     partial void Inserttbl_Batch(tbl_Batch instance);
     partial void Updatetbl_Batch(tbl_Batch instance);
     partial void Deletetbl_Batch(tbl_Batch instance);
-    partial void Inserttbl_DESo(tbl_DESo instance);
-    partial void Updatetbl_DESo(tbl_DESo instance);
-    partial void Deletetbl_DESo(tbl_DESo instance);
-    partial void Inserttbl_DESo_BackUp(tbl_DESo_BackUp instance);
-    partial void Updatetbl_DESo_BackUp(tbl_DESo_BackUp instance);
-    partial void Deletetbl_DESo_BackUp(tbl_DESo_BackUp instance);
+    partial void Inserttbl_MissImage_DESO(tbl_MissImage_DESO instance);
+    partial void Updatetbl_MissImage_DESO(tbl_MissImage_DESO instance);
+    partial void Deletetbl_MissImage_DESO(tbl_MissImage_DESO instance);
+    partial void Inserttbl_DESO(tbl_DESO instance);
+    partial void Updatetbl_DESO(tbl_DESO instance);
+    partial void Deletetbl_DESO(tbl_DESO instance);
+    partial void Inserttbl_DESO_Backup(tbl_DESO_Backup instance);
+    partial void Updatetbl_DESO_Backup(tbl_DESO_Backup instance);
+    partial void Deletetbl_DESO_Backup(tbl_DESO_Backup instance);
     partial void Inserttbl_Image(tbl_Image instance);
     partial void Updatetbl_Image(tbl_Image instance);
     partial void Deletetbl_Image(tbl_Image instance);
-    partial void Inserttbl_LogFile(tbl_LogFile instance);
-    partial void Updatetbl_LogFile(tbl_LogFile instance);
-    partial void Deletetbl_LogFile(tbl_LogFile instance);
-    partial void Inserttbl_MissImage(tbl_MissImage instance);
-    partial void Updatetbl_MissImage(tbl_MissImage instance);
-    partial void Deletetbl_MissImage(tbl_MissImage instance);
+    partial void Inserttbl_MissCheck_DESO(tbl_MissCheck_DESO instance);
+    partial void Updatetbl_MissCheck_DESO(tbl_MissCheck_DESO instance);
+    partial void Deletetbl_MissCheck_DESO(tbl_MissCheck_DESO instance);
     #endregion
 		
 		public DataNatsuDataContext() : 
@@ -83,14 +80,6 @@ namespace Natsu
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<tbl_MissImageCheck> tbl_MissImageChecks
-		{
-			get
-			{
-				return this.GetTable<tbl_MissImageCheck>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tbl_Batch> tbl_Batches
 		{
 			get
@@ -99,19 +88,27 @@ namespace Natsu
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_DESo> tbl_DESos
+		public System.Data.Linq.Table<tbl_MissImage_DESO> tbl_MissImage_DESOs
 		{
 			get
 			{
-				return this.GetTable<tbl_DESo>();
+				return this.GetTable<tbl_MissImage_DESO>();
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_DESo_BackUp> tbl_DESo_BackUps
+		public System.Data.Linq.Table<tbl_DESO> tbl_DESOs
 		{
 			get
 			{
-				return this.GetTable<tbl_DESo_BackUp>();
+				return this.GetTable<tbl_DESO>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_DESO_Backup> tbl_DESO_Backups
+		{
+			get
+			{
+				return this.GetTable<tbl_DESO_Backup>();
 			}
 		}
 		
@@ -123,177 +120,11 @@ namespace Natsu
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_LogFile> tbl_LogFiles
+		public System.Data.Linq.Table<tbl_MissCheck_DESO> tbl_MissCheck_DESOs
 		{
 			get
 			{
-				return this.GetTable<tbl_LogFile>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tbl_MissImage> tbl_MissImages
-		{
-			get
-			{
-				return this.GetTable<tbl_MissImage>();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_MissImageCheck")]
-	public partial class tbl_MissImageCheck : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private long _Id;
-		
-		private string _IdImage;
-		
-		private string _fBatchName;
-		
-		private string _UserNameCheck;
-		
-		private int _SubmitCheck;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(long value);
-    partial void OnIdChanged();
-    partial void OnIdImageChanging(string value);
-    partial void OnIdImageChanged();
-    partial void OnfBatchNameChanging(string value);
-    partial void OnfBatchNameChanged();
-    partial void OnUserNameCheckChanging(string value);
-    partial void OnUserNameCheckChanged();
-    partial void OnSubmitCheckChanging(int value);
-    partial void OnSubmitCheckChanged();
-    #endregion
-		
-		public tbl_MissImageCheck()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.Always, DbType="BigInt NOT NULL IDENTITY", IsDbGenerated=true)]
-		public long Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string IdImage
-		{
-			get
-			{
-				return this._IdImage;
-			}
-			set
-			{
-				if ((this._IdImage != value))
-				{
-					this.OnIdImageChanging(value);
-					this.SendPropertyChanging();
-					this._IdImage = value;
-					this.SendPropertyChanged("IdImage");
-					this.OnIdImageChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string fBatchName
-		{
-			get
-			{
-				return this._fBatchName;
-			}
-			set
-			{
-				if ((this._fBatchName != value))
-				{
-					this.OnfBatchNameChanging(value);
-					this.SendPropertyChanging();
-					this._fBatchName = value;
-					this.SendPropertyChanged("fBatchName");
-					this.OnfBatchNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameCheck", DbType="NVarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string UserNameCheck
-		{
-			get
-			{
-				return this._UserNameCheck;
-			}
-			set
-			{
-				if ((this._UserNameCheck != value))
-				{
-					this.OnUserNameCheckChanging(value);
-					this.SendPropertyChanging();
-					this._UserNameCheck = value;
-					this.SendPropertyChanged("UserNameCheck");
-					this.OnUserNameCheckChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SubmitCheck", DbType="Int NOT NULL")]
-		public int SubmitCheck
-		{
-			get
-			{
-				return this._SubmitCheck;
-			}
-			set
-			{
-				if ((this._SubmitCheck != value))
-				{
-					this.OnSubmitCheckChanging(value);
-					this.SendPropertyChanging();
-					this._SubmitCheck = value;
-					this.SendPropertyChanged("SubmitCheck");
-					this.OnSubmitCheckChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<tbl_MissCheck_DESO>();
 			}
 		}
 	}
@@ -304,7 +135,7 @@ namespace Natsu
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _IDBatch;
+		private long _IDBatch;
 		
 		private string _fBatchName;
 		
@@ -314,17 +145,17 @@ namespace Natsu
 		
 		private string _fPathPicture;
 		
-		private System.Nullable<bool> _fMultiEntry;
-		
 		private string _fLocation;
 		
-		private string _fGhiChu;
+		private string _fSoLuongAnh;
+		
+		private string _LoaiBatch;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDBatchChanging(int value);
+    partial void OnIDBatchChanging(long value);
     partial void OnIDBatchChanged();
     partial void OnfBatchNameChanging(string value);
     partial void OnfBatchNameChanged();
@@ -334,12 +165,12 @@ namespace Natsu
     partial void OnfusercreateChanged();
     partial void OnfPathPictureChanging(string value);
     partial void OnfPathPictureChanged();
-    partial void OnfMultiEntryChanging(System.Nullable<bool> value);
-    partial void OnfMultiEntryChanged();
     partial void OnfLocationChanging(string value);
     partial void OnfLocationChanged();
-    partial void OnfGhiChuChanging(string value);
-    partial void OnfGhiChuChanged();
+    partial void OnfSoLuongAnhChanging(string value);
+    partial void OnfSoLuongAnhChanged();
+    partial void OnLoaiBatchChanging(string value);
+    partial void OnLoaiBatchChanged();
     #endregion
 		
 		public tbl_Batch()
@@ -347,8 +178,8 @@ namespace Natsu
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDBatch", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int IDBatch
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDBatch", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long IDBatch
 		{
 			get
 			{
@@ -447,26 +278,6 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fMultiEntry", DbType="Bit")]
-		public System.Nullable<bool> fMultiEntry
-		{
-			get
-			{
-				return this._fMultiEntry;
-			}
-			set
-			{
-				if ((this._fMultiEntry != value))
-				{
-					this.OnfMultiEntryChanging(value);
-					this.SendPropertyChanging();
-					this._fMultiEntry = value;
-					this.SendPropertyChanged("fMultiEntry");
-					this.OnfMultiEntryChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fLocation", DbType="NVarChar(200)")]
 		public string fLocation
 		{
@@ -487,22 +298,42 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fGhiChu", DbType="NVarChar(200)")]
-		public string fGhiChu
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fSoLuongAnh", DbType="NVarChar(200)")]
+		public string fSoLuongAnh
 		{
 			get
 			{
-				return this._fGhiChu;
+				return this._fSoLuongAnh;
 			}
 			set
 			{
-				if ((this._fGhiChu != value))
+				if ((this._fSoLuongAnh != value))
 				{
-					this.OnfGhiChuChanging(value);
+					this.OnfSoLuongAnhChanging(value);
 					this.SendPropertyChanging();
-					this._fGhiChu = value;
-					this.SendPropertyChanged("fGhiChu");
-					this.OnfGhiChuChanged();
+					this._fSoLuongAnh = value;
+					this.SendPropertyChanged("fSoLuongAnh");
+					this.OnfSoLuongAnhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoaiBatch", DbType="NVarChar(200)")]
+		public string LoaiBatch
+		{
+			get
+			{
+				return this._LoaiBatch;
+			}
+			set
+			{
+				if ((this._LoaiBatch != value))
+				{
+					this.OnLoaiBatchChanging(value);
+					this.SendPropertyChanging();
+					this._LoaiBatch = value;
+					this.SendPropertyChanged("LoaiBatch");
+					this.OnLoaiBatchChanged();
 				}
 			}
 		}
@@ -528,8 +359,8 @@ namespace Natsu
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DESo")]
-	public partial class tbl_DESo : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_MissImage_DESO")]
+	public partial class tbl_MissImage_DESO : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -542,61 +373,7 @@ namespace Natsu
 		
 		private string _UserName;
 		
-		private int _IdPhieu;
-		
-		private string _TruongSo01;
-		
-		private string _TruongSo02;
-		
-		private string _TruongSo03;
-		
-		private string _TruongSo04;
-		
-		private string _TruongSo05;
-		
-		private string _TruongSo06;
-		
-		private string _TruongSo07;
-		
-		private string _TruongSo08;
-		
-		private string _TruongSo09;
-		
-		private string _TruongSo10;
-		
-		private string _TruongSo11;
-		
-		private string _TruongSo12;
-		
-		private string _TruongSo13;
-		
-		private string _TruongSo14;
-		
-		private string _TruongSo15;
-		
-		private string _TruongSo16;
-		
-		private string _TruongSo17;
-		
-		private string _TruongSo18;
-		
-		private string _TruongSo19;
-		
-		private string _TruongSo20;
-		
-		private string _TruongSo21;
-		
-		private string _TruongSo22;
-		
-		private string _TruongSo23;
-		
-		private string _TruongSo24;
-		
-		private System.Nullable<int> _Dem;
-		
-		private System.Nullable<int> _Error;
-		
-		private System.Nullable<int> _True;
+		private System.Nullable<int> _Submit;
 		
 		private System.Nullable<System.DateTime> _DateInput;
 		
@@ -612,67 +389,13 @@ namespace Natsu
     partial void OnfBatchNameChanged();
     partial void OnUserNameChanging(string value);
     partial void OnUserNameChanged();
-    partial void OnIdPhieuChanging(int value);
-    partial void OnIdPhieuChanged();
-    partial void OnTruongSo01Changing(string value);
-    partial void OnTruongSo01Changed();
-    partial void OnTruongSo02Changing(string value);
-    partial void OnTruongSo02Changed();
-    partial void OnTruongSo03Changing(string value);
-    partial void OnTruongSo03Changed();
-    partial void OnTruongSo04Changing(string value);
-    partial void OnTruongSo04Changed();
-    partial void OnTruongSo05Changing(string value);
-    partial void OnTruongSo05Changed();
-    partial void OnTruongSo06Changing(string value);
-    partial void OnTruongSo06Changed();
-    partial void OnTruongSo07Changing(string value);
-    partial void OnTruongSo07Changed();
-    partial void OnTruongSo08Changing(string value);
-    partial void OnTruongSo08Changed();
-    partial void OnTruongSo09Changing(string value);
-    partial void OnTruongSo09Changed();
-    partial void OnTruongSo10Changing(string value);
-    partial void OnTruongSo10Changed();
-    partial void OnTruongSo11Changing(string value);
-    partial void OnTruongSo11Changed();
-    partial void OnTruongSo12Changing(string value);
-    partial void OnTruongSo12Changed();
-    partial void OnTruongSo13Changing(string value);
-    partial void OnTruongSo13Changed();
-    partial void OnTruongSo14Changing(string value);
-    partial void OnTruongSo14Changed();
-    partial void OnTruongSo15Changing(string value);
-    partial void OnTruongSo15Changed();
-    partial void OnTruongSo16Changing(string value);
-    partial void OnTruongSo16Changed();
-    partial void OnTruongSo17Changing(string value);
-    partial void OnTruongSo17Changed();
-    partial void OnTruongSo18Changing(string value);
-    partial void OnTruongSo18Changed();
-    partial void OnTruongSo19Changing(string value);
-    partial void OnTruongSo19Changed();
-    partial void OnTruongSo20Changing(string value);
-    partial void OnTruongSo20Changed();
-    partial void OnTruongSo21Changing(string value);
-    partial void OnTruongSo21Changed();
-    partial void OnTruongSo22Changing(string value);
-    partial void OnTruongSo22Changed();
-    partial void OnTruongSo23Changing(string value);
-    partial void OnTruongSo23Changed();
-    partial void OnTruongSo24Changing(string value);
-    partial void OnTruongSo24Changed();
-    partial void OnDemChanging(System.Nullable<int> value);
-    partial void OnDemChanged();
-    partial void OnErrorChanging(System.Nullable<int> value);
-    partial void OnErrorChanged();
-    partial void OnTrueChanging(System.Nullable<int> value);
-    partial void OnTrueChanged();
+    partial void OnSubmitChanging(System.Nullable<int> value);
+    partial void OnSubmitChanged();
     partial void OnDateInputChanging(System.Nullable<System.DateTime> value);
     partial void OnDateInputChanged();
     #endregion
 		
-		public tbl_DESo()
+		public tbl_MissImage_DESO()
 		{
 			OnCreated();
 		}
@@ -737,7 +460,7 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="VarChar(30) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string UserName
 		{
 			get
@@ -753,6 +476,452 @@ namespace Natsu
 					this._UserName = value;
 					this.SendPropertyChanged("UserName");
 					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Submit", DbType="Int")]
+		public System.Nullable<int> Submit
+		{
+			get
+			{
+				return this._Submit;
+			}
+			set
+			{
+				if ((this._Submit != value))
+				{
+					this.OnSubmitChanging(value);
+					this.SendPropertyChanging();
+					this._Submit = value;
+					this.SendPropertyChanged("Submit");
+					this.OnSubmitChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateInput", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateInput
+		{
+			get
+			{
+				return this._DateInput;
+			}
+			set
+			{
+				if ((this._DateInput != value))
+				{
+					this.OnDateInputChanging(value);
+					this.SendPropertyChanging();
+					this._DateInput = value;
+					this.SendPropertyChanged("DateInput");
+					this.OnDateInputChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DESO")]
+	public partial class tbl_DESO : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _Id;
+		
+		private string _IdImage;
+		
+		private string _fBatchName;
+		
+		private string _UserName;
+		
+		private string _Truong_01;
+		
+		private string _Truong_02;
+		
+		private string _Truong_03;
+		
+		private string _Truong_04;
+		
+		private string _Truong_05;
+		
+		private string _Truong_06;
+		
+		private string _Truong_07;
+		
+		private string _Truong_08;
+		
+		private string _Truong_09;
+		
+		private string _Truong_10;
+		
+		private int _IdPhieu;
+		
+		private System.Nullable<int> _Dem;
+		
+		private System.Nullable<int> _Error;
+		
+		private System.Nullable<int> _True;
+		
+		private System.Nullable<System.DateTime> _DateInput;
+		
+		private string _STT;
+		
+		private string _Date;
+		
+		private string _LoaiBatch;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(long value);
+    partial void OnIdChanged();
+    partial void OnIdImageChanging(string value);
+    partial void OnIdImageChanged();
+    partial void OnfBatchNameChanging(string value);
+    partial void OnfBatchNameChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnTruong_01Changing(string value);
+    partial void OnTruong_01Changed();
+    partial void OnTruong_02Changing(string value);
+    partial void OnTruong_02Changed();
+    partial void OnTruong_03Changing(string value);
+    partial void OnTruong_03Changed();
+    partial void OnTruong_04Changing(string value);
+    partial void OnTruong_04Changed();
+    partial void OnTruong_05Changing(string value);
+    partial void OnTruong_05Changed();
+    partial void OnTruong_06Changing(string value);
+    partial void OnTruong_06Changed();
+    partial void OnTruong_07Changing(string value);
+    partial void OnTruong_07Changed();
+    partial void OnTruong_08Changing(string value);
+    partial void OnTruong_08Changed();
+    partial void OnTruong_09Changing(string value);
+    partial void OnTruong_09Changed();
+    partial void OnTruong_10Changing(string value);
+    partial void OnTruong_10Changed();
+    partial void OnIdPhieuChanging(int value);
+    partial void OnIdPhieuChanged();
+    partial void OnDemChanging(System.Nullable<int> value);
+    partial void OnDemChanged();
+    partial void OnErrorChanging(System.Nullable<int> value);
+    partial void OnErrorChanged();
+    partial void OnTrueChanging(System.Nullable<int> value);
+    partial void OnTrueChanged();
+    partial void OnDateInputChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateInputChanged();
+    partial void OnSTTChanging(string value);
+    partial void OnSTTChanged();
+    partial void OnDateChanging(string value);
+    partial void OnDateChanged();
+    partial void OnLoaiBatchChanging(string value);
+    partial void OnLoaiBatchChanged();
+    #endregion
+		
+		public tbl_DESO()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.Always, DbType="BigInt NOT NULL IDENTITY", IsDbGenerated=true)]
+		public long Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(150) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string IdImage
+		{
+			get
+			{
+				return this._IdImage;
+			}
+			set
+			{
+				if ((this._IdImage != value))
+				{
+					this.OnIdImageChanging(value);
+					this.SendPropertyChanging();
+					this._IdImage = value;
+					this.SendPropertyChanged("IdImage");
+					this.OnIdImageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(150) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this.OnfBatchNameChanging(value);
+					this.SendPropertyChanging();
+					this._fBatchName = value;
+					this.SendPropertyChanged("fBatchName");
+					this.OnfBatchNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(150) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this.OnUserNameChanging(value);
+					this.SendPropertyChanging();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_01", DbType="NVarChar(255)")]
+		public string Truong_01
+		{
+			get
+			{
+				return this._Truong_01;
+			}
+			set
+			{
+				if ((this._Truong_01 != value))
+				{
+					this.OnTruong_01Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_01 = value;
+					this.SendPropertyChanged("Truong_01");
+					this.OnTruong_01Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_02", DbType="NVarChar(255)")]
+		public string Truong_02
+		{
+			get
+			{
+				return this._Truong_02;
+			}
+			set
+			{
+				if ((this._Truong_02 != value))
+				{
+					this.OnTruong_02Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_02 = value;
+					this.SendPropertyChanged("Truong_02");
+					this.OnTruong_02Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_03", DbType="NVarChar(255)")]
+		public string Truong_03
+		{
+			get
+			{
+				return this._Truong_03;
+			}
+			set
+			{
+				if ((this._Truong_03 != value))
+				{
+					this.OnTruong_03Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_03 = value;
+					this.SendPropertyChanged("Truong_03");
+					this.OnTruong_03Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_04", DbType="NVarChar(255)")]
+		public string Truong_04
+		{
+			get
+			{
+				return this._Truong_04;
+			}
+			set
+			{
+				if ((this._Truong_04 != value))
+				{
+					this.OnTruong_04Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_04 = value;
+					this.SendPropertyChanged("Truong_04");
+					this.OnTruong_04Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_05", DbType="NVarChar(255)")]
+		public string Truong_05
+		{
+			get
+			{
+				return this._Truong_05;
+			}
+			set
+			{
+				if ((this._Truong_05 != value))
+				{
+					this.OnTruong_05Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_05 = value;
+					this.SendPropertyChanged("Truong_05");
+					this.OnTruong_05Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_06", DbType="NVarChar(255)")]
+		public string Truong_06
+		{
+			get
+			{
+				return this._Truong_06;
+			}
+			set
+			{
+				if ((this._Truong_06 != value))
+				{
+					this.OnTruong_06Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_06 = value;
+					this.SendPropertyChanged("Truong_06");
+					this.OnTruong_06Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_07", DbType="NVarChar(255)")]
+		public string Truong_07
+		{
+			get
+			{
+				return this._Truong_07;
+			}
+			set
+			{
+				if ((this._Truong_07 != value))
+				{
+					this.OnTruong_07Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_07 = value;
+					this.SendPropertyChanged("Truong_07");
+					this.OnTruong_07Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_08", DbType="NVarChar(255)")]
+		public string Truong_08
+		{
+			get
+			{
+				return this._Truong_08;
+			}
+			set
+			{
+				if ((this._Truong_08 != value))
+				{
+					this.OnTruong_08Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_08 = value;
+					this.SendPropertyChanged("Truong_08");
+					this.OnTruong_08Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_09", DbType="NVarChar(255)")]
+		public string Truong_09
+		{
+			get
+			{
+				return this._Truong_09;
+			}
+			set
+			{
+				if ((this._Truong_09 != value))
+				{
+					this.OnTruong_09Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_09 = value;
+					this.SendPropertyChanged("Truong_09");
+					this.OnTruong_09Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_10", DbType="NVarChar(255)")]
+		public string Truong_10
+		{
+			get
+			{
+				return this._Truong_10;
+			}
+			set
+			{
+				if ((this._Truong_10 != value))
+				{
+					this.OnTruong_10Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_10 = value;
+					this.SendPropertyChanged("Truong_10");
+					this.OnTruong_10Changed();
 				}
 			}
 		}
@@ -773,486 +942,6 @@ namespace Natsu
 					this._IdPhieu = value;
 					this.SendPropertyChanged("IdPhieu");
 					this.OnIdPhieuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo01", DbType="NVarChar(100)")]
-		public string TruongSo01
-		{
-			get
-			{
-				return this._TruongSo01;
-			}
-			set
-			{
-				if ((this._TruongSo01 != value))
-				{
-					this.OnTruongSo01Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo01 = value;
-					this.SendPropertyChanged("TruongSo01");
-					this.OnTruongSo01Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo02", DbType="NVarChar(100)")]
-		public string TruongSo02
-		{
-			get
-			{
-				return this._TruongSo02;
-			}
-			set
-			{
-				if ((this._TruongSo02 != value))
-				{
-					this.OnTruongSo02Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo02 = value;
-					this.SendPropertyChanged("TruongSo02");
-					this.OnTruongSo02Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo03", DbType="NVarChar(100)")]
-		public string TruongSo03
-		{
-			get
-			{
-				return this._TruongSo03;
-			}
-			set
-			{
-				if ((this._TruongSo03 != value))
-				{
-					this.OnTruongSo03Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo03 = value;
-					this.SendPropertyChanged("TruongSo03");
-					this.OnTruongSo03Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo04", DbType="NVarChar(100)")]
-		public string TruongSo04
-		{
-			get
-			{
-				return this._TruongSo04;
-			}
-			set
-			{
-				if ((this._TruongSo04 != value))
-				{
-					this.OnTruongSo04Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo04 = value;
-					this.SendPropertyChanged("TruongSo04");
-					this.OnTruongSo04Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo05", DbType="NVarChar(100)")]
-		public string TruongSo05
-		{
-			get
-			{
-				return this._TruongSo05;
-			}
-			set
-			{
-				if ((this._TruongSo05 != value))
-				{
-					this.OnTruongSo05Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo05 = value;
-					this.SendPropertyChanged("TruongSo05");
-					this.OnTruongSo05Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo06", DbType="NVarChar(100)")]
-		public string TruongSo06
-		{
-			get
-			{
-				return this._TruongSo06;
-			}
-			set
-			{
-				if ((this._TruongSo06 != value))
-				{
-					this.OnTruongSo06Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo06 = value;
-					this.SendPropertyChanged("TruongSo06");
-					this.OnTruongSo06Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo07", DbType="NVarChar(100)")]
-		public string TruongSo07
-		{
-			get
-			{
-				return this._TruongSo07;
-			}
-			set
-			{
-				if ((this._TruongSo07 != value))
-				{
-					this.OnTruongSo07Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo07 = value;
-					this.SendPropertyChanged("TruongSo07");
-					this.OnTruongSo07Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo08", DbType="NVarChar(100)")]
-		public string TruongSo08
-		{
-			get
-			{
-				return this._TruongSo08;
-			}
-			set
-			{
-				if ((this._TruongSo08 != value))
-				{
-					this.OnTruongSo08Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo08 = value;
-					this.SendPropertyChanged("TruongSo08");
-					this.OnTruongSo08Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo09", DbType="NVarChar(100)")]
-		public string TruongSo09
-		{
-			get
-			{
-				return this._TruongSo09;
-			}
-			set
-			{
-				if ((this._TruongSo09 != value))
-				{
-					this.OnTruongSo09Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo09 = value;
-					this.SendPropertyChanged("TruongSo09");
-					this.OnTruongSo09Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo10", DbType="NVarChar(100)")]
-		public string TruongSo10
-		{
-			get
-			{
-				return this._TruongSo10;
-			}
-			set
-			{
-				if ((this._TruongSo10 != value))
-				{
-					this.OnTruongSo10Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo10 = value;
-					this.SendPropertyChanged("TruongSo10");
-					this.OnTruongSo10Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo11", DbType="NVarChar(100)")]
-		public string TruongSo11
-		{
-			get
-			{
-				return this._TruongSo11;
-			}
-			set
-			{
-				if ((this._TruongSo11 != value))
-				{
-					this.OnTruongSo11Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo11 = value;
-					this.SendPropertyChanged("TruongSo11");
-					this.OnTruongSo11Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo12", DbType="NVarChar(100)")]
-		public string TruongSo12
-		{
-			get
-			{
-				return this._TruongSo12;
-			}
-			set
-			{
-				if ((this._TruongSo12 != value))
-				{
-					this.OnTruongSo12Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo12 = value;
-					this.SendPropertyChanged("TruongSo12");
-					this.OnTruongSo12Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo13", DbType="NVarChar(100)")]
-		public string TruongSo13
-		{
-			get
-			{
-				return this._TruongSo13;
-			}
-			set
-			{
-				if ((this._TruongSo13 != value))
-				{
-					this.OnTruongSo13Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo13 = value;
-					this.SendPropertyChanged("TruongSo13");
-					this.OnTruongSo13Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo14", DbType="NVarChar(100)")]
-		public string TruongSo14
-		{
-			get
-			{
-				return this._TruongSo14;
-			}
-			set
-			{
-				if ((this._TruongSo14 != value))
-				{
-					this.OnTruongSo14Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo14 = value;
-					this.SendPropertyChanged("TruongSo14");
-					this.OnTruongSo14Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo15", DbType="NVarChar(100)")]
-		public string TruongSo15
-		{
-			get
-			{
-				return this._TruongSo15;
-			}
-			set
-			{
-				if ((this._TruongSo15 != value))
-				{
-					this.OnTruongSo15Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo15 = value;
-					this.SendPropertyChanged("TruongSo15");
-					this.OnTruongSo15Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo16", DbType="NVarChar(100)")]
-		public string TruongSo16
-		{
-			get
-			{
-				return this._TruongSo16;
-			}
-			set
-			{
-				if ((this._TruongSo16 != value))
-				{
-					this.OnTruongSo16Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo16 = value;
-					this.SendPropertyChanged("TruongSo16");
-					this.OnTruongSo16Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo17", DbType="NVarChar(100)")]
-		public string TruongSo17
-		{
-			get
-			{
-				return this._TruongSo17;
-			}
-			set
-			{
-				if ((this._TruongSo17 != value))
-				{
-					this.OnTruongSo17Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo17 = value;
-					this.SendPropertyChanged("TruongSo17");
-					this.OnTruongSo17Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo18", DbType="NVarChar(100)")]
-		public string TruongSo18
-		{
-			get
-			{
-				return this._TruongSo18;
-			}
-			set
-			{
-				if ((this._TruongSo18 != value))
-				{
-					this.OnTruongSo18Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo18 = value;
-					this.SendPropertyChanged("TruongSo18");
-					this.OnTruongSo18Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo19", DbType="NVarChar(100)")]
-		public string TruongSo19
-		{
-			get
-			{
-				return this._TruongSo19;
-			}
-			set
-			{
-				if ((this._TruongSo19 != value))
-				{
-					this.OnTruongSo19Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo19 = value;
-					this.SendPropertyChanged("TruongSo19");
-					this.OnTruongSo19Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo20", DbType="NVarChar(100)")]
-		public string TruongSo20
-		{
-			get
-			{
-				return this._TruongSo20;
-			}
-			set
-			{
-				if ((this._TruongSo20 != value))
-				{
-					this.OnTruongSo20Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo20 = value;
-					this.SendPropertyChanged("TruongSo20");
-					this.OnTruongSo20Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo21", DbType="NVarChar(100)")]
-		public string TruongSo21
-		{
-			get
-			{
-				return this._TruongSo21;
-			}
-			set
-			{
-				if ((this._TruongSo21 != value))
-				{
-					this.OnTruongSo21Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo21 = value;
-					this.SendPropertyChanged("TruongSo21");
-					this.OnTruongSo21Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo22", DbType="NVarChar(100)")]
-		public string TruongSo22
-		{
-			get
-			{
-				return this._TruongSo22;
-			}
-			set
-			{
-				if ((this._TruongSo22 != value))
-				{
-					this.OnTruongSo22Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo22 = value;
-					this.SendPropertyChanged("TruongSo22");
-					this.OnTruongSo22Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo23", DbType="NVarChar(100)")]
-		public string TruongSo23
-		{
-			get
-			{
-				return this._TruongSo23;
-			}
-			set
-			{
-				if ((this._TruongSo23 != value))
-				{
-					this.OnTruongSo23Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo23 = value;
-					this.SendPropertyChanged("TruongSo23");
-					this.OnTruongSo23Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo24", DbType="NVarChar(100)")]
-		public string TruongSo24
-		{
-			get
-			{
-				return this._TruongSo24;
-			}
-			set
-			{
-				if ((this._TruongSo24 != value))
-				{
-					this.OnTruongSo24Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo24 = value;
-					this.SendPropertyChanged("TruongSo24");
-					this.OnTruongSo24Changed();
 				}
 			}
 		}
@@ -1337,6 +1026,66 @@ namespace Natsu
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STT", DbType="NVarChar(100)")]
+		public string STT
+		{
+			get
+			{
+				return this._STT;
+			}
+			set
+			{
+				if ((this._STT != value))
+				{
+					this.OnSTTChanging(value);
+					this.SendPropertyChanging();
+					this._STT = value;
+					this.SendPropertyChanged("STT");
+					this.OnSTTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="NVarChar(255)")]
+		public string Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				if ((this._Date != value))
+				{
+					this.OnDateChanging(value);
+					this.SendPropertyChanging();
+					this._Date = value;
+					this.SendPropertyChanged("Date");
+					this.OnDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoaiBatch", DbType="NVarChar(50)")]
+		public string LoaiBatch
+		{
+			get
+			{
+				return this._LoaiBatch;
+			}
+			set
+			{
+				if ((this._LoaiBatch != value))
+				{
+					this.OnLoaiBatchChanging(value);
+					this.SendPropertyChanging();
+					this._LoaiBatch = value;
+					this.SendPropertyChanged("LoaiBatch");
+					this.OnLoaiBatchChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1358,8 +1107,8 @@ namespace Natsu
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DESo_BackUp")]
-	public partial class tbl_DESo_BackUp : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DESO_Backup")]
+	public partial class tbl_DESO_Backup : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1372,55 +1121,27 @@ namespace Natsu
 		
 		private string _UserName;
 		
+		private string _Truong_01;
+		
+		private string _Truong_02;
+		
+		private string _Truong_03;
+		
+		private string _Truong_04;
+		
+		private string _Truong_05;
+		
+		private string _Truong_06;
+		
+		private string _Truong_07;
+		
+		private string _Truong_08;
+		
+		private string _Truong_09;
+		
+		private string _Truong_10;
+		
 		private int _IdPhieu;
-		
-		private string _TruongSo01;
-		
-		private string _TruongSo02;
-		
-		private string _TruongSo03;
-		
-		private string _TruongSo04;
-		
-		private string _TruongSo05;
-		
-		private string _TruongSo06;
-		
-		private string _TruongSo07;
-		
-		private string _TruongSo08;
-		
-		private string _TruongSo09;
-		
-		private string _TruongSo10;
-		
-		private string _TruongSo11;
-		
-		private string _TruongSo12;
-		
-		private string _TruongSo13;
-		
-		private string _TruongSo14;
-		
-		private string _TruongSo15;
-		
-		private string _TruongSo16;
-		
-		private string _TruongSo17;
-		
-		private string _TruongSo18;
-		
-		private string _TruongSo19;
-		
-		private string _TruongSo20;
-		
-		private string _TruongSo21;
-		
-		private string _TruongSo22;
-		
-		private string _TruongSo23;
-		
-		private string _TruongSo24;
 		
 		private System.Nullable<int> _Dem;
 		
@@ -1429,6 +1150,12 @@ namespace Natsu
 		private System.Nullable<int> _True;
 		
 		private System.Nullable<System.DateTime> _DateInput;
+		
+		private string _STT;
+		
+		private string _Date;
+		
+		private string _LoaiBatch;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1442,56 +1169,28 @@ namespace Natsu
     partial void OnfBatchNameChanged();
     partial void OnUserNameChanging(string value);
     partial void OnUserNameChanged();
+    partial void OnTruong_01Changing(string value);
+    partial void OnTruong_01Changed();
+    partial void OnTruong_02Changing(string value);
+    partial void OnTruong_02Changed();
+    partial void OnTruong_03Changing(string value);
+    partial void OnTruong_03Changed();
+    partial void OnTruong_04Changing(string value);
+    partial void OnTruong_04Changed();
+    partial void OnTruong_05Changing(string value);
+    partial void OnTruong_05Changed();
+    partial void OnTruong_06Changing(string value);
+    partial void OnTruong_06Changed();
+    partial void OnTruong_07Changing(string value);
+    partial void OnTruong_07Changed();
+    partial void OnTruong_08Changing(string value);
+    partial void OnTruong_08Changed();
+    partial void OnTruong_09Changing(string value);
+    partial void OnTruong_09Changed();
+    partial void OnTruong_10Changing(string value);
+    partial void OnTruong_10Changed();
     partial void OnIdPhieuChanging(int value);
     partial void OnIdPhieuChanged();
-    partial void OnTruongSo01Changing(string value);
-    partial void OnTruongSo01Changed();
-    partial void OnTruongSo02Changing(string value);
-    partial void OnTruongSo02Changed();
-    partial void OnTruongSo03Changing(string value);
-    partial void OnTruongSo03Changed();
-    partial void OnTruongSo04Changing(string value);
-    partial void OnTruongSo04Changed();
-    partial void OnTruongSo05Changing(string value);
-    partial void OnTruongSo05Changed();
-    partial void OnTruongSo06Changing(string value);
-    partial void OnTruongSo06Changed();
-    partial void OnTruongSo07Changing(string value);
-    partial void OnTruongSo07Changed();
-    partial void OnTruongSo08Changing(string value);
-    partial void OnTruongSo08Changed();
-    partial void OnTruongSo09Changing(string value);
-    partial void OnTruongSo09Changed();
-    partial void OnTruongSo10Changing(string value);
-    partial void OnTruongSo10Changed();
-    partial void OnTruongSo11Changing(string value);
-    partial void OnTruongSo11Changed();
-    partial void OnTruongSo12Changing(string value);
-    partial void OnTruongSo12Changed();
-    partial void OnTruongSo13Changing(string value);
-    partial void OnTruongSo13Changed();
-    partial void OnTruongSo14Changing(string value);
-    partial void OnTruongSo14Changed();
-    partial void OnTruongSo15Changing(string value);
-    partial void OnTruongSo15Changed();
-    partial void OnTruongSo16Changing(string value);
-    partial void OnTruongSo16Changed();
-    partial void OnTruongSo17Changing(string value);
-    partial void OnTruongSo17Changed();
-    partial void OnTruongSo18Changing(string value);
-    partial void OnTruongSo18Changed();
-    partial void OnTruongSo19Changing(string value);
-    partial void OnTruongSo19Changed();
-    partial void OnTruongSo20Changing(string value);
-    partial void OnTruongSo20Changed();
-    partial void OnTruongSo21Changing(string value);
-    partial void OnTruongSo21Changed();
-    partial void OnTruongSo22Changing(string value);
-    partial void OnTruongSo22Changed();
-    partial void OnTruongSo23Changing(string value);
-    partial void OnTruongSo23Changed();
-    partial void OnTruongSo24Changing(string value);
-    partial void OnTruongSo24Changed();
     partial void OnDemChanging(System.Nullable<int> value);
     partial void OnDemChanged();
     partial void OnErrorChanging(System.Nullable<int> value);
@@ -1500,9 +1199,15 @@ namespace Natsu
     partial void OnTrueChanged();
     partial void OnDateInputChanging(System.Nullable<System.DateTime> value);
     partial void OnDateInputChanged();
+    partial void OnSTTChanging(string value);
+    partial void OnSTTChanged();
+    partial void OnDateChanging(string value);
+    partial void OnDateChanged();
+    partial void OnLoaiBatchChanging(string value);
+    partial void OnLoaiBatchChanged();
     #endregion
 		
-		public tbl_DESo_BackUp()
+		public tbl_DESO_Backup()
 		{
 			OnCreated();
 		}
@@ -1527,7 +1232,7 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(150) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string IdImage
 		{
 			get
@@ -1547,7 +1252,7 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(150) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string fBatchName
 		{
 			get
@@ -1567,7 +1272,7 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(150) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string UserName
 		{
 			get
@@ -1583,6 +1288,206 @@ namespace Natsu
 					this._UserName = value;
 					this.SendPropertyChanged("UserName");
 					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_01", DbType="NVarChar(255)")]
+		public string Truong_01
+		{
+			get
+			{
+				return this._Truong_01;
+			}
+			set
+			{
+				if ((this._Truong_01 != value))
+				{
+					this.OnTruong_01Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_01 = value;
+					this.SendPropertyChanged("Truong_01");
+					this.OnTruong_01Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_02", DbType="NVarChar(255)")]
+		public string Truong_02
+		{
+			get
+			{
+				return this._Truong_02;
+			}
+			set
+			{
+				if ((this._Truong_02 != value))
+				{
+					this.OnTruong_02Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_02 = value;
+					this.SendPropertyChanged("Truong_02");
+					this.OnTruong_02Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_03", DbType="NVarChar(255)")]
+		public string Truong_03
+		{
+			get
+			{
+				return this._Truong_03;
+			}
+			set
+			{
+				if ((this._Truong_03 != value))
+				{
+					this.OnTruong_03Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_03 = value;
+					this.SendPropertyChanged("Truong_03");
+					this.OnTruong_03Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_04", DbType="NVarChar(255)")]
+		public string Truong_04
+		{
+			get
+			{
+				return this._Truong_04;
+			}
+			set
+			{
+				if ((this._Truong_04 != value))
+				{
+					this.OnTruong_04Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_04 = value;
+					this.SendPropertyChanged("Truong_04");
+					this.OnTruong_04Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_05", DbType="NVarChar(255)")]
+		public string Truong_05
+		{
+			get
+			{
+				return this._Truong_05;
+			}
+			set
+			{
+				if ((this._Truong_05 != value))
+				{
+					this.OnTruong_05Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_05 = value;
+					this.SendPropertyChanged("Truong_05");
+					this.OnTruong_05Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_06", DbType="NVarChar(255)")]
+		public string Truong_06
+		{
+			get
+			{
+				return this._Truong_06;
+			}
+			set
+			{
+				if ((this._Truong_06 != value))
+				{
+					this.OnTruong_06Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_06 = value;
+					this.SendPropertyChanged("Truong_06");
+					this.OnTruong_06Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_07", DbType="NVarChar(255)")]
+		public string Truong_07
+		{
+			get
+			{
+				return this._Truong_07;
+			}
+			set
+			{
+				if ((this._Truong_07 != value))
+				{
+					this.OnTruong_07Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_07 = value;
+					this.SendPropertyChanged("Truong_07");
+					this.OnTruong_07Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_08", DbType="NVarChar(255)")]
+		public string Truong_08
+		{
+			get
+			{
+				return this._Truong_08;
+			}
+			set
+			{
+				if ((this._Truong_08 != value))
+				{
+					this.OnTruong_08Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_08 = value;
+					this.SendPropertyChanged("Truong_08");
+					this.OnTruong_08Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_09", DbType="NVarChar(255)")]
+		public string Truong_09
+		{
+			get
+			{
+				return this._Truong_09;
+			}
+			set
+			{
+				if ((this._Truong_09 != value))
+				{
+					this.OnTruong_09Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_09 = value;
+					this.SendPropertyChanged("Truong_09");
+					this.OnTruong_09Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_10", DbType="NVarChar(255)")]
+		public string Truong_10
+		{
+			get
+			{
+				return this._Truong_10;
+			}
+			set
+			{
+				if ((this._Truong_10 != value))
+				{
+					this.OnTruong_10Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_10 = value;
+					this.SendPropertyChanged("Truong_10");
+					this.OnTruong_10Changed();
 				}
 			}
 		}
@@ -1603,486 +1508,6 @@ namespace Natsu
 					this._IdPhieu = value;
 					this.SendPropertyChanged("IdPhieu");
 					this.OnIdPhieuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo01", DbType="NVarChar(100)")]
-		public string TruongSo01
-		{
-			get
-			{
-				return this._TruongSo01;
-			}
-			set
-			{
-				if ((this._TruongSo01 != value))
-				{
-					this.OnTruongSo01Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo01 = value;
-					this.SendPropertyChanged("TruongSo01");
-					this.OnTruongSo01Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo02", DbType="NVarChar(100)")]
-		public string TruongSo02
-		{
-			get
-			{
-				return this._TruongSo02;
-			}
-			set
-			{
-				if ((this._TruongSo02 != value))
-				{
-					this.OnTruongSo02Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo02 = value;
-					this.SendPropertyChanged("TruongSo02");
-					this.OnTruongSo02Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo03", DbType="NVarChar(100)")]
-		public string TruongSo03
-		{
-			get
-			{
-				return this._TruongSo03;
-			}
-			set
-			{
-				if ((this._TruongSo03 != value))
-				{
-					this.OnTruongSo03Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo03 = value;
-					this.SendPropertyChanged("TruongSo03");
-					this.OnTruongSo03Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo04", DbType="NVarChar(100)")]
-		public string TruongSo04
-		{
-			get
-			{
-				return this._TruongSo04;
-			}
-			set
-			{
-				if ((this._TruongSo04 != value))
-				{
-					this.OnTruongSo04Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo04 = value;
-					this.SendPropertyChanged("TruongSo04");
-					this.OnTruongSo04Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo05", DbType="NVarChar(100)")]
-		public string TruongSo05
-		{
-			get
-			{
-				return this._TruongSo05;
-			}
-			set
-			{
-				if ((this._TruongSo05 != value))
-				{
-					this.OnTruongSo05Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo05 = value;
-					this.SendPropertyChanged("TruongSo05");
-					this.OnTruongSo05Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo06", DbType="NVarChar(100)")]
-		public string TruongSo06
-		{
-			get
-			{
-				return this._TruongSo06;
-			}
-			set
-			{
-				if ((this._TruongSo06 != value))
-				{
-					this.OnTruongSo06Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo06 = value;
-					this.SendPropertyChanged("TruongSo06");
-					this.OnTruongSo06Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo07", DbType="NVarChar(100)")]
-		public string TruongSo07
-		{
-			get
-			{
-				return this._TruongSo07;
-			}
-			set
-			{
-				if ((this._TruongSo07 != value))
-				{
-					this.OnTruongSo07Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo07 = value;
-					this.SendPropertyChanged("TruongSo07");
-					this.OnTruongSo07Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo08", DbType="NVarChar(100)")]
-		public string TruongSo08
-		{
-			get
-			{
-				return this._TruongSo08;
-			}
-			set
-			{
-				if ((this._TruongSo08 != value))
-				{
-					this.OnTruongSo08Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo08 = value;
-					this.SendPropertyChanged("TruongSo08");
-					this.OnTruongSo08Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo09", DbType="NVarChar(100)")]
-		public string TruongSo09
-		{
-			get
-			{
-				return this._TruongSo09;
-			}
-			set
-			{
-				if ((this._TruongSo09 != value))
-				{
-					this.OnTruongSo09Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo09 = value;
-					this.SendPropertyChanged("TruongSo09");
-					this.OnTruongSo09Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo10", DbType="NVarChar(100)")]
-		public string TruongSo10
-		{
-			get
-			{
-				return this._TruongSo10;
-			}
-			set
-			{
-				if ((this._TruongSo10 != value))
-				{
-					this.OnTruongSo10Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo10 = value;
-					this.SendPropertyChanged("TruongSo10");
-					this.OnTruongSo10Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo11", DbType="NVarChar(100)")]
-		public string TruongSo11
-		{
-			get
-			{
-				return this._TruongSo11;
-			}
-			set
-			{
-				if ((this._TruongSo11 != value))
-				{
-					this.OnTruongSo11Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo11 = value;
-					this.SendPropertyChanged("TruongSo11");
-					this.OnTruongSo11Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo12", DbType="NVarChar(100)")]
-		public string TruongSo12
-		{
-			get
-			{
-				return this._TruongSo12;
-			}
-			set
-			{
-				if ((this._TruongSo12 != value))
-				{
-					this.OnTruongSo12Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo12 = value;
-					this.SendPropertyChanged("TruongSo12");
-					this.OnTruongSo12Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo13", DbType="NVarChar(100)")]
-		public string TruongSo13
-		{
-			get
-			{
-				return this._TruongSo13;
-			}
-			set
-			{
-				if ((this._TruongSo13 != value))
-				{
-					this.OnTruongSo13Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo13 = value;
-					this.SendPropertyChanged("TruongSo13");
-					this.OnTruongSo13Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo14", DbType="NVarChar(100)")]
-		public string TruongSo14
-		{
-			get
-			{
-				return this._TruongSo14;
-			}
-			set
-			{
-				if ((this._TruongSo14 != value))
-				{
-					this.OnTruongSo14Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo14 = value;
-					this.SendPropertyChanged("TruongSo14");
-					this.OnTruongSo14Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo15", DbType="NVarChar(100)")]
-		public string TruongSo15
-		{
-			get
-			{
-				return this._TruongSo15;
-			}
-			set
-			{
-				if ((this._TruongSo15 != value))
-				{
-					this.OnTruongSo15Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo15 = value;
-					this.SendPropertyChanged("TruongSo15");
-					this.OnTruongSo15Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo16", DbType="NVarChar(100)")]
-		public string TruongSo16
-		{
-			get
-			{
-				return this._TruongSo16;
-			}
-			set
-			{
-				if ((this._TruongSo16 != value))
-				{
-					this.OnTruongSo16Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo16 = value;
-					this.SendPropertyChanged("TruongSo16");
-					this.OnTruongSo16Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo17", DbType="NVarChar(100)")]
-		public string TruongSo17
-		{
-			get
-			{
-				return this._TruongSo17;
-			}
-			set
-			{
-				if ((this._TruongSo17 != value))
-				{
-					this.OnTruongSo17Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo17 = value;
-					this.SendPropertyChanged("TruongSo17");
-					this.OnTruongSo17Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo18", DbType="NVarChar(100)")]
-		public string TruongSo18
-		{
-			get
-			{
-				return this._TruongSo18;
-			}
-			set
-			{
-				if ((this._TruongSo18 != value))
-				{
-					this.OnTruongSo18Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo18 = value;
-					this.SendPropertyChanged("TruongSo18");
-					this.OnTruongSo18Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo19", DbType="NVarChar(100)")]
-		public string TruongSo19
-		{
-			get
-			{
-				return this._TruongSo19;
-			}
-			set
-			{
-				if ((this._TruongSo19 != value))
-				{
-					this.OnTruongSo19Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo19 = value;
-					this.SendPropertyChanged("TruongSo19");
-					this.OnTruongSo19Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo20", DbType="NVarChar(100)")]
-		public string TruongSo20
-		{
-			get
-			{
-				return this._TruongSo20;
-			}
-			set
-			{
-				if ((this._TruongSo20 != value))
-				{
-					this.OnTruongSo20Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo20 = value;
-					this.SendPropertyChanged("TruongSo20");
-					this.OnTruongSo20Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo21", DbType="NVarChar(100)")]
-		public string TruongSo21
-		{
-			get
-			{
-				return this._TruongSo21;
-			}
-			set
-			{
-				if ((this._TruongSo21 != value))
-				{
-					this.OnTruongSo21Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo21 = value;
-					this.SendPropertyChanged("TruongSo21");
-					this.OnTruongSo21Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo22", DbType="NVarChar(100)")]
-		public string TruongSo22
-		{
-			get
-			{
-				return this._TruongSo22;
-			}
-			set
-			{
-				if ((this._TruongSo22 != value))
-				{
-					this.OnTruongSo22Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo22 = value;
-					this.SendPropertyChanged("TruongSo22");
-					this.OnTruongSo22Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo23", DbType="NVarChar(100)")]
-		public string TruongSo23
-		{
-			get
-			{
-				return this._TruongSo23;
-			}
-			set
-			{
-				if ((this._TruongSo23 != value))
-				{
-					this.OnTruongSo23Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo23 = value;
-					this.SendPropertyChanged("TruongSo23");
-					this.OnTruongSo23Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TruongSo24", DbType="NVarChar(100)")]
-		public string TruongSo24
-		{
-			get
-			{
-				return this._TruongSo24;
-			}
-			set
-			{
-				if ((this._TruongSo24 != value))
-				{
-					this.OnTruongSo24Changing(value);
-					this.SendPropertyChanging();
-					this._TruongSo24 = value;
-					this.SendPropertyChanged("TruongSo24");
-					this.OnTruongSo24Changed();
 				}
 			}
 		}
@@ -2163,6 +1588,66 @@ namespace Natsu
 					this._DateInput = value;
 					this.SendPropertyChanged("DateInput");
 					this.OnDateInputChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STT", DbType="NVarChar(100)")]
+		public string STT
+		{
+			get
+			{
+				return this._STT;
+			}
+			set
+			{
+				if ((this._STT != value))
+				{
+					this.OnSTTChanging(value);
+					this.SendPropertyChanging();
+					this._STT = value;
+					this.SendPropertyChanged("STT");
+					this.OnSTTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="NVarChar(255)")]
+		public string Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				if ((this._Date != value))
+				{
+					this.OnDateChanging(value);
+					this.SendPropertyChanging();
+					this._Date = value;
+					this.SendPropertyChanged("Date");
+					this.OnDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoaiBatch", DbType="NVarChar(50)")]
+		public string LoaiBatch
+		{
+			get
+			{
+				return this._LoaiBatch;
+			}
+			set
+			{
+				if ((this._LoaiBatch != value))
+				{
+					this.OnLoaiBatchChanging(value);
+					this.SendPropertyChanging();
+					this._LoaiBatch = value;
+					this.SendPropertyChanged("LoaiBatch");
+					this.OnLoaiBatchChanged();
 				}
 			}
 		}
@@ -2196,9 +1681,9 @@ namespace Natsu
 		
 		private long _Id;
 		
-		private string _IdImage;
+		private string _idimage;
 		
-		private string _fBatchName;
+		private string _fbatchname;
 		
 		private string _UserNameDESo;
 		
@@ -2208,16 +1693,20 @@ namespace Natsu
 		
 		private string _TienDoDESO;
 		
+		private System.Nullable<int> _ReadImageDESO_NotGood;
+		
+		private System.Nullable<int> _ReadImageDESO_Good;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnIdChanging(long value);
     partial void OnIdChanged();
-    partial void OnIdImageChanging(string value);
-    partial void OnIdImageChanged();
-    partial void OnfBatchNameChanging(string value);
-    partial void OnfBatchNameChanged();
+    partial void OnidimageChanging(string value);
+    partial void OnidimageChanged();
+    partial void OnfbatchnameChanging(string value);
+    partial void OnfbatchnameChanged();
     partial void OnUserNameDESoChanging(string value);
     partial void OnUserNameDESoChanged();
     partial void OnReadImageDESoChanging(int value);
@@ -2226,6 +1715,10 @@ namespace Natsu
     partial void OnCheckedDESoChanged();
     partial void OnTienDoDESOChanging(string value);
     partial void OnTienDoDESOChanged();
+    partial void OnReadImageDESO_NotGoodChanging(System.Nullable<int> value);
+    partial void OnReadImageDESO_NotGoodChanged();
+    partial void OnReadImageDESO_GoodChanging(System.Nullable<int> value);
+    partial void OnReadImageDESO_GoodChanged();
     #endregion
 		
 		public tbl_Image()
@@ -2253,47 +1746,47 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string IdImage
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idimage", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string idimage
 		{
 			get
 			{
-				return this._IdImage;
+				return this._idimage;
 			}
 			set
 			{
-				if ((this._IdImage != value))
+				if ((this._idimage != value))
 				{
-					this.OnIdImageChanging(value);
+					this.OnidimageChanging(value);
 					this.SendPropertyChanging();
-					this._IdImage = value;
-					this.SendPropertyChanged("IdImage");
-					this.OnIdImageChanged();
+					this._idimage = value;
+					this.SendPropertyChanged("idimage");
+					this.OnidimageChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string fBatchName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fbatchname", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string fbatchname
 		{
 			get
 			{
-				return this._fBatchName;
+				return this._fbatchname;
 			}
 			set
 			{
-				if ((this._fBatchName != value))
+				if ((this._fbatchname != value))
 				{
-					this.OnfBatchNameChanging(value);
+					this.OnfbatchnameChanging(value);
 					this.SendPropertyChanging();
-					this._fBatchName = value;
-					this.SendPropertyChanged("fBatchName");
-					this.OnfBatchNameChanged();
+					this._fbatchname = value;
+					this.SendPropertyChanged("fbatchname");
+					this.OnfbatchnameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDESo", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDESo", DbType="NVarChar(200)")]
 		public string UserNameDESo
 		{
 			get
@@ -2373,6 +1866,46 @@ namespace Natsu
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReadImageDESO_NotGood", DbType="Int")]
+		public System.Nullable<int> ReadImageDESO_NotGood
+		{
+			get
+			{
+				return this._ReadImageDESO_NotGood;
+			}
+			set
+			{
+				if ((this._ReadImageDESO_NotGood != value))
+				{
+					this.OnReadImageDESO_NotGoodChanging(value);
+					this.SendPropertyChanging();
+					this._ReadImageDESO_NotGood = value;
+					this.SendPropertyChanged("ReadImageDESO_NotGood");
+					this.OnReadImageDESO_NotGoodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReadImageDESO_Good", DbType="Int")]
+		public System.Nullable<int> ReadImageDESO_Good
+		{
+			get
+			{
+				return this._ReadImageDESO_Good;
+			}
+			set
+			{
+				if ((this._ReadImageDESO_Good != value))
+				{
+					this.OnReadImageDESO_GoodChanging(value);
+					this.SendPropertyChanging();
+					this._ReadImageDESO_Good = value;
+					this.SendPropertyChanged("ReadImageDESO_Good");
+					this.OnReadImageDESO_GoodChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2394,41 +1927,49 @@ namespace Natsu
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_LogFile")]
-	public partial class tbl_LogFile : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_MissCheck_DESO")]
+	public partial class tbl_MissCheck_DESO : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private long _Id;
 		
-		private string _Username;
+		private string _IdImage;
 		
-		private string _Info;
+		private string _fBatchName;
 		
-		private System.Nullable<System.DateTime> _DateLog;
+		private string _UserName;
+		
+		private System.Nullable<int> _Submit;
+		
+		private System.Nullable<System.DateTime> _DateCheck;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
+    partial void OnIdChanging(long value);
     partial void OnIdChanged();
-    partial void OnUsernameChanging(string value);
-    partial void OnUsernameChanged();
-    partial void OnInfoChanging(string value);
-    partial void OnInfoChanged();
-    partial void OnDateLogChanging(System.Nullable<System.DateTime> value);
-    partial void OnDateLogChanged();
+    partial void OnIdImageChanging(string value);
+    partial void OnIdImageChanged();
+    partial void OnfBatchNameChanging(string value);
+    partial void OnfBatchNameChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnSubmitChanging(System.Nullable<int> value);
+    partial void OnSubmitChanged();
+    partial void OnDateCheckChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateCheckChanged();
     #endregion
 		
-		public tbl_LogFile()
+		public tbl_MissCheck_DESO()
 		{
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long Id
 		{
 			get
 			{
@@ -2447,145 +1988,7 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(200)")]
-		public string Username
-		{
-			get
-			{
-				return this._Username;
-			}
-			set
-			{
-				if ((this._Username != value))
-				{
-					this.OnUsernameChanging(value);
-					this.SendPropertyChanging();
-					this._Username = value;
-					this.SendPropertyChanged("Username");
-					this.OnUsernameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Info", DbType="NVarChar(2000)")]
-		public string Info
-		{
-			get
-			{
-				return this._Info;
-			}
-			set
-			{
-				if ((this._Info != value))
-				{
-					this.OnInfoChanging(value);
-					this.SendPropertyChanging();
-					this._Info = value;
-					this.SendPropertyChanged("Info");
-					this.OnInfoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateLog", DbType="DateTime")]
-		public System.Nullable<System.DateTime> DateLog
-		{
-			get
-			{
-				return this._DateLog;
-			}
-			set
-			{
-				if ((this._DateLog != value))
-				{
-					this.OnDateLogChanging(value);
-					this.SendPropertyChanging();
-					this._DateLog = value;
-					this.SendPropertyChanged("DateLog");
-					this.OnDateLogChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_MissImage")]
-	public partial class tbl_MissImage : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private long _id;
-		
-		private string _IdImage;
-		
-		private string _fBatchName;
-		
-		private string _UserNameDESo;
-		
-		private System.Nullable<int> _SubmitDESo;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(long value);
-    partial void OnidChanged();
-    partial void OnIdImageChanging(string value);
-    partial void OnIdImageChanged();
-    partial void OnfBatchNameChanging(string value);
-    partial void OnfBatchNameChanged();
-    partial void OnUserNameDESoChanging(string value);
-    partial void OnUserNameDESoChanged();
-    partial void OnSubmitDESoChanging(System.Nullable<int> value);
-    partial void OnSubmitDESoChanged();
-    #endregion
-		
-		public tbl_MissImage()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.Always, DbType="BigInt NOT NULL IDENTITY", IsDbGenerated=true)]
-		public long id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(255)")]
 		public string IdImage
 		{
 			get
@@ -2605,7 +2008,7 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
 		public string fBatchName
 		{
 			get
@@ -2625,42 +2028,62 @@ namespace Natsu
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDESo", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string UserNameDESo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255)")]
+		public string UserName
 		{
 			get
 			{
-				return this._UserNameDESo;
+				return this._UserName;
 			}
 			set
 			{
-				if ((this._UserNameDESo != value))
+				if ((this._UserName != value))
 				{
-					this.OnUserNameDESoChanging(value);
+					this.OnUserNameChanging(value);
 					this.SendPropertyChanging();
-					this._UserNameDESo = value;
-					this.SendPropertyChanged("UserNameDESo");
-					this.OnUserNameDESoChanged();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SubmitDESo", DbType="Int")]
-		public System.Nullable<int> SubmitDESo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Submit", DbType="Int")]
+		public System.Nullable<int> Submit
 		{
 			get
 			{
-				return this._SubmitDESo;
+				return this._Submit;
 			}
 			set
 			{
-				if ((this._SubmitDESo != value))
+				if ((this._Submit != value))
 				{
-					this.OnSubmitDESoChanging(value);
+					this.OnSubmitChanging(value);
 					this.SendPropertyChanging();
-					this._SubmitDESo = value;
-					this.SendPropertyChanged("SubmitDESo");
-					this.OnSubmitDESoChanged();
+					this._Submit = value;
+					this.SendPropertyChanged("Submit");
+					this.OnSubmitChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCheck", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCheck
+		{
+			get
+			{
+				return this._DateCheck;
+			}
+			set
+			{
+				if ((this._DateCheck != value))
+				{
+					this.OnDateCheckChanging(value);
+					this.SendPropertyChanging();
+					this._DateCheck = value;
+					this.SendPropertyChanged("DateCheck");
+					this.OnDateCheckChanged();
 				}
 			}
 		}
