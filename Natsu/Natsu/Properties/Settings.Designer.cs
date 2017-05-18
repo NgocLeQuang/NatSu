@@ -44,5 +44,17 @@ namespace Natsu.Properties {
                 return ((string)(this["NatsuConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int ZoomImage {
+            get {
+                return ((int)(this["ZoomImage"]));
+            }
+            set {
+                this["ZoomImage"] = value;
+            }
+        }
     }
 }
