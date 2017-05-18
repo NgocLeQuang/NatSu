@@ -31,7 +31,7 @@ namespace Natsu
             {
                 temp = false;
                 Frm_Login a = new Frm_Login();
-                a.lb_programName.Text = "\n           NATSU Project";
+                a.lb_programName.Text = @"           NATSU Project";
 
                 a.lb_vision.Text = @"Version :";
                 a.grb_1.Text = @"Information PC";
@@ -75,22 +75,22 @@ namespace Natsu
             if (iLogin == 1)
             {
                 //Kiểm tra Token
-                bool has = Global.db_BPO.tbl_TokenLogins.Any(w => w.UserName == strUsername && w.IDProject == Global.StrIdProject);
+                bool has = Global.DbBpo.tbl_TokenLogins.Any(w => w.UserName == strUsername && w.IDProject == Global.StrIdProject);
                 if (has)
                 {
-                    var token = (from w in Global.db_BPO.tbl_TokenLogins where w.UserName == strUsername && w.IDProject == Global.StrIdProject select w.Token).FirstOrDefault();
+                    var token = (from w in Global.DbBpo.tbl_TokenLogins where w.UserName == strUsername && w.IDProject == Global.StrIdProject select w.Token).FirstOrDefault();
                     if (token == "")
                     {
-                        Global.db_BPO.updateToken(strUsername, Global.StrIdProject, strToken);
-                        Global.db_BPO.InsertLoginTime_new(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken, Global.StrIdProject);
+                        Global.DbBpo.updateToken(strUsername, Global.StrIdProject, strToken);
+                        Global.DbBpo.InsertLoginTime_new(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken, Global.StrIdProject);
                         loginOk = true;
                     }
                     else
                     {
                         if (MessageBox.Show(@"This user has logged in on another machine. Would you like to continue signing in?", @"Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                         {
-                            Global.db_BPO.updateToken(strUsername, Global.StrIdProject, strToken);
-                            Global.db_BPO.InsertLoginTime_new(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken, Global.StrIdProject);
+                            Global.DbBpo.updateToken(strUsername, Global.StrIdProject, strToken);
+                            Global.DbBpo.InsertLoginTime_new(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken, Global.StrIdProject);
                             loginOk = true;
                         }
                         else
@@ -105,11 +105,11 @@ namespace Natsu
                     token.UserName = strUsername;
                     token.IDProject = Global.StrIdProject;
                     token.Token = "";
-                    token.DateLogin = DateTime.Now; Global.db_BPO.tbl_TokenLogins.InsertOnSubmit(token);
-                    Global.db_BPO.SubmitChanges();
+                    token.DateLogin = DateTime.Now; Global.DbBpo.tbl_TokenLogins.InsertOnSubmit(token);
+                    Global.DbBpo.SubmitChanges();
                     loginOk = true;
-                    Global.db_BPO.updateToken(strUsername, Global.StrIdProject, strToken);
-                    Global.db_BPO.InsertLoginTime_new(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken, Global.StrIdProject);
+                    Global.DbBpo.updateToken(strUsername, Global.StrIdProject, strToken);
+                    Global.DbBpo.InsertLoginTime_new(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken, Global.StrIdProject);
                 }
             }
         }
@@ -117,9 +117,9 @@ namespace Natsu
         {
             try
             {
-                iKiemtraLogin = Global.db_BPO.KiemTraLogin(username, password);
-                strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
-                role = (from w in Global.db_BPO.tbl_Users where w.Username == username select w.IDRole).FirstOrDefault();
+                iKiemtraLogin = Global.DbBpo.KiemTraLogin(username, password);
+                strVersion = (from w in Global.DbBpo.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
+                role = (from w in Global.DbBpo.tbl_Users where w.Username == username select w.IDRole).FirstOrDefault();
                 if (!string.IsNullOrEmpty(role))
                     role = role.ToUpper();
                 if (iKiemtraLogin == 1 && role == "ADMIN")
