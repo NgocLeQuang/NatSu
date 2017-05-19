@@ -6,54 +6,69 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace Natsu.MyUserControl
 {
     public partial class UcNatsu : UserControl
     {
+        public event AllTextChange Changed;
         public UcNatsu()
         {
             InitializeComponent();
         }
         public void ResetData()
         {
-            //uc_AE_Rows9.ResetData();
-            //uc_AE_Rows10.ResetData();
-            //txt_TruongSo02.Focus();
+            UcNatsuItem1.ResetData();
+            UcNatsuItem2.ResetData();
+            UcNatsuItem3.ResetData();
+            UcNatsuItem4.ResetData();
+            UcNatsuItem5.ResetData();
+            UcNatsuItem1.txt_TruongSo01.Focus();
         }
         public bool IsEmpty()
         {
-            bool empty = true;
-
-            //if (uc_AE_Rows1.IsEmpty() == false ||
-            //    uc_AE_Rows2.IsEmpty() == false ||
-            //    uc_AE_Rows3.IsEmpty() == false ||
-            //    uc_AE_Rows4.IsEmpty() == false ||
-            //    uc_AE_Rows5.IsEmpty() == false ||
-            //    uc_AE_Rows6.IsEmpty() == false ||
-            //    uc_AE_Rows7.IsEmpty() == false ||
-            //    uc_AE_Rows8.IsEmpty() == false ||
-            //    uc_AE_Rows9.IsEmpty() == false ||
-            //    uc_AE_Rows10.IsEmpty() == false)
-            //    empty = false;
+            bool empty = UcNatsuItem1.IsEmpty() &&
+                         UcNatsuItem2.IsEmpty() &&
+                         UcNatsuItem3.IsEmpty() &&
+                         UcNatsuItem4.IsEmpty() &&
+                         UcNatsuItem5.IsEmpty();
             return empty;
         }
+
         public void SaveData(string idImage)
         {
-
+            UcNatsuItem1.SaveData(idImage, "1");
+            UcNatsuItem2.SaveData(idImage, "2");
+            UcNatsuItem3.SaveData(idImage, "3");
+            UcNatsuItem4.SaveData(idImage, "4");
+            UcNatsuItem5.SaveData(idImage, "5");
         }
+
         public void SuaVaLuu(string usersaiit, string usersainhieu, string idimage)
         {
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows1.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows1.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows2.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows2.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows3.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows3.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows4.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows4.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows5.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows5.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows6.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows6.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows7.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows7.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows8.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows8.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows9.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows9.txt_TruongSo09.Text, "");
-            //Global.db.SuaVaLuu_deso(usersaiit, usersainhieu, idimage, Global.StrBatch, Global.StrUsername, uc_AE_Rows10.txt_STT.Text, txt_TruongSo02.Text, txt_TruongSo03.Text, txt_TruongSo04.Text, txt_TruongSo05.Text, "", "", uc_AE_Rows10.txt_TruongSo09.Text, "");
+            UcNatsuItem1.SaveData_SuaVaLuu(usersaiit, usersainhieu, idimage, "1");
+            UcNatsuItem2.SaveData_SuaVaLuu(usersaiit, usersainhieu, idimage, "2");
+            UcNatsuItem3.SaveData_SuaVaLuu(usersaiit, usersainhieu, idimage, "3");
+            UcNatsuItem4.SaveData_SuaVaLuu(usersaiit, usersainhieu, idimage, "4");
+            UcNatsuItem5.SaveData_SuaVaLuu(usersaiit, usersainhieu, idimage, "5");
+        }
+
+        private void UcNatsuItem1_Load(object sender, EventArgs e)
+        {
+            UcNatsuItem1.Changed += UcNatsuItem1_Changed;
+            UcNatsuItem2.Changed += UcNatsuItem1_Changed;
+            UcNatsuItem3.Changed += UcNatsuItem1_Changed;
+            UcNatsuItem4.Changed += UcNatsuItem1_Changed;
+            UcNatsuItem5.Changed += UcNatsuItem1_Changed;
+        }
+
+        private void UcNatsuItem1_Changed(object sender, EventArgs e)
+        {
+            if (sender is TextEdit)
+            {
+                Changed?.Invoke(sender, e);
+            }
         }
     }
 }

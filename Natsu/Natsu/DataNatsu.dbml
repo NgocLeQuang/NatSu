@@ -52,6 +52,7 @@
       <Column Name="Truong_22" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_23" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_24" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_25" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="IdPhieu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Dem" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Error" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -92,6 +93,7 @@
       <Column Name="Truong_22" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_23" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_24" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_25" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="IdPhieu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Dem" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Error" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -367,6 +369,7 @@
     <Parameter Name="Truong_22" Parameter="truong_22" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="Truong_23" Parameter="truong_23" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="Truong_24" Parameter="truong_24" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_25" Parameter="truong_25" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="idphieu" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
@@ -462,6 +465,7 @@
     <Parameter Name="Truong_22" Parameter="truong_22" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="Truong_23" Parameter="truong_23" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="Truong_24" Parameter="truong_24" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_25" Parameter="truong_25" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.SuaVaLuu_True" Method="SuaVaLuu_True">

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Natsu.MyClass;
 using Natsu.Properties;
@@ -52,7 +47,7 @@ namespace Natsu.MyForm
                             return "Error";
 
                         }
-                        UcNatsu1.ucNatsuItem1.textEdit1.Focus();
+                        UcNatsu1.UcNatsuItem1.txt_TruongSo01.Focus();
                     }
                     catch (Exception)
                     {
@@ -69,7 +64,7 @@ namespace Natsu.MyForm
                         UcPictureBox1.imageBox1.Image = Resources.svn_deleted;
                         return "Error";
                     }
-                    UcNatsu1.ucNatsuItem1.textEdit1.Focus();
+                    UcNatsu1.UcNatsuItem1.txt_TruongSo01.Focus();
                 }
             }
             return "OK";
@@ -89,7 +84,7 @@ namespace Natsu.MyForm
                 bar_Manager.Enabled = false;
                 if (Global.StrRole == "DESO")
                 {
-                    
+                    UcNatsu1.ResetData();
                 }
                 else
                 {
@@ -104,36 +99,7 @@ namespace Natsu.MyForm
                 MessageBox.Show(@"Error Load Main: " + i.Message);
             }
         }
-
-        private void btn_ZoomImage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            new FrmChangeZoom().ShowDialog();
-        }
-
-        private void btn_Logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DialogResult = DialogResult.Yes;
-        }
-
-        private void btn_Exit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Global.DbBpo.UpdateTimeLastRequest(Global.StrToken);
-            Global.DbBpo.UpdateTimeLogout(Global.StrToken);
-            Global.DbBpo.ResetToken(Global.StrUsername, Global.StrIdProject, Global.StrToken);
-            Settings.Default.Save();
-        }
-
-        private void btn_Pause_Click(object sender, EventArgs e)
-        {
-            new FrmFreeTime().ShowDialog();
-            Global.DbBpo.UpdateTimeFree(Global.StrToken, Global.FreeTime);
-        }
-
+        
         private void btn_Start_Submit_Click(object sender, EventArgs e)
         {
             try
@@ -182,7 +148,7 @@ namespace Natsu.MyForm
                         }
                         else
                         {
-                            MessageBox.Show(@"Out of Image!");
+                            MessageBox.Show(@"Picture is out!");
                             btn_Logout_ItemClick(null, null);
                         }
                     }
@@ -202,8 +168,7 @@ namespace Natsu.MyForm
                     {
                         if (UcNatsu1.IsEmpty())
                         {
-                            if (
-                                MessageBox.Show(@"You are empty one or more fields.Do you want to submit ? \r\nYes = Submit and next Image < Press Enter >\r\nNo = Enter the blank field for this image. < Press N > ", @"Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                            if (MessageBox.Show(@"You are empty one or more fields.Do you want to submit ? \r\nYes = Submit and next Image < Press Enter >\r\nNo = Enter the blank field for this image. < Press N > ", @"Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                                 return;
                         }
                         UcNatsu1.SaveData(lb_IdImage.Text);
@@ -253,6 +218,111 @@ namespace Natsu.MyForm
             {
                 MessageBox.Show(@"Error Submit" + i.Message);
             }
+        }
+
+        private void btn_Submit_Logout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Global.DbBpo.UpdateTimeLastRequest(Global.StrToken);
+                //Kiểm tra token
+                var token = (from w in Global.DbBpo.tbl_TokenLogins where w.UserName == Global.StrUsername && w.IDProject == Global.StrIdProject select w.Token).FirstOrDefault();
+
+                if (token != Global.StrToken)
+                {
+                    MessageBox.Show(@"User logged on to another PC, please login again!");
+                    DialogResult = DialogResult.Yes;
+                }
+                if (Global.StrRole == "DESO")
+                {
+                    if (UcNatsu1.IsEmpty())
+                    {
+                        if (MessageBox.Show(@"You are empty one or more fields.Do you want to submit ? \r\nYes = Submit and next Image < Press Enter >\r\nNo = Enter the blank field for this image. < Press N > ", @"Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                            return;
+                    }
+                    UcNatsu1.SaveData(lb_IdImage.Text);
+                }
+                btn_Logout_ItemClick(null, null);
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show(@"Error Submit" + i.Message);
+            }
+        }
+
+        private void FrmMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.Enter)
+                btn_Start_Submit_Click(null, null);
+            if (e.Control && e.KeyCode == Keys.PageUp)
+                UcPictureBox1.btn_Xoaytrai_Click(null, null);
+            if (e.Control && e.KeyCode == Keys.PageDown)
+                UcPictureBox1.btn_xoayphai_Click(null, null);
+            if (e.KeyCode == Keys.Escape)
+            {
+                new FrmFreeTime().ShowDialog();
+                Global.DbBpo.UpdateTimeFree(Global.StrToken, Global.FreeTime);
+            }
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Global.DbBpo.UpdateTimeLastRequest(Global.StrToken);
+            Global.DbBpo.UpdateTimeLogout(Global.StrToken);
+            Global.DbBpo.ResetToken(Global.StrUsername, Global.StrIdProject, Global.StrToken);
+            Settings.Default.Save();
+        }
+
+        private void btn_Logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult = DialogResult.Yes;
+        }
+
+        private void btn_Exit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_ZoomImage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new FrmChangeZoom().ShowDialog();
+        }
+
+        private void btn_Pause_Click(object sender, EventArgs e)
+        {
+            new FrmFreeTime().ShowDialog();
+            Global.DbBpo.UpdateTimeFree(Global.StrToken, Global.FreeTime);
+            UcNatsu1.ResetData();
+        }
+
+        private void btn_Batch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmManagerBatch().ShowDialog();
+        }
+
+        private void btn_User_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_Check_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_Progress_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_Productivity_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btn_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }
