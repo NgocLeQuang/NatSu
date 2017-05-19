@@ -37,6 +37,7 @@
     <Reference Include="DevExpress.Data.v16.2" />
     <Reference Include="DevExpress.Utils.v16.2" />
     <Reference Include="DevExpress.Sparkline.v16.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.2" />
     <Reference Include="DevExpress.Printing.v16.2.Core" />
     <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -109,6 +110,24 @@
     <Compile Include="MyForm\FrmUser.designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\UcNatsuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UcNatsuItem.Designer.cs">
+      <DependentUpon>UcNatsuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UcPictureBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UcPictureBox.designer.cs">
+      <DependentUpon>UcPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UcNatsu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UcNatsu.Designer.cs">
+      <DependentUpon>UcNatsu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config" />
@@ -135,6 +154,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UcNatsu.resx">
+      <DependentUpon>UcNatsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UcNatsuItem.resx">
+      <DependentUpon>UcNatsuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UcPictureBox.resx">
+      <DependentUpon>UcPictureBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

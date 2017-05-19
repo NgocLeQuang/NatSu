@@ -56,5 +56,29 @@ namespace Natsu.Properties {
                 this["ZoomImage"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1400")]
+        public int Zoom_Doc {
+            get {
+                return ((int)(this["Zoom_Doc"]));
+            }
+            set {
+                this["Zoom_Doc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1700")]
+        public int Zoom_Ngang {
+            get {
+                return ((int)(this["Zoom_Ngang"]));
+            }
+            set {
+                this["Zoom_Ngang"] = value;
+            }
+        }
     }
 }
