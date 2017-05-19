@@ -144,14 +144,14 @@ namespace Natsu.MyForm
 
                 if (token != Global.StrToken)
                 {
-                    MessageBox.Show("User đã đăng nhập ở PC khác, bạn vui lòng đăng nhập lại!");
+                    MessageBox.Show(@"User logged on to another PC, please login again!");
                     DialogResult = DialogResult.Yes;
                 }
                 if (btn_Start_Submit.Text == @"Start")
                 {
                     if (string.IsNullOrEmpty(Global.StrBatch))
                     {
-                        MessageBox.Show("Vui lòng đăng nhập lại và chọn Batch!");
+                        MessageBox.Show(@"Please log in again and select Batch!");
                         return;
                     }
 
@@ -161,9 +161,7 @@ namespace Natsu.MyForm
                         var listResult = Global.Db.GetBatNotFinishDeSo(Global.StrUsername).ToList();
                         if (listResult.Count > 0)
                         {
-                            if (MessageBox.Show("Batch tiếp theo là: " + listResult[0].fbatchname +
-                                    "\nBạn có muốn tiếp tục làm không?", "Thông báo!", MessageBoxButtons.YesNo) ==
-                                DialogResult.Yes)
+                            if (MessageBox.Show(@"Batch next is: " + listResult[0].fbatchname + "\nWould you like to continue??", "Notification!", MessageBoxButtons.YesNo) == DialogResult.Yes)
                             {
                                 Global.StrBatch = listResult[0].fbatchname;
                                 lb_fBatchName.Text = Global.StrBatch;
@@ -190,7 +188,7 @@ namespace Natsu.MyForm
                     }
                     else if (temp == "Error")
                     {
-                        MessageBox.Show("Không thể load hình!");
+                        MessageBox.Show(@"Can not load image!");
                         btn_Logout_ItemClick(null, null);
                     }
                     UcNatsu1.ResetData();
@@ -205,9 +203,7 @@ namespace Natsu.MyForm
                         if (UcNatsu1.IsEmpty())
                         {
                             if (
-                                MessageBox.Show(
-                                    "Bạn đang để trống nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>",
-                                    "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                                MessageBox.Show(@"You are empty one or more fields.Do you want to submit ? \r\nYes = Submit and next Image < Press Enter >\r\nNo = Enter the blank field for this image. < Press N > ", @"Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                                 return;
                         }
                         UcNatsu1.SaveData(lb_IdImage.Text);
@@ -216,14 +212,10 @@ namespace Natsu.MyForm
                         string temp = GetImage();
                         if (temp == "NULL")
                         {
-                            Global.KeyEven = false;
                             var listResult = Global.Db.GetBatNotFinishDeSo(Global.StrUsername).ToList();
                             if (listResult.Count > 0)
                             {
-                                if (MessageBox.Show(
-                                        "Batch tiếp theo là: " + listResult[0].fbatchname +
-                                        "\nBạn có muốn tiếp tục làm không?", "Thông báo!", MessageBoxButtons.YesNo) ==
-                                    DialogResult.Yes)
+                                if (MessageBox.Show(@"Batch next is: " + listResult[0].fbatchname +"\nWould you like to continue??", @"Notification!", MessageBoxButtons.YesNo) == DialogResult.Yes)
                                 {
                                     Global.StrBatch = listResult[0].fbatchname;
                                     lb_fBatchName.Text = Global.StrBatch;
@@ -234,7 +226,7 @@ namespace Natsu.MyForm
                                     lb_SoHinhLamDuoc.Text = (from w in Global.Db.tbl_MissImage_DESOs where w.UserName == Global.StrUsername && w.fBatchName == Global.StrBatch select w.IdImage).Count().ToString();
                                     
                                     SetValue();
-                                    btn_Start_Submit.Text = "Start";
+                                    btn_Start_Submit.Text = @"Start";
                                     btn_Start_Submit_Click(null, null);
                                 }
                                 else
@@ -244,13 +236,13 @@ namespace Natsu.MyForm
                             }
                             else
                             {
-                                MessageBox.Show("Hết Hình!");
+                                MessageBox.Show(@"Picture is out!");
                                 btn_Logout_ItemClick(null, null);
                             }
                         }
                         else if (temp == "Error")
                         {
-                            MessageBox.Show("Không thể load hình!");
+                            MessageBox.Show(@"Can not load image!");
                             btn_Logout_ItemClick(null, null);
                         }
                     }
@@ -259,7 +251,7 @@ namespace Natsu.MyForm
             }
             catch (Exception i)
             {
-                MessageBox.Show("Lỗi khi Submit" + i.Message);
+                MessageBox.Show(@"Error Submit" + i.Message);
             }
         }
     }
