@@ -79,6 +79,12 @@
     <Compile Include="MyForm\FrmChangeZoom.designer.cs">
       <DependentUpon>FrmChangeZoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frmCreateBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frmCreateBatch.Designer.cs">
+      <DependentUpon>frmCreateBatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\FrmFreeTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="MyClass\Global.cs" />
+    <Compile Include="MyForm\frmManagerBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frmManagerBatch.Designer.cs">
+      <DependentUpon>frmManagerBatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,11 +140,17 @@
     <EmbeddedResource Include="MyForm\FrmChangeZoom.resx">
       <DependentUpon>FrmChangeZoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frmCreateBatch.resx">
+      <DependentUpon>frmCreateBatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\FrmFreeTime.resx">
       <DependentUpon>FrmFreeTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frmManagerBatch.resx">
+      <DependentUpon>frmManagerBatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
