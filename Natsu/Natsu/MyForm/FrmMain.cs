@@ -20,5 +20,10 @@ namespace Natsu.MyForm
         {
 
         }
+
+        private void btn_ZoomImage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new FrmChangeZoom().ShowDialog();
+        }
     }
 }
