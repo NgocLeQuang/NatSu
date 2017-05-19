@@ -31,7 +31,7 @@ namespace Natsu.MyForm
         }
         private void RefreshBatch()
         {
-            var temp = from var in Global.db.tbl_Batches orderby var.fdatecreated select var;
+            var temp = from var in Global.Db.tbl_Batches orderby var.fdatecreated select var;
             gridControl1.DataSource = temp;
         }
 
@@ -43,7 +43,7 @@ namespace Natsu.MyForm
             {
                 try
                 {
-                    Global.db.XoaBatch(fbatchname);
+                    Global.Db.XoaBatch(fbatchname);
                     Directory.Delete(temp, true);
                     MessageBox.Show("Đã xóa batch thành công!");
 
