@@ -3,7 +3,7 @@
     internal class Global
     {
         public static DataBPODataContext DbBpo = new DataBPODataContext();
-        public static DataNatsuDataContext Db = new DataNatsuDataContext();
+        public static DataNatsuDataContext db = new DataNatsuDataContext();
         public static string StrMachine = "";
         public static string StrUserWindow = "";
         public static string StrIpAddress = "";
