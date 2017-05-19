@@ -51,7 +51,6 @@
             this.labelControl1.Size = new System.Drawing.Size(12, 23);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "1";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // labelControl2
             // 
@@ -64,7 +63,6 @@
             this.labelControl2.Size = new System.Drawing.Size(12, 23);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "2";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // labelControl3
             // 
@@ -77,7 +75,6 @@
             this.labelControl3.Size = new System.Drawing.Size(12, 23);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "3";
-            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
             // labelControl4
             // 
@@ -90,7 +87,6 @@
             this.labelControl4.Size = new System.Drawing.Size(12, 23);
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "4";
-            this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);
             // 
             // labelControl5
             // 
@@ -103,7 +99,6 @@
             this.labelControl5.Size = new System.Drawing.Size(12, 23);
             this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "5";
-            this.labelControl5.Click += new System.EventHandler(this.labelControl5_Click);
             // 
             // ucNatsuItem5
             // 
@@ -112,7 +107,6 @@
             this.ucNatsuItem5.Name = "ucNatsuItem5";
             this.ucNatsuItem5.Size = new System.Drawing.Size(508, 108);
             this.ucNatsuItem5.TabIndex = 0;
-            this.ucNatsuItem5.Load += new System.EventHandler(this.ucNatsuItem5_Load);
             // 
             // ucNatsuItem3
             // 
@@ -121,7 +115,6 @@
             this.ucNatsuItem3.Name = "ucNatsuItem3";
             this.ucNatsuItem3.Size = new System.Drawing.Size(508, 108);
             this.ucNatsuItem3.TabIndex = 0;
-            this.ucNatsuItem3.Load += new System.EventHandler(this.ucNatsuItem3_Load);
             // 
             // ucNatsuItem4
             // 
@@ -130,7 +123,6 @@
             this.ucNatsuItem4.Name = "ucNatsuItem4";
             this.ucNatsuItem4.Size = new System.Drawing.Size(508, 108);
             this.ucNatsuItem4.TabIndex = 0;
-            this.ucNatsuItem4.Load += new System.EventHandler(this.ucNatsuItem4_Load);
             // 
             // ucNatsuItem2
             // 
@@ -147,7 +139,6 @@
             this.ucNatsuItem1.Name = "ucNatsuItem1";
             this.ucNatsuItem1.Size = new System.Drawing.Size(508, 108);
             this.ucNatsuItem1.TabIndex = 0;
-            this.ucNatsuItem1.Load += new System.EventHandler(this.ucNatsuItem1_Load);
             // 
             // UcNatsu
             // 
@@ -174,15 +165,15 @@
 
         #endregion
 
-        private UcNatsuItem ucNatsuItem1;
-        private UcNatsuItem ucNatsuItem2;
-        private UcNatsuItem ucNatsuItem3;
-        private UcNatsuItem ucNatsuItem4;
-        private UcNatsuItem ucNatsuItem5;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
+        public UcNatsuItem ucNatsuItem1;
+        public UcNatsuItem ucNatsuItem2;
+        public UcNatsuItem ucNatsuItem3;
+        public UcNatsuItem ucNatsuItem4;
+        public UcNatsuItem ucNatsuItem5;
+        public DevExpress.XtraEditors.LabelControl labelControl1;
+        public DevExpress.XtraEditors.LabelControl labelControl2;
+        public DevExpress.XtraEditors.LabelControl labelControl3;
+        public DevExpress.XtraEditors.LabelControl labelControl4;
+        public DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

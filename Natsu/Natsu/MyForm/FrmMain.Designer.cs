@@ -46,7 +46,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pn_Top = new DevExpress.XtraEditors.PanelControl();
             this.lb_SoHinhLamDuoc = new DevExpress.XtraEditors.LabelControl();
             this.lb_SoHinhConLai = new DevExpress.XtraEditors.LabelControl();
             this.lb_4 = new DevExpress.XtraEditors.LabelControl();
@@ -59,23 +59,23 @@
             this.lb_5 = new DevExpress.XtraEditors.LabelControl();
             this.lb_2 = new DevExpress.XtraEditors.LabelControl();
             this.lb_1 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.ucNatsu1 = new Natsu.MyUserControl.UcNatsu();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.pn_Input = new DevExpress.XtraEditors.PanelControl();
+            this.UcNatsu1 = new Natsu.MyUserControl.UcNatsu();
+            this.pn_Button = new DevExpress.XtraEditors.PanelControl();
             this.btn_Pause = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.ucPictureBox1 = new Natsu.MyUserControl.UcPictureBox();
+            this.pn_Image = new DevExpress.XtraEditors.PanelControl();
+            this.UcPictureBox1 = new Natsu.MyUserControl.UcPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Top)).BeginInit();
+            this.pn_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Input)).BeginInit();
+            this.pn_Input.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Button)).BeginInit();
+            this.pn_Button.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Image)).BeginInit();
+            this.pn_Image.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -131,12 +131,14 @@
             this.btn_Logout.Caption = "&Logout";
             this.btn_Logout.Id = 1;
             this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Logout_ItemClick);
             // 
             // btn_Exit
             // 
             this.btn_Exit.Caption = "&Exit";
             this.btn_Exit.Id = 2;
             this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Exit_ItemClick);
             // 
             // bar_Manager
             // 
@@ -226,25 +228,25 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 626);
             // 
-            // panelControl1
+            // pn_Top
             // 
-            this.panelControl1.Controls.Add(this.lb_SoHinhLamDuoc);
-            this.panelControl1.Controls.Add(this.lb_SoHinhConLai);
-            this.panelControl1.Controls.Add(this.lb_4);
-            this.panelControl1.Controls.Add(this.lb_TongSoHinh);
-            this.panelControl1.Controls.Add(this.lb_3);
-            this.panelControl1.Controls.Add(this.lb_UserName);
-            this.panelControl1.Controls.Add(this.lb_IdImage);
-            this.panelControl1.Controls.Add(this.lb_6);
-            this.panelControl1.Controls.Add(this.lb_fBatchName);
-            this.panelControl1.Controls.Add(this.lb_5);
-            this.panelControl1.Controls.Add(this.lb_2);
-            this.panelControl1.Controls.Add(this.lb_1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 20);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1264, 25);
-            this.panelControl1.TabIndex = 7;
+            this.pn_Top.Controls.Add(this.lb_SoHinhLamDuoc);
+            this.pn_Top.Controls.Add(this.lb_SoHinhConLai);
+            this.pn_Top.Controls.Add(this.lb_4);
+            this.pn_Top.Controls.Add(this.lb_TongSoHinh);
+            this.pn_Top.Controls.Add(this.lb_3);
+            this.pn_Top.Controls.Add(this.lb_UserName);
+            this.pn_Top.Controls.Add(this.lb_IdImage);
+            this.pn_Top.Controls.Add(this.lb_6);
+            this.pn_Top.Controls.Add(this.lb_fBatchName);
+            this.pn_Top.Controls.Add(this.lb_5);
+            this.pn_Top.Controls.Add(this.lb_2);
+            this.pn_Top.Controls.Add(this.lb_1);
+            this.pn_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pn_Top.Location = new System.Drawing.Point(0, 20);
+            this.pn_Top.Name = "pn_Top";
+            this.pn_Top.Size = new System.Drawing.Size(1264, 25);
+            this.pn_Top.TabIndex = 7;
             // 
             // lb_SoHinhLamDuoc
             // 
@@ -350,36 +352,36 @@
             this.lb_1.TabIndex = 12;
             this.lb_1.Text = "Batch:";
             // 
-            // panelControl2
+            // pn_Input
             // 
-            this.panelControl2.Controls.Add(this.ucNatsu1);
-            this.panelControl2.Controls.Add(this.panelControl4);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl2.Location = new System.Drawing.Point(736, 45);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(528, 601);
-            this.panelControl2.TabIndex = 8;
+            this.pn_Input.Controls.Add(this.UcNatsu1);
+            this.pn_Input.Controls.Add(this.pn_Button);
+            this.pn_Input.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pn_Input.Location = new System.Drawing.Point(736, 45);
+            this.pn_Input.Name = "pn_Input";
+            this.pn_Input.Size = new System.Drawing.Size(528, 601);
+            this.pn_Input.TabIndex = 8;
             // 
-            // ucNatsu1
+            // UcNatsu1
             // 
-            this.ucNatsu1.AutoScroll = true;
-            this.ucNatsu1.AutoSize = true;
-            this.ucNatsu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucNatsu1.Location = new System.Drawing.Point(2, 2);
-            this.ucNatsu1.Name = "ucNatsu1";
-            this.ucNatsu1.Size = new System.Drawing.Size(524, 567);
-            this.ucNatsu1.TabIndex = 1;
+            this.UcNatsu1.AutoScroll = true;
+            this.UcNatsu1.AutoSize = true;
+            this.UcNatsu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UcNatsu1.Location = new System.Drawing.Point(2, 2);
+            this.UcNatsu1.Name = "UcNatsu1";
+            this.UcNatsu1.Size = new System.Drawing.Size(524, 567);
+            this.UcNatsu1.TabIndex = 1;
             // 
-            // panelControl4
+            // pn_Button
             // 
-            this.panelControl4.Controls.Add(this.btn_Pause);
-            this.panelControl4.Controls.Add(this.btn_Submit_Logout);
-            this.panelControl4.Controls.Add(this.btn_Start_Submit);
-            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl4.Location = new System.Drawing.Point(2, 569);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(524, 30);
-            this.panelControl4.TabIndex = 0;
+            this.pn_Button.Controls.Add(this.btn_Pause);
+            this.pn_Button.Controls.Add(this.btn_Submit_Logout);
+            this.pn_Button.Controls.Add(this.btn_Start_Submit);
+            this.pn_Button.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pn_Button.Location = new System.Drawing.Point(2, 569);
+            this.pn_Button.Name = "pn_Button";
+            this.pn_Button.Size = new System.Drawing.Size(524, 30);
+            this.pn_Button.TabIndex = 0;
             // 
             // btn_Pause
             // 
@@ -388,6 +390,7 @@
             this.btn_Pause.Size = new System.Drawing.Size(95, 23);
             this.btn_Pause.TabIndex = 7;
             this.btn_Pause.Text = "Pause (ESC)";
+            this.btn_Pause.Click += new System.EventHandler(this.btn_Pause_Click);
             // 
             // btn_Submit_Logout
             // 
@@ -404,50 +407,52 @@
             this.btn_Start_Submit.Size = new System.Drawing.Size(90, 21);
             this.btn_Start_Submit.TabIndex = 5;
             this.btn_Start_Submit.Text = "Start";
+            this.btn_Start_Submit.Click += new System.EventHandler(this.btn_Start_Submit_Click);
             // 
-            // panelControl3
+            // pn_Image
             // 
-            this.panelControl3.Controls.Add(this.ucPictureBox1);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(0, 45);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(736, 601);
-            this.panelControl3.TabIndex = 9;
+            this.pn_Image.Controls.Add(this.UcPictureBox1);
+            this.pn_Image.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Image.Location = new System.Drawing.Point(0, 45);
+            this.pn_Image.Name = "pn_Image";
+            this.pn_Image.Size = new System.Drawing.Size(736, 601);
+            this.pn_Image.TabIndex = 9;
             // 
-            // ucPictureBox1
+            // UcPictureBox1
             // 
-            this.ucPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.ucPictureBox1.Name = "ucPictureBox1";
-            this.ucPictureBox1.Size = new System.Drawing.Size(732, 597);
-            this.ucPictureBox1.TabIndex = 0;
+            this.UcPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UcPictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.UcPictureBox1.Name = "UcPictureBox1";
+            this.UcPictureBox1.Size = new System.Drawing.Size(732, 597);
+            this.UcPictureBox1.TabIndex = 0;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 646);
-            this.Controls.Add(this.panelControl3);
-            this.Controls.Add(this.panelControl2);
-            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.pn_Image);
+            this.Controls.Add(this.pn_Input);
+            this.Controls.Add(this.pn_Top);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FrmMain";
             this.Text = "Natsu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Top)).EndInit();
+            this.pn_Top.ResumeLayout(false);
+            this.pn_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Input)).EndInit();
+            this.pn_Input.ResumeLayout(false);
+            this.pn_Input.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Button)).EndInit();
+            this.pn_Button.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pn_Image)).EndInit();
+            this.pn_Image.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,11 +476,11 @@
         private DevExpress.XtraBars.BarButtonItem btn_Productivity;
         private DevExpress.XtraBars.BarButtonItem btn_ExportExcel;
         private DevExpress.XtraBars.BarButtonItem btn_ZoomImage;
-        private DevExpress.XtraEditors.PanelControl panelControl3;
-        private MyUserControl.UcPictureBox ucPictureBox1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.PanelControl panelControl4;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl pn_Image;
+        private MyUserControl.UcPictureBox UcPictureBox1;
+        private DevExpress.XtraEditors.PanelControl pn_Input;
+        private DevExpress.XtraEditors.PanelControl pn_Button;
+        private DevExpress.XtraEditors.PanelControl pn_Top;
         private DevExpress.XtraEditors.LabelControl lb_SoHinhLamDuoc;
         private DevExpress.XtraEditors.LabelControl lb_SoHinhConLai;
         private DevExpress.XtraEditors.LabelControl lb_4;
@@ -491,7 +496,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_Pause;
         private DevExpress.XtraEditors.SimpleButton btn_Submit_Logout;
         private DevExpress.XtraEditors.SimpleButton btn_Start_Submit;
-        private MyUserControl.UcNatsu ucNatsu1;
+        private MyUserControl.UcNatsu UcNatsu1;
     }
 }
 
