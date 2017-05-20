@@ -67,6 +67,7 @@
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
             this.pn_Image = new DevExpress.XtraEditors.PanelControl();
             this.UcPictureBox1 = new Natsu.MyUserControl.UcPictureBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pn_Top)).BeginInit();
             this.pn_Top.SuspendLayout();
@@ -236,6 +237,7 @@
             // 
             // pn_Top
             // 
+            this.pn_Top.Controls.Add(this.labelControl1);
             this.pn_Top.Controls.Add(this.lb_SoHinhLamDuoc);
             this.pn_Top.Controls.Add(this.lb_SoHinhConLai);
             this.pn_Top.Controls.Add(this.lb_4);
@@ -433,6 +435,15 @@
             this.UcPictureBox1.Size = new System.Drawing.Size(745, 597);
             this.UcPictureBox1.TabIndex = 0;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Location = new System.Drawing.Point(1190, 6);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(60, 13);
+            this.labelControl1.TabIndex = 13;
+            this.labelControl1.Text = "月額変更届";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +459,7 @@
             this.KeyPreview = true;
             this.Name = "FrmMain";
             this.Text = "Natsu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMain_KeyDown);
@@ -506,6 +518,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_Submit_Logout;
         private DevExpress.XtraEditors.SimpleButton btn_Start_Submit;
         private MyUserControl.UcNatsu UcNatsu1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
 

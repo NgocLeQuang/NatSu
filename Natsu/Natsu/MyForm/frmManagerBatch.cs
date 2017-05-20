@@ -1,20 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
-    public partial class frmManagerBatch : DevExpress.XtraEditors.XtraForm
+    public partial class FrmManagerBatch : DevExpress.XtraEditors.XtraForm
     {
-        public frmManagerBatch()
+        public FrmManagerBatch()
         {
             InitializeComponent();
         }
@@ -26,7 +20,7 @@ namespace Natsu.MyForm
 
         private void btn_TaoBatch_Click(object sender, EventArgs e)
         {
-            new frmCreateBatch().ShowDialog();
+            new FrmCreateBatch().ShowDialog();
             RefreshBatch();
         }
         private void RefreshBatch()
@@ -39,19 +33,19 @@ namespace Natsu.MyForm
         {
             string fbatchname = gridView1.GetFocusedRowCellValue("fBatchName").ToString();
             string temp = Global.StrPath + "\\" + fbatchname;
-            if (MessageBox.Show("Bạn chắc chắn muốn xóa batch: " + fbatchname + "?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show(@"You definitely want to delete the batch: " + fbatchname + @"?", @"Notification", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {
                     Global.Db.XoaBatch(fbatchname);
                     Directory.Delete(temp, true);
-                    MessageBox.Show("Đã xóa batch thành công!");
+                    MessageBox.Show(@"Deleted batch successfully!");
 
                 }
                 catch (Exception)
                 {
 
-                    MessageBox.Show("Xóa batch bị lỗi!");
+                    MessageBox.Show(@"Delete batch error!");
 
                 }
 

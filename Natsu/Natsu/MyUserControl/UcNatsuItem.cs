@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Natsu.MyClass;
@@ -143,24 +138,24 @@ namespace Natsu.MyUserControl
                                     txt_TruongSo05.Text,
                                     txt_TruongSo06.Text,
                                     txt_TruongSo07.Text,
-                                    txt_TruongSo08.Text,
-                                    txt_TruongSo09.Text,
-                                    txt_TruongSo10.Text,
-                                    txt_TruongSo11.Text,
+                                    txt_TruongSo08.Text?.Replace(",",""),
+                                    txt_TruongSo09.Text?.Replace(",", ""),
+                                    txt_TruongSo10.Text?.Replace(",", ""),
+                                    txt_TruongSo11.Text?.Replace(",", ""),
                                     txt_TruongSo12.Text,
-                                    txt_TruongSo13.Text,
+                                    txt_TruongSo13.Text?.Replace(",", ""),
                                     txt_TruongSo14.Text,
                                     txt_TruongSo15.Text,
-                                    txt_TruongSo16.Text,
-                                    txt_TruongSo17.Text,
-                                    txt_TruongSo18.Text,
-                                    txt_TruongSo19.Text,
-                                    txt_TruongSo20.Text,
+                                    txt_TruongSo16.Text?.Replace(",", ""),
+                                    txt_TruongSo17.Text?.Replace(",", ""),
+                                    txt_TruongSo18.Text?.Replace(",", ""),
+                                    txt_TruongSo19.Text?.Replace(",", ""),
+                                    txt_TruongSo20.Text?.Replace(",", ""),
                                     txt_TruongSo21.Text,
                                     txt_TruongSo22.Text,
-                                    txt_TruongSo23.Text,
-                                    txt_TruongSo24.Text,
-                                    txt_TruongSo25.Text,
+                                    txt_TruongSo23.Text?.Replace(",", ""),
+                                    txt_TruongSo24.Text?.Replace(",", ""),
+                                    txt_TruongSo25.Text?.Replace(",", ""),
                                     idphieu);
         }
 
@@ -175,24 +170,24 @@ namespace Natsu.MyUserControl
                                     txt_TruongSo05.Text,
                                     txt_TruongSo06.Text,
                                     txt_TruongSo07.Text,
-                                    txt_TruongSo08.Text,
-                                    txt_TruongSo09.Text,
-                                    txt_TruongSo10.Text,
-                                    txt_TruongSo11.Text,
+                                    txt_TruongSo08.Text?.Replace(",", ""),
+                                    txt_TruongSo09.Text?.Replace(",", ""),
+                                    txt_TruongSo10.Text?.Replace(",", ""),
+                                    txt_TruongSo11.Text?.Replace(",", ""),
                                     txt_TruongSo12.Text,
-                                    txt_TruongSo13.Text,
+                                    txt_TruongSo13.Text?.Replace(",", ""),
                                     txt_TruongSo14.Text,
                                     txt_TruongSo15.Text,
-                                    txt_TruongSo16.Text,
-                                    txt_TruongSo17.Text,
-                                    txt_TruongSo18.Text,
-                                    txt_TruongSo19.Text,
-                                    txt_TruongSo20.Text,
+                                    txt_TruongSo16.Text?.Replace(",", ""),
+                                    txt_TruongSo17.Text?.Replace(",", ""),
+                                    txt_TruongSo18.Text?.Replace(",", ""),
+                                    txt_TruongSo19.Text?.Replace(",", ""),
+                                    txt_TruongSo20.Text?.Replace(",", ""),
                                     txt_TruongSo21.Text,
                                     txt_TruongSo22.Text,
-                                    txt_TruongSo23.Text,
-                                    txt_TruongSo24.Text,
-                                    txt_TruongSo25.Text);
+                                    txt_TruongSo23.Text?.Replace(",", ""),
+                                    txt_TruongSo24.Text?.Replace(",", ""),
+                                    txt_TruongSo25.Text?.Replace(",", ""));
         }
         public void DoiMauTextBox(TextEdit txt, int sobytenho, int sobytelon)
         {
@@ -423,7 +418,7 @@ namespace Natsu.MyUserControl
 
         private void txt_TruongSo12_EditValueChanged(object sender, EventArgs e)
         {
-            DoiMauTextBox((TextEdit)sender, 0, 2);
+            DoiMauTextBox((TextEdit)sender, 0, 4);
             Changed?.Invoke(sender, e);
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Natsu.MyForm
 {
-    partial class frmManagerBatch
+    partial class FrmManagerBatch
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagerBatch));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManagerBatch));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -122,7 +122,7 @@
             // 
             // IDBatch
             // 
-            this.IDBatch.Caption = "IDBatch";
+            this.IDBatch.Caption = "ID Batch";
             this.IDBatch.FieldName = "IDBatch";
             this.IDBatch.Name = "IDBatch";
             this.IDBatch.Visible = true;
@@ -131,7 +131,7 @@
             // 
             // fBatchName
             // 
-            this.fBatchName.Caption = "Tên Batch";
+            this.fBatchName.Caption = "Batch name";
             this.fBatchName.FieldName = "fBatchName";
             this.fBatchName.Name = "fBatchName";
             this.fBatchName.Visible = true;
@@ -140,7 +140,7 @@
             // 
             // fdatecreated
             // 
-            this.fdatecreated.Caption = "Ngày tạo Batch";
+            this.fdatecreated.Caption = "Date create";
             this.fdatecreated.FieldName = "fdatecreated";
             this.fdatecreated.Name = "fdatecreated";
             this.fdatecreated.Visible = true;
@@ -149,7 +149,7 @@
             // 
             // fusercreate
             // 
-            this.fusercreate.Caption = "User tạo Batch";
+            this.fusercreate.Caption = "User create";
             this.fusercreate.FieldName = "fusercreate";
             this.fusercreate.Name = "fusercreate";
             this.fusercreate.Visible = true;
@@ -158,7 +158,7 @@
             // 
             // fPathPicture
             // 
-            this.fPathPicture.Caption = "Đường dẫn up Batch";
+            this.fPathPicture.Caption = "Path Batch";
             this.fPathPicture.FieldName = "fPathPicture";
             this.fPathPicture.Name = "fPathPicture";
             this.fPathPicture.Visible = true;
@@ -167,7 +167,7 @@
             // 
             // fLocation
             // 
-            this.fLocation.Caption = "Path xuất trong excel";
+            this.fLocation.Caption = "Path export in excel";
             this.fLocation.FieldName = "fLocation";
             this.fLocation.Name = "fLocation";
             this.fLocation.Visible = true;
@@ -176,7 +176,7 @@
             // 
             // fSoLuongAnh
             // 
-            this.fSoLuongAnh.Caption = "Số lượng ảnh";
+            this.fSoLuongAnh.Caption = "Total image";
             this.fSoLuongAnh.FieldName = "fSoLuongAnh";
             this.fSoLuongAnh.Name = "fSoLuongAnh";
             this.fSoLuongAnh.Visible = true;
@@ -185,7 +185,7 @@
             // 
             // LoaiBatch
             // 
-            this.LoaiBatch.Caption = "Loại Batch";
+            this.LoaiBatch.Caption = "Type";
             this.LoaiBatch.FieldName = "LoaiBatch";
             this.LoaiBatch.Name = "LoaiBatch";
             this.LoaiBatch.Visible = true;
@@ -194,7 +194,7 @@
             // 
             // gridColumn8
             // 
-            this.gridColumn8.Caption = "Xoá Batch";
+            this.gridColumn8.Caption = "Delete";
             this.gridColumn8.ColumnEdit = this.repositoryItemButtonEdit3;
             this.gridColumn8.ImageAlignment = System.Drawing.StringAlignment.Center;
             this.gridColumn8.Name = "gridColumn8";
@@ -239,7 +239,7 @@
             this.btn_TaoBatch.Name = "btn_TaoBatch";
             this.btn_TaoBatch.Size = new System.Drawing.Size(126, 55);
             this.btn_TaoBatch.TabIndex = 0;
-            this.btn_TaoBatch.Text = "Tạo Batch";
+            this.btn_TaoBatch.Text = "Create Batch";
             this.btn_TaoBatch.Click += new System.EventHandler(this.btn_TaoBatch_Click);
             // 
             // repositoryItemButtonEdit5
@@ -250,15 +250,15 @@
             this.repositoryItemButtonEdit5.Name = "repositoryItemButtonEdit5";
             this.repositoryItemButtonEdit5.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // frmManagerBatch
+            // FrmManagerBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 441);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl1);
-            this.Name = "frmManagerBatch";
-            this.Text = "frmManagerBatch";
+            this.Name = "FrmManagerBatch";
+            this.Text = "Manager Batch";
             this.Load += new System.EventHandler(this.frmManagerBatch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();

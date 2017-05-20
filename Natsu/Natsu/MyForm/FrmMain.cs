@@ -173,7 +173,6 @@ namespace Natsu.MyForm
                         }
                         UcNatsu1.SaveData(lb_IdImage.Text);
                         UcNatsu1.ResetData();
-                        //    uc_ASAHI1.ResetData();//}
                         string temp = GetImage();
                         if (temp == "NULL")
                         {
@@ -292,37 +291,36 @@ namespace Natsu.MyForm
         {
             new FrmFreeTime().ShowDialog();
             Global.DbBpo.UpdateTimeFree(Global.StrToken, Global.FreeTime);
-            UcNatsu1.ResetData();
         }
 
         private void btn_Batch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmManagerBatch().ShowDialog();
+            new FrmManagerBatch().ShowDialog();
         }
 
         private void btn_User_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new FrmUser().ShowDialog();
         }
 
         private void btn_Check_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new FrmCheckDeSo().ShowDialog();
         }
 
         private void btn_Progress_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new FrmTienDo().ShowDialog();
         }
 
         private void btn_Productivity_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new FrmNangSuat().ShowDialog();
         }
 
         private void btn_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new FrmExportExcel().ShowDialog();
         }
     }
 }

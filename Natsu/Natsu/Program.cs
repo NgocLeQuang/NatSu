@@ -125,19 +125,19 @@ namespace Natsu
                 if (iKiemtraLogin == 1 && role == "ADMIN")
                 {
 
-                    //cbb.DataSource = Global.db.GetBatch();
-                    //cbb.DisplayMember = "fBatchName";
+                    cbb.DataSource = Global.Db.GetBatch();
+                    cbb.DisplayMember = "fBatchName";
                 }
 
                 else if (iKiemtraLogin == 1 && role == "DESO")
                 {
-                    //cbb.DataSource = Global.db.GetBatNotFinishDeSo(username);
-                    //cbb.DisplayMember = "fBatchName";
+                    cbb.DataSource = Global.Db.GetBatNotFinishDeSo(username);
+                    cbb.DisplayMember = "fBatchName";
                 }
                 else if (iKiemtraLogin == 1 && role == "CHECKERDESO")
                 {
-                    //cbb.DataSource = Global.db.GetBatNotFinishCheckerDeSo(username);
-                    //cbb.DisplayMember = "fBatchName";
+                    cbb.DataSource = Global.Db.GetBatNotFinishCheckerDeSo(username);
+                    cbb.DisplayMember = "fBatchName";
                 }
             }
             catch (Exception e)
