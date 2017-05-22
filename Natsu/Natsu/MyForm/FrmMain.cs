@@ -216,7 +216,7 @@ namespace Natsu.MyForm
                         string temp = GetImage();
                         if (temp == "NULL")
                         {
-                            Global.KeyEven = false;
+                            //Global.KeyEven = false;
                             var listResult = Global.Db.GetBatNotFinishDeSo(Global.StrUsername).ToList();
                             if (listResult.Count > 0)
                             {
