@@ -67,6 +67,7 @@
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
             this.pn_Image = new DevExpress.XtraEditors.PanelControl();
             this.UcPictureBox1 = new Natsu.MyUserControl.UcPictureBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pn_Top)).BeginInit();
             this.pn_Top.SuspendLayout();
@@ -158,36 +159,42 @@
             this.btn_Batch.Caption = "Manager &Batch";
             this.btn_Batch.Id = 4;
             this.btn_Batch.Name = "btn_Batch";
+            this.btn_Batch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Batch_ItemClick);
             // 
             // btn_User
             // 
             this.btn_User.Caption = "Manager &User";
             this.btn_User.Id = 5;
             this.btn_User.Name = "btn_User";
+            this.btn_User.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_User_ItemClick);
             // 
             // btn_Check
             // 
             this.btn_Check.Caption = "&Check";
             this.btn_Check.Id = 6;
             this.btn_Check.Name = "btn_Check";
+            this.btn_Check.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_ItemClick);
             // 
             // btn_Progress
             // 
             this.btn_Progress.Caption = "&Progress";
             this.btn_Progress.Id = 7;
             this.btn_Progress.Name = "btn_Progress";
+            this.btn_Progress.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Progress_ItemClick);
             // 
             // btn_Productivity
             // 
             this.btn_Productivity.Caption = "Pro&ductivity";
             this.btn_Productivity.Id = 8;
             this.btn_Productivity.Name = "btn_Productivity";
+            this.btn_Productivity.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Productivity_ItemClick);
             // 
             // btn_ExportExcel
             // 
             this.btn_ExportExcel.Caption = "&Export Excel";
             this.btn_ExportExcel.Id = 9;
             this.btn_ExportExcel.Name = "btn_ExportExcel";
+            this.btn_ExportExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ExportExcel_ItemClick);
             // 
             // btn_ZoomImage
             // 
@@ -230,6 +237,7 @@
             // 
             // pn_Top
             // 
+            this.pn_Top.Controls.Add(this.labelControl1);
             this.pn_Top.Controls.Add(this.lb_SoHinhLamDuoc);
             this.pn_Top.Controls.Add(this.lb_SoHinhConLai);
             this.pn_Top.Controls.Add(this.lb_4);
@@ -357,9 +365,9 @@
             this.pn_Input.Controls.Add(this.UcNatsu1);
             this.pn_Input.Controls.Add(this.pn_Button);
             this.pn_Input.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_Input.Location = new System.Drawing.Point(736, 45);
+            this.pn_Input.Location = new System.Drawing.Point(749, 45);
             this.pn_Input.Name = "pn_Input";
-            this.pn_Input.Size = new System.Drawing.Size(528, 601);
+            this.pn_Input.Size = new System.Drawing.Size(515, 601);
             this.pn_Input.TabIndex = 8;
             // 
             // UcNatsu1
@@ -369,8 +377,8 @@
             this.UcNatsu1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UcNatsu1.Location = new System.Drawing.Point(2, 2);
             this.UcNatsu1.Name = "UcNatsu1";
-            this.UcNatsu1.Size = new System.Drawing.Size(524, 567);
-            this.UcNatsu1.TabIndex = 1;
+            this.UcNatsu1.Size = new System.Drawing.Size(511, 567);
+            this.UcNatsu1.TabIndex = 8;
             // 
             // pn_Button
             // 
@@ -380,7 +388,7 @@
             this.pn_Button.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pn_Button.Location = new System.Drawing.Point(2, 569);
             this.pn_Button.Name = "pn_Button";
-            this.pn_Button.Size = new System.Drawing.Size(524, 30);
+            this.pn_Button.Size = new System.Drawing.Size(511, 30);
             this.pn_Button.TabIndex = 0;
             // 
             // btn_Pause
@@ -399,6 +407,7 @@
             this.btn_Submit_Logout.Size = new System.Drawing.Size(90, 21);
             this.btn_Submit_Logout.TabIndex = 6;
             this.btn_Submit_Logout.Text = "Submit + Logout";
+            this.btn_Submit_Logout.Click += new System.EventHandler(this.btn_Submit_Logout_Click);
             // 
             // btn_Start_Submit
             // 
@@ -415,7 +424,7 @@
             this.pn_Image.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_Image.Location = new System.Drawing.Point(0, 45);
             this.pn_Image.Name = "pn_Image";
-            this.pn_Image.Size = new System.Drawing.Size(736, 601);
+            this.pn_Image.Size = new System.Drawing.Size(749, 601);
             this.pn_Image.TabIndex = 9;
             // 
             // UcPictureBox1
@@ -423,8 +432,17 @@
             this.UcPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UcPictureBox1.Location = new System.Drawing.Point(2, 2);
             this.UcPictureBox1.Name = "UcPictureBox1";
-            this.UcPictureBox1.Size = new System.Drawing.Size(732, 597);
+            this.UcPictureBox1.Size = new System.Drawing.Size(745, 597);
             this.UcPictureBox1.TabIndex = 0;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Location = new System.Drawing.Point(1190, 6);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(60, 13);
+            this.labelControl1.TabIndex = 13;
+            this.labelControl1.Text = "月額変更届";
             // 
             // FrmMain
             // 
@@ -438,10 +456,13 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.KeyPreview = true;
             this.Name = "FrmMain";
             this.Text = "Natsu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMain_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pn_Top)).EndInit();
             this.pn_Top.ResumeLayout(false);
@@ -497,6 +518,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_Submit_Logout;
         private DevExpress.XtraEditors.SimpleButton btn_Start_Submit;
         private MyUserControl.UcNatsu UcNatsu1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
 

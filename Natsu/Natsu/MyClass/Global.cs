@@ -14,7 +14,7 @@
         public static string StrIdimage = "";
         public static string StrCheck = "";
         public static string StrPath = @"\\10.10.10.248\Natsu$";
-        public static string Webservice = "http://10.10.10.248:8888/Natsu";
+        public static string Webservice = "http://10.10.10.248:8888/Natsu/";
         public static string StrIdProject = "Natsu";
         public static int FreeTime = 0;
     }

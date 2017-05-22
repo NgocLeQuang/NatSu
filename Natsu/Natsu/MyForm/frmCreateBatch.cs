@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
@@ -12,11 +8,11 @@ using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
-    public partial class frmCreateBatch : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCreateBatch : XtraForm
     {
         private string[] _lFileNames;
-        private int soluonghinh;
-        public frmCreateBatch()
+        private int _soluonghinh;
+        public FrmCreateBatch()
         {
             InitializeComponent();
         }
@@ -24,19 +20,19 @@ namespace Natsu.MyForm
         private void frmCreateBatch_Load(object sender, EventArgs e)
         {
             txt_UserCreate.Text = Global.StrUsername;
-            txt_DateCreate.Text = DateTime.Now.ToShortDateString() + "  -  " + DateTime.Now.ToShortTimeString();
+            txt_DateCreate.Text = DateTime.Now.ToShortDateString() + @"  -  " + DateTime.Now.ToShortTimeString();
         }
 
         private void btn_BrowserImage_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_BatchName.Text))
             {
-                MessageBox.Show("Vui lòng điền tên batch", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"Please enter a batch name", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "All Types Image|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
+            dlg.Filter = @"All Types Image|*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff";
 
             dlg.Multiselect = true;
 
@@ -45,9 +41,9 @@ namespace Natsu.MyForm
                 _lFileNames = dlg.FileNames;
                 txt_ImagePath.Text = Path.GetDirectoryName(dlg.FileName);
             }
-            soluonghinh = 0;
-            soluonghinh = dlg.FileNames.Length;
-            lb_SoLuongHinh.Text = dlg.FileNames.Length + " files ";
+            _soluonghinh = 0;
+            _soluonghinh = dlg.FileNames.Length;
+            lb_SoLuongHinh.Text = dlg.FileNames.Length + @" files ";
         }
 
         private void btn_CreateBatch_Click(object sender, EventArgs e)
@@ -73,7 +69,7 @@ namespace Natsu.MyForm
                         fdatecreated = DateTime.Now,
                         fPathPicture = txt_ImagePath.Text,
                         fLocation = txt_Location.Text,
-                        fSoLuongAnh = soluonghinh.ToString(),
+                        fSoLuongAnh = _soluonghinh.ToString(),
                         LoaiBatch = "Getsu"
                         //LoaiBatch = rg_LoaiBatch.Properties.Items[rg_LoaiBatch.SelectedIndex].Description
 
@@ -87,13 +83,13 @@ namespace Natsu.MyForm
                 }
                 else
                 {
-                    MessageBox.Show("Batch đã tồn tại vui lòng điền tên batch khác!");
+                    MessageBox.Show(@"Batch exists please enter another batch name!");
                     return;
                 }
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn hình ảnh!");
+                MessageBox.Show(@"You have not selected an image yet!");
                 return;
             }
             string temp = Global.StrPath + "\\" + txt_BatchName.Text;
@@ -103,7 +99,7 @@ namespace Natsu.MyForm
             }
             else
             {
-                MessageBox.Show("Bị trùng tên batch!");
+                MessageBox.Show(@"Batch named batch!");
                 return;
             }
             foreach (string i in _lFileNames)
@@ -129,7 +125,7 @@ namespace Natsu.MyForm
                 progressBarControl1.PerformStep();
                 progressBarControl1.Update();
             }
-            MessageBox.Show("Tạo batch mới thành công!");
+            MessageBox.Show(@"Create a new batch successfully!");
             progressBarControl1.EditValue = 0;
             txt_BatchName.Text = "";
             txt_ImagePath.Text = "";

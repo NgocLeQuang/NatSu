@@ -29,80 +29,80 @@
         private void InitializeComponent()
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo01 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo02 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo03 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo04 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo05 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo06 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo07 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo08 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo09 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo10 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo11 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo12 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo13 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo14 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo15 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit16 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo16 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit17 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo17 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit18 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo18 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit19 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit20 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo19 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo20 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit21 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo21 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit22 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo22 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit23 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit24 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo23 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TruongSo24 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit25 = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit24.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).BeginInit();
+            this.txt_TruongSo25 = new DevExpress.XtraEditors.TextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo01.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo02.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo03.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo04.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo05.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo06.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo07.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo08.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo09.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo14.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo15.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo16.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo17.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo18.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo19.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo20.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo21.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo22.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo23.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo24.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo25.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -117,13 +117,16 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "1";
             // 
-            // textEdit1
+            // txt_TruongSo01
             // 
-            this.textEdit1.EditValue = "777777";
-            this.textEdit1.Location = new System.Drawing.Point(14, 2);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(50, 20);
-            this.textEdit1.TabIndex = 1;
+            this.txt_TruongSo01.EditValue = "";
+            this.txt_TruongSo01.Location = new System.Drawing.Point(14, 2);
+            this.txt_TruongSo01.Name = "txt_TruongSo01";
+            this.txt_TruongSo01.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo01.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo01.Size = new System.Drawing.Size(50, 20);
+            this.txt_TruongSo01.TabIndex = 1;
+            this.txt_TruongSo01.EditValueChanged += new System.EventHandler(this.txt_TruongSo01_EditValueChanged);
             // 
             // labelControl2
             // 
@@ -137,13 +140,16 @@
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "2";
             // 
-            // textEdit2
+            // txt_TruongSo02
             // 
-            this.textEdit2.EditValue = "7";
-            this.textEdit2.Location = new System.Drawing.Point(84, 2);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(25, 20);
-            this.textEdit2.TabIndex = 1;
+            this.txt_TruongSo02.EditValue = "";
+            this.txt_TruongSo02.Location = new System.Drawing.Point(84, 2);
+            this.txt_TruongSo02.Name = "txt_TruongSo02";
+            this.txt_TruongSo02.Properties.Mask.EditMask = "[1357*?]+";
+            this.txt_TruongSo02.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo02.Size = new System.Drawing.Size(25, 20);
+            this.txt_TruongSo02.TabIndex = 2;
+            this.txt_TruongSo02.EditValueChanged += new System.EventHandler(this.txt_TruongSo02_EditValueChanged);
             // 
             // labelControl3
             // 
@@ -157,12 +163,15 @@
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "3";
             // 
-            // textEdit3
+            // txt_TruongSo03
             // 
-            this.textEdit3.Location = new System.Drawing.Point(125, 2);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(50, 20);
-            this.textEdit3.TabIndex = 1;
+            this.txt_TruongSo03.Location = new System.Drawing.Point(125, 2);
+            this.txt_TruongSo03.Name = "txt_TruongSo03";
+            this.txt_TruongSo03.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo03.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo03.Size = new System.Drawing.Size(50, 20);
+            this.txt_TruongSo03.TabIndex = 3;
+            this.txt_TruongSo03.EditValueChanged += new System.EventHandler(this.txt_TruongSo03_EditValueChanged);
             // 
             // labelControl4
             // 
@@ -176,12 +185,15 @@
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "4";
             // 
-            // textEdit4
+            // txt_TruongSo04
             // 
-            this.textEdit4.Location = new System.Drawing.Point(187, 2);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(50, 20);
-            this.textEdit4.TabIndex = 1;
+            this.txt_TruongSo04.Location = new System.Drawing.Point(187, 2);
+            this.txt_TruongSo04.Name = "txt_TruongSo04";
+            this.txt_TruongSo04.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo04.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo04.Size = new System.Drawing.Size(50, 20);
+            this.txt_TruongSo04.TabIndex = 4;
+            this.txt_TruongSo04.EditValueChanged += new System.EventHandler(this.txt_TruongSo04_EditValueChanged);
             // 
             // labelControl5
             // 
@@ -195,13 +207,16 @@
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "5";
             // 
-            // textEdit5
+            // txt_TruongSo05
             // 
-            this.textEdit5.EditValue = "77,777";
-            this.textEdit5.Location = new System.Drawing.Point(272, 2);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(50, 20);
-            this.textEdit5.TabIndex = 1;
+            this.txt_TruongSo05.EditValue = "";
+            this.txt_TruongSo05.Location = new System.Drawing.Point(272, 2);
+            this.txt_TruongSo05.Name = "txt_TruongSo05";
+            this.txt_TruongSo05.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo05.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo05.Size = new System.Drawing.Size(50, 20);
+            this.txt_TruongSo05.TabIndex = 5;
+            this.txt_TruongSo05.EditValueChanged += new System.EventHandler(this.txt_TruongSo05_EditValueChanged);
             // 
             // labelControl6
             // 
@@ -215,13 +230,16 @@
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "6";
             // 
-            // textEdit6
+            // txt_TruongSo06
             // 
-            this.textEdit6.EditValue = "77";
-            this.textEdit6.Location = new System.Drawing.Point(14, 28);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(25, 20);
-            this.textEdit6.TabIndex = 1;
+            this.txt_TruongSo06.EditValue = "";
+            this.txt_TruongSo06.Location = new System.Drawing.Point(14, 28);
+            this.txt_TruongSo06.Name = "txt_TruongSo06";
+            this.txt_TruongSo06.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo06.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo06.Size = new System.Drawing.Size(25, 20);
+            this.txt_TruongSo06.TabIndex = 6;
+            this.txt_TruongSo06.EditValueChanged += new System.EventHandler(this.txt_TruongSo06_EditValueChanged);
             // 
             // labelControl7
             // 
@@ -235,12 +253,15 @@
             this.labelControl7.TabIndex = 0;
             this.labelControl7.Text = "7";
             // 
-            // textEdit7
+            // txt_TruongSo07
             // 
-            this.textEdit7.Location = new System.Drawing.Point(54, 28);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(25, 20);
-            this.textEdit7.TabIndex = 1;
+            this.txt_TruongSo07.Location = new System.Drawing.Point(54, 28);
+            this.txt_TruongSo07.Name = "txt_TruongSo07";
+            this.txt_TruongSo07.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo07.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo07.Size = new System.Drawing.Size(25, 20);
+            this.txt_TruongSo07.TabIndex = 7;
+            this.txt_TruongSo07.EditValueChanged += new System.EventHandler(this.txt_TruongSo07_EditValueChanged);
             // 
             // labelControl8
             // 
@@ -254,13 +275,18 @@
             this.labelControl8.TabIndex = 0;
             this.labelControl8.Text = "8";
             // 
-            // textEdit8
+            // txt_TruongSo08
             // 
-            this.textEdit8.EditValue = "8,7978,978";
-            this.textEdit8.Location = new System.Drawing.Point(98, 28);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(65, 20);
-            this.textEdit8.TabIndex = 1;
+            this.txt_TruongSo08.EditValue = "";
+            this.txt_TruongSo08.Location = new System.Drawing.Point(98, 28);
+            this.txt_TruongSo08.Name = "txt_TruongSo08";
+            this.txt_TruongSo08.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo08.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo08.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo08.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo08.TabIndex = 8;
+            this.txt_TruongSo08.EditValueChanged += new System.EventHandler(this.txt_TruongSo08_EditValueChanged);
+            this.txt_TruongSo08.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl9
             // 
@@ -274,12 +300,17 @@
             this.labelControl9.TabIndex = 0;
             this.labelControl9.Text = "9";
             // 
-            // textEdit9
+            // txt_TruongSo09
             // 
-            this.textEdit9.Location = new System.Drawing.Point(181, 28);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(65, 20);
-            this.textEdit9.TabIndex = 1;
+            this.txt_TruongSo09.Location = new System.Drawing.Point(181, 28);
+            this.txt_TruongSo09.Name = "txt_TruongSo09";
+            this.txt_TruongSo09.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo09.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo09.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo09.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo09.TabIndex = 9;
+            this.txt_TruongSo09.EditValueChanged += new System.EventHandler(this.txt_TruongSo09_EditValueChanged);
+            this.txt_TruongSo09.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl10
             // 
@@ -293,13 +324,18 @@
             this.labelControl10.TabIndex = 0;
             this.labelControl10.Text = "10";
             // 
-            // textEdit10
+            // txt_TruongSo10
             // 
-            this.textEdit10.EditValue = "78,789,987";
-            this.textEdit10.Location = new System.Drawing.Point(266, 28);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Size = new System.Drawing.Size(65, 20);
-            this.textEdit10.TabIndex = 1;
+            this.txt_TruongSo10.EditValue = "";
+            this.txt_TruongSo10.Location = new System.Drawing.Point(266, 28);
+            this.txt_TruongSo10.Name = "txt_TruongSo10";
+            this.txt_TruongSo10.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo10.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo10.TabIndex = 10;
+            this.txt_TruongSo10.EditValueChanged += new System.EventHandler(this.txt_TruongSo10_EditValueChanged);
+            this.txt_TruongSo10.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl11
             // 
@@ -313,12 +349,17 @@
             this.labelControl11.TabIndex = 0;
             this.labelControl11.Text = "11";
             // 
-            // textEdit11
+            // txt_TruongSo11
             // 
-            this.textEdit11.Location = new System.Drawing.Point(350, 28);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Size = new System.Drawing.Size(65, 20);
-            this.textEdit11.TabIndex = 1;
+            this.txt_TruongSo11.Location = new System.Drawing.Point(350, 28);
+            this.txt_TruongSo11.Name = "txt_TruongSo11";
+            this.txt_TruongSo11.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo11.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo11.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo11.TabIndex = 19;
+            this.txt_TruongSo11.EditValueChanged += new System.EventHandler(this.txt_TruongSo11_EditValueChanged);
+            this.txt_TruongSo11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl12
             // 
@@ -332,13 +373,16 @@
             this.labelControl12.TabIndex = 0;
             this.labelControl12.Text = "12";
             // 
-            // textEdit12
+            // txt_TruongSo12
             // 
-            this.textEdit12.EditValue = "7,897";
-            this.textEdit12.Location = new System.Drawing.Point(435, 28);
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Size = new System.Drawing.Size(40, 20);
-            this.textEdit12.TabIndex = 1;
+            this.txt_TruongSo12.EditValue = "";
+            this.txt_TruongSo12.Location = new System.Drawing.Point(435, 28);
+            this.txt_TruongSo12.Name = "txt_TruongSo12";
+            this.txt_TruongSo12.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo12.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo12.Size = new System.Drawing.Size(40, 20);
+            this.txt_TruongSo12.TabIndex = 21;
+            this.txt_TruongSo12.EditValueChanged += new System.EventHandler(this.txt_TruongSo12_EditValueChanged);
             // 
             // labelControl13
             // 
@@ -352,13 +396,18 @@
             this.labelControl13.TabIndex = 0;
             this.labelControl13.Text = "13";
             // 
-            // textEdit13
+            // txt_TruongSo13
             // 
-            this.textEdit13.EditValue = "7,8978,978";
-            this.textEdit13.Location = new System.Drawing.Point(350, 80);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Size = new System.Drawing.Size(65, 20);
-            this.textEdit13.TabIndex = 1;
+            this.txt_TruongSo13.EditValue = "";
+            this.txt_TruongSo13.Location = new System.Drawing.Point(350, 80);
+            this.txt_TruongSo13.Name = "txt_TruongSo13";
+            this.txt_TruongSo13.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo13.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo13.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo13.TabIndex = 23;
+            this.txt_TruongSo13.EditValueChanged += new System.EventHandler(this.txt_TruongSo13_EditValueChanged);
+            this.txt_TruongSo13.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl14
             // 
@@ -372,12 +421,15 @@
             this.labelControl14.TabIndex = 0;
             this.labelControl14.Text = "14";
             // 
-            // textEdit14
+            // txt_TruongSo14
             // 
-            this.textEdit14.Location = new System.Drawing.Point(436, 79);
-            this.textEdit14.Name = "textEdit14";
-            this.textEdit14.Size = new System.Drawing.Size(25, 20);
-            this.textEdit14.TabIndex = 1;
+            this.txt_TruongSo14.Location = new System.Drawing.Point(436, 79);
+            this.txt_TruongSo14.Name = "txt_TruongSo14";
+            this.txt_TruongSo14.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo14.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo14.Size = new System.Drawing.Size(25, 20);
+            this.txt_TruongSo14.TabIndex = 24;
+            this.txt_TruongSo14.EditValueChanged += new System.EventHandler(this.txt_TruongSo14_EditValueChanged);
             // 
             // labelControl15
             // 
@@ -391,12 +443,15 @@
             this.labelControl15.TabIndex = 0;
             this.labelControl15.Text = "15";
             // 
-            // textEdit15
+            // txt_TruongSo15
             // 
-            this.textEdit15.Location = new System.Drawing.Point(54, 54);
-            this.textEdit15.Name = "textEdit15";
-            this.textEdit15.Size = new System.Drawing.Size(25, 20);
-            this.textEdit15.TabIndex = 1;
+            this.txt_TruongSo15.Location = new System.Drawing.Point(54, 54);
+            this.txt_TruongSo15.Name = "txt_TruongSo15";
+            this.txt_TruongSo15.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo15.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo15.Size = new System.Drawing.Size(25, 20);
+            this.txt_TruongSo15.TabIndex = 11;
+            this.txt_TruongSo15.EditValueChanged += new System.EventHandler(this.txt_TruongSo15_EditValueChanged);
             // 
             // labelControl16
             // 
@@ -410,12 +465,17 @@
             this.labelControl16.TabIndex = 0;
             this.labelControl16.Text = "16";
             // 
-            // textEdit16
+            // txt_TruongSo16
             // 
-            this.textEdit16.Location = new System.Drawing.Point(98, 54);
-            this.textEdit16.Name = "textEdit16";
-            this.textEdit16.Size = new System.Drawing.Size(65, 20);
-            this.textEdit16.TabIndex = 1;
+            this.txt_TruongSo16.Location = new System.Drawing.Point(98, 54);
+            this.txt_TruongSo16.Name = "txt_TruongSo16";
+            this.txt_TruongSo16.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo16.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo16.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo16.TabIndex = 12;
+            this.txt_TruongSo16.EditValueChanged += new System.EventHandler(this.txt_TruongSo16_EditValueChanged);
+            this.txt_TruongSo16.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl17
             // 
@@ -429,12 +489,17 @@
             this.labelControl17.TabIndex = 0;
             this.labelControl17.Text = "17";
             // 
-            // textEdit17
+            // txt_TruongSo17
             // 
-            this.textEdit17.Location = new System.Drawing.Point(181, 54);
-            this.textEdit17.Name = "textEdit17";
-            this.textEdit17.Size = new System.Drawing.Size(65, 20);
-            this.textEdit17.TabIndex = 1;
+            this.txt_TruongSo17.Location = new System.Drawing.Point(181, 54);
+            this.txt_TruongSo17.Name = "txt_TruongSo17";
+            this.txt_TruongSo17.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo17.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo17.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo17.TabIndex = 13;
+            this.txt_TruongSo17.EditValueChanged += new System.EventHandler(this.txt_TruongSo17_EditValueChanged);
+            this.txt_TruongSo17.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl18
             // 
@@ -448,12 +513,17 @@
             this.labelControl18.TabIndex = 0;
             this.labelControl18.Text = "18";
             // 
-            // textEdit18
+            // txt_TruongSo18
             // 
-            this.textEdit18.Location = new System.Drawing.Point(266, 54);
-            this.textEdit18.Name = "textEdit18";
-            this.textEdit18.Size = new System.Drawing.Size(65, 20);
-            this.textEdit18.TabIndex = 1;
+            this.txt_TruongSo18.Location = new System.Drawing.Point(266, 54);
+            this.txt_TruongSo18.Name = "txt_TruongSo18";
+            this.txt_TruongSo18.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo18.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo18.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo18.TabIndex = 14;
+            this.txt_TruongSo18.EditValueChanged += new System.EventHandler(this.txt_TruongSo18_EditValueChanged);
+            this.txt_TruongSo18.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl19
             // 
@@ -479,19 +549,29 @@
             this.labelControl20.TabIndex = 0;
             this.labelControl20.Text = "20";
             // 
-            // textEdit19
+            // txt_TruongSo19
             // 
-            this.textEdit19.Location = new System.Drawing.Point(350, 54);
-            this.textEdit19.Name = "textEdit19";
-            this.textEdit19.Size = new System.Drawing.Size(65, 20);
-            this.textEdit19.TabIndex = 1;
+            this.txt_TruongSo19.Location = new System.Drawing.Point(350, 54);
+            this.txt_TruongSo19.Name = "txt_TruongSo19";
+            this.txt_TruongSo19.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo19.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo19.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo19.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo19.TabIndex = 20;
+            this.txt_TruongSo19.EditValueChanged += new System.EventHandler(this.txt_TruongSo19_EditValueChanged);
+            this.txt_TruongSo19.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
-            // textEdit20
+            // txt_TruongSo20
             // 
-            this.textEdit20.Location = new System.Drawing.Point(435, 54);
-            this.textEdit20.Name = "textEdit20";
-            this.textEdit20.Size = new System.Drawing.Size(65, 20);
-            this.textEdit20.TabIndex = 1;
+            this.txt_TruongSo20.Location = new System.Drawing.Point(435, 54);
+            this.txt_TruongSo20.Name = "txt_TruongSo20";
+            this.txt_TruongSo20.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo20.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo20.TabIndex = 22;
+            this.txt_TruongSo20.EditValueChanged += new System.EventHandler(this.txt_TruongSo20_EditValueChanged);
+            this.txt_TruongSo20.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl21
             // 
@@ -505,12 +585,15 @@
             this.labelControl21.TabIndex = 0;
             this.labelControl21.Text = "21";
             // 
-            // textEdit21
+            // txt_TruongSo21
             // 
-            this.textEdit21.Location = new System.Drawing.Point(480, 80);
-            this.textEdit21.Name = "textEdit21";
-            this.textEdit21.Size = new System.Drawing.Size(20, 20);
-            this.textEdit21.TabIndex = 1;
+            this.txt_TruongSo21.Location = new System.Drawing.Point(480, 80);
+            this.txt_TruongSo21.Name = "txt_TruongSo21";
+            this.txt_TruongSo21.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo21.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo21.Size = new System.Drawing.Size(20, 20);
+            this.txt_TruongSo21.TabIndex = 25;
+            this.txt_TruongSo21.EditValueChanged += new System.EventHandler(this.txt_TruongSo21_EditValueChanged);
             // 
             // labelControl22
             // 
@@ -524,12 +607,15 @@
             this.labelControl22.TabIndex = 0;
             this.labelControl22.Text = "22";
             // 
-            // textEdit22
+            // txt_TruongSo22
             // 
-            this.textEdit22.Location = new System.Drawing.Point(54, 80);
-            this.textEdit22.Name = "textEdit22";
-            this.textEdit22.Size = new System.Drawing.Size(25, 20);
-            this.textEdit22.TabIndex = 1;
+            this.txt_TruongSo22.Location = new System.Drawing.Point(54, 80);
+            this.txt_TruongSo22.Name = "txt_TruongSo22";
+            this.txt_TruongSo22.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo22.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo22.Size = new System.Drawing.Size(25, 20);
+            this.txt_TruongSo22.TabIndex = 15;
+            this.txt_TruongSo22.EditValueChanged += new System.EventHandler(this.txt_TruongSo22_EditValueChanged);
             // 
             // labelControl23
             // 
@@ -555,19 +641,29 @@
             this.labelControl24.TabIndex = 0;
             this.labelControl24.Text = "24";
             // 
-            // textEdit23
+            // txt_TruongSo23
             // 
-            this.textEdit23.Location = new System.Drawing.Point(99, 80);
-            this.textEdit23.Name = "textEdit23";
-            this.textEdit23.Size = new System.Drawing.Size(65, 20);
-            this.textEdit23.TabIndex = 1;
+            this.txt_TruongSo23.Location = new System.Drawing.Point(99, 80);
+            this.txt_TruongSo23.Name = "txt_TruongSo23";
+            this.txt_TruongSo23.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo23.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo23.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo23.TabIndex = 16;
+            this.txt_TruongSo23.EditValueChanged += new System.EventHandler(this.txt_TruongSo23_EditValueChanged);
+            this.txt_TruongSo23.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
-            // textEdit24
+            // txt_TruongSo24
             // 
-            this.textEdit24.Location = new System.Drawing.Point(181, 80);
-            this.textEdit24.Name = "textEdit24";
-            this.textEdit24.Size = new System.Drawing.Size(65, 20);
-            this.textEdit24.TabIndex = 1;
+            this.txt_TruongSo24.Location = new System.Drawing.Point(181, 80);
+            this.txt_TruongSo24.Name = "txt_TruongSo24";
+            this.txt_TruongSo24.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo24.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo24.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo24.TabIndex = 17;
+            this.txt_TruongSo24.EditValueChanged += new System.EventHandler(this.txt_TruongSo24_EditValueChanged);
+            this.txt_TruongSo24.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // labelControl25
             // 
@@ -581,95 +677,101 @@
             this.labelControl25.TabIndex = 0;
             this.labelControl25.Text = "25";
             // 
-            // textEdit25
+            // txt_TruongSo25
             // 
-            this.textEdit25.Location = new System.Drawing.Point(266, 80);
-            this.textEdit25.Name = "textEdit25";
-            this.textEdit25.Size = new System.Drawing.Size(65, 20);
-            this.textEdit25.TabIndex = 1;
+            this.txt_TruongSo25.Location = new System.Drawing.Point(266, 80);
+            this.txt_TruongSo25.Name = "txt_TruongSo25";
+            this.txt_TruongSo25.Properties.Mask.EditMask = "[0-9*?-,]+";
+            this.txt_TruongSo25.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_TruongSo25.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_TruongSo25.Size = new System.Drawing.Size(65, 20);
+            this.txt_TruongSo25.TabIndex = 18;
+            this.txt_TruongSo25.EditValueChanged += new System.EventHandler(this.txt_TruongSo25_EditValueChanged);
+            this.txt_TruongSo25.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
             // 
             // UcNatsuItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.textEdit25);
-            this.Controls.Add(this.textEdit21);
-            this.Controls.Add(this.textEdit10);
+            this.Controls.Add(this.txt_TruongSo25);
+            this.Controls.Add(this.txt_TruongSo21);
+            this.Controls.Add(this.txt_TruongSo10);
             this.Controls.Add(this.labelControl25);
-            this.Controls.Add(this.textEdit5);
+            this.Controls.Add(this.txt_TruongSo05);
             this.Controls.Add(this.labelControl21);
             this.Controls.Add(this.labelControl10);
-            this.Controls.Add(this.textEdit24);
+            this.Controls.Add(this.txt_TruongSo24);
             this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.textEdit20);
-            this.Controls.Add(this.textEdit23);
-            this.Controls.Add(this.textEdit14);
-            this.Controls.Add(this.textEdit19);
+            this.Controls.Add(this.txt_TruongSo20);
+            this.Controls.Add(this.txt_TruongSo23);
+            this.Controls.Add(this.txt_TruongSo14);
+            this.Controls.Add(this.txt_TruongSo19);
             this.Controls.Add(this.labelControl24);
-            this.Controls.Add(this.textEdit9);
+            this.Controls.Add(this.txt_TruongSo09);
             this.Controls.Add(this.labelControl20);
             this.Controls.Add(this.labelControl14);
             this.Controls.Add(this.labelControl23);
-            this.Controls.Add(this.textEdit4);
+            this.Controls.Add(this.txt_TruongSo04);
             this.Controls.Add(this.labelControl19);
-            this.Controls.Add(this.textEdit22);
+            this.Controls.Add(this.txt_TruongSo22);
             this.Controls.Add(this.labelControl9);
-            this.Controls.Add(this.textEdit18);
-            this.Controls.Add(this.textEdit13);
+            this.Controls.Add(this.txt_TruongSo18);
+            this.Controls.Add(this.txt_TruongSo13);
             this.Controls.Add(this.labelControl22);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl18);
             this.Controls.Add(this.labelControl13);
-            this.Controls.Add(this.textEdit17);
-            this.Controls.Add(this.textEdit8);
+            this.Controls.Add(this.txt_TruongSo17);
+            this.Controls.Add(this.txt_TruongSo08);
             this.Controls.Add(this.labelControl17);
             this.Controls.Add(this.labelControl8);
-            this.Controls.Add(this.textEdit16);
-            this.Controls.Add(this.textEdit12);
-            this.Controls.Add(this.textEdit3);
-            this.Controls.Add(this.textEdit7);
+            this.Controls.Add(this.txt_TruongSo16);
+            this.Controls.Add(this.txt_TruongSo12);
+            this.Controls.Add(this.txt_TruongSo03);
+            this.Controls.Add(this.txt_TruongSo07);
             this.Controls.Add(this.labelControl16);
             this.Controls.Add(this.labelControl12);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl7);
-            this.Controls.Add(this.textEdit15);
-            this.Controls.Add(this.textEdit11);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.txt_TruongSo15);
+            this.Controls.Add(this.txt_TruongSo11);
+            this.Controls.Add(this.txt_TruongSo02);
             this.Controls.Add(this.labelControl15);
-            this.Controls.Add(this.textEdit6);
+            this.Controls.Add(this.txt_TruongSo06);
             this.Controls.Add(this.labelControl11);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl6);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txt_TruongSo01);
             this.Controls.Add(this.labelControl1);
             this.Name = "UcNatsuItem";
             this.Size = new System.Drawing.Size(508, 108);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit24.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).EndInit();
+            this.Load += new System.EventHandler(this.UcNatsuItem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo01.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo02.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo03.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo04.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo05.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo06.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo07.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo08.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo09.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo15.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo16.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo17.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo18.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo19.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo20.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo21.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo22.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo23.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo24.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo25.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -678,54 +780,54 @@
         #endregion
 
         public DevExpress.XtraEditors.LabelControl labelControl1;
-        public DevExpress.XtraEditors.TextEdit textEdit1;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo01;
         public DevExpress.XtraEditors.LabelControl labelControl2;
-        public DevExpress.XtraEditors.TextEdit textEdit2;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo02;
         public DevExpress.XtraEditors.LabelControl labelControl3;
-        public DevExpress.XtraEditors.TextEdit textEdit3;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo03;
         public DevExpress.XtraEditors.LabelControl labelControl4;
-        public DevExpress.XtraEditors.TextEdit textEdit4;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo04;
         public DevExpress.XtraEditors.LabelControl labelControl5;
-        public DevExpress.XtraEditors.TextEdit textEdit5;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo05;
         public DevExpress.XtraEditors.LabelControl labelControl6;
-        public DevExpress.XtraEditors.TextEdit textEdit6;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo06;
         public DevExpress.XtraEditors.LabelControl labelControl7;
-        public DevExpress.XtraEditors.TextEdit textEdit7;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo07;
         public DevExpress.XtraEditors.LabelControl labelControl8;
-        public DevExpress.XtraEditors.TextEdit textEdit8;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo08;
         public DevExpress.XtraEditors.LabelControl labelControl9;
-        public DevExpress.XtraEditors.TextEdit textEdit9;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo09;
         public DevExpress.XtraEditors.LabelControl labelControl10;
-        public DevExpress.XtraEditors.TextEdit textEdit10;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo10;
         public DevExpress.XtraEditors.LabelControl labelControl11;
-        public DevExpress.XtraEditors.TextEdit textEdit11;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo11;
         public DevExpress.XtraEditors.LabelControl labelControl12;
-        public DevExpress.XtraEditors.TextEdit textEdit12;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo12;
         public DevExpress.XtraEditors.LabelControl labelControl13;
-        public DevExpress.XtraEditors.TextEdit textEdit13;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo13;
         public DevExpress.XtraEditors.LabelControl labelControl14;
-        public DevExpress.XtraEditors.TextEdit textEdit14;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo14;
         public DevExpress.XtraEditors.LabelControl labelControl15;
-        public DevExpress.XtraEditors.TextEdit textEdit15;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo15;
         public DevExpress.XtraEditors.LabelControl labelControl16;
-        public DevExpress.XtraEditors.TextEdit textEdit16;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo16;
         public DevExpress.XtraEditors.LabelControl labelControl17;
-        public DevExpress.XtraEditors.TextEdit textEdit17;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo17;
         public DevExpress.XtraEditors.LabelControl labelControl18;
-        public DevExpress.XtraEditors.TextEdit textEdit18;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo18;
         public DevExpress.XtraEditors.LabelControl labelControl19;
         public DevExpress.XtraEditors.LabelControl labelControl20;
-        public DevExpress.XtraEditors.TextEdit textEdit19;
-        public DevExpress.XtraEditors.TextEdit textEdit20;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo19;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo20;
         public DevExpress.XtraEditors.LabelControl labelControl21;
-        public DevExpress.XtraEditors.TextEdit textEdit21;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo21;
         public DevExpress.XtraEditors.LabelControl labelControl22;
-        public DevExpress.XtraEditors.TextEdit textEdit22;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo22;
         public DevExpress.XtraEditors.LabelControl labelControl23;
         public DevExpress.XtraEditors.LabelControl labelControl24;
-        public DevExpress.XtraEditors.TextEdit textEdit23;
-        public DevExpress.XtraEditors.TextEdit textEdit24;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo23;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo24;
         public DevExpress.XtraEditors.LabelControl labelControl25;
-        public DevExpress.XtraEditors.TextEdit textEdit25;
+        public DevExpress.XtraEditors.TextEdit txt_TruongSo25;
     }
 }

@@ -304,9 +304,10 @@ namespace Natsu
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_22", DbType="NVarChar(255)")] string truong_22, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_23", DbType="NVarChar(255)")] string truong_23, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_24", DbType="NVarChar(255)")] string truong_24, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_25", DbType="NVarChar(255)")] string truong_25, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idphieu)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, truong_01, truong_02, truong_03, truong_04, truong_05, truong_06, truong_07, truong_08, truong_09, truong_10, truong_11, truong_12, truong_13, truong_14, truong_15, truong_16, truong_17, truong_18, truong_19, truong_20, truong_21, truong_22, truong_23, truong_24, idphieu);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, truong_01, truong_02, truong_03, truong_04, truong_05, truong_06, truong_07, truong_08, truong_09, truong_10, truong_11, truong_12, truong_13, truong_14, truong_15, truong_16, truong_17, truong_18, truong_19, truong_20, truong_21, truong_22, truong_23, truong_24, truong_25, idphieu);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -383,9 +384,10 @@ namespace Natsu
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_21", DbType="NVarChar(255)")] string truong_21, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_22", DbType="NVarChar(255)")] string truong_22, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_23", DbType="NVarChar(255)")] string truong_23, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_24", DbType="NVarChar(255)")] string truong_24)
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_24", DbType="NVarChar(255)")] string truong_24, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_25", DbType="NVarChar(255)")] string truong_25)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userSaiIt, userSaiNhieu, idImage, fBatchName, userCheck, iDPhieu, truong_01, truong_02, truong_03, truong_04, truong_05, truong_06, truong_07, truong_08, truong_09, truong_10, truong_11, truong_12, truong_13, truong_14, truong_15, truong_16, truong_17, truong_18, truong_19, truong_20, truong_21, truong_22, truong_23, truong_24);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userSaiIt, userSaiNhieu, idImage, fBatchName, userCheck, iDPhieu, truong_01, truong_02, truong_03, truong_04, truong_05, truong_06, truong_07, truong_08, truong_09, truong_10, truong_11, truong_12, truong_13, truong_14, truong_15, truong_16, truong_17, truong_18, truong_19, truong_20, truong_21, truong_22, truong_23, truong_24, truong_25);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -885,6 +887,8 @@ namespace Natsu
 		
 		private string _Truong_24;
 		
+		private string _Truong_25;
+		
 		private int _IdPhieu;
 		
 		private System.Nullable<int> _Dem;
@@ -961,6 +965,8 @@ namespace Natsu
     partial void OnTruong_23Changed();
     partial void OnTruong_24Changing(string value);
     partial void OnTruong_24Changed();
+    partial void OnTruong_25Changing(string value);
+    partial void OnTruong_25Changed();
     partial void OnIdPhieuChanging(int value);
     partial void OnIdPhieuChanged();
     partial void OnDemChanging(System.Nullable<int> value);
@@ -1544,6 +1550,26 @@ namespace Natsu
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_25", DbType="NVarChar(255)")]
+		public string Truong_25
+		{
+			get
+			{
+				return this._Truong_25;
+			}
+			set
+			{
+				if ((this._Truong_25 != value))
+				{
+					this.OnTruong_25Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_25 = value;
+					this.SendPropertyChanged("Truong_25");
+					this.OnTruong_25Changed();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdPhieu", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int IdPhieu
 		{
@@ -1787,6 +1813,8 @@ namespace Natsu
 		
 		private string _Truong_24;
 		
+		private string _Truong_25;
+		
 		private int _IdPhieu;
 		
 		private System.Nullable<int> _Dem;
@@ -1863,6 +1891,8 @@ namespace Natsu
     partial void OnTruong_23Changed();
     partial void OnTruong_24Changing(string value);
     partial void OnTruong_24Changed();
+    partial void OnTruong_25Changing(string value);
+    partial void OnTruong_25Changed();
     partial void OnIdPhieuChanging(int value);
     partial void OnIdPhieuChanged();
     partial void OnDemChanging(System.Nullable<int> value);
@@ -2442,6 +2472,26 @@ namespace Natsu
 					this._Truong_24 = value;
 					this.SendPropertyChanged("Truong_24");
 					this.OnTruong_24Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_25", DbType="NVarChar(255)")]
+		public string Truong_25
+		{
+			get
+			{
+				return this._Truong_25;
+			}
+			set
+			{
+				if ((this._Truong_25 != value))
+				{
+					this.OnTruong_25Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_25 = value;
+					this.SendPropertyChanged("Truong_25");
+					this.OnTruong_25Changed();
 				}
 			}
 		}

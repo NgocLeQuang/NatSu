@@ -1,6 +1,6 @@
 ﻿namespace Natsu.MyForm
 {
-    partial class frmCreateBatch
+    partial class FrmCreateBatch
     {
         /// <summary>
         /// Required designer variable.
@@ -87,7 +87,7 @@
             this.btn_CreateBatch.Name = "btn_CreateBatch";
             this.btn_CreateBatch.Size = new System.Drawing.Size(164, 44);
             this.btn_CreateBatch.TabIndex = 43;
-            this.btn_CreateBatch.Text = "Tạo Batch";
+            this.btn_CreateBatch.Text = "Create";
             this.btn_CreateBatch.Click += new System.EventHandler(this.btn_CreateBatch_Click);
             // 
             // btn_BrowserImage
@@ -96,7 +96,7 @@
             this.btn_BrowserImage.Name = "btn_BrowserImage";
             this.btn_BrowserImage.Size = new System.Drawing.Size(85, 23);
             this.btn_BrowserImage.TabIndex = 42;
-            this.btn_BrowserImage.Text = "Chọn Image...";
+            this.btn_BrowserImage.Text = "Browser...";
             this.btn_BrowserImage.Click += new System.EventHandler(this.btn_BrowserImage_Click);
             // 
             // txt_ImagePath
@@ -131,43 +131,43 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(30, 233);
+            this.labelControl7.Location = new System.Drawing.Point(62, 234);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(91, 13);
+            this.labelControl7.Size = new System.Drawing.Size(59, 13);
             this.labelControl7.TabIndex = 34;
-            this.labelControl7.Text = "Đường dẫn Image:";
+            this.labelControl7.Text = "Path Image:";
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(30, 188);
+            this.labelControl6.Location = new System.Drawing.Point(31, 189);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(78, 13);
+            this.labelControl6.Size = new System.Drawing.Size(91, 13);
             this.labelControl6.TabIndex = 33;
-            this.labelControl6.Text = "Ngày tạo Batch:";
+            this.labelControl6.Text = "Date create Batch:";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(30, 144);
+            this.labelControl5.Location = new System.Drawing.Point(32, 145);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(75, 13);
+            this.labelControl5.Size = new System.Drawing.Size(90, 13);
             this.labelControl5.TabIndex = 32;
-            this.labelControl5.Text = "User tạo Batch:";
+            this.labelControl5.Text = "User create Batch:";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(30, 101);
+            this.labelControl4.Location = new System.Drawing.Point(95, 102);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(58, 13);
+            this.labelControl4.Size = new System.Drawing.Size(26, 13);
             this.labelControl4.TabIndex = 31;
-            this.labelControl4.Text = "Đường dẫn:";
+            this.labelControl4.Text = "Path:";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(30, 59);
+            this.labelControl2.Location = new System.Drawing.Point(61, 60);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(52, 13);
+            this.labelControl2.Size = new System.Drawing.Size(61, 13);
             this.labelControl2.TabIndex = 35;
-            this.labelControl2.Text = "Tên Batch:";
+            this.labelControl2.Text = "Batch Name:";
             // 
             // labelControl1
             // 
@@ -175,13 +175,13 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(221, 3);
+            this.labelControl1.Location = new System.Drawing.Point(205, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(182, 27);
+            this.labelControl1.Size = new System.Drawing.Size(216, 25);
             this.labelControl1.TabIndex = 30;
-            this.labelControl1.Text = "TẠO BATCH MỚI";
+            this.labelControl1.Text = "CREATE NEW BATCH";
             // 
-            // frmCreateBatch
+            // FrmCreateBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,9 +201,9 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Name = "frmCreateBatch";
+            this.Name = "FrmCreateBatch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCreateBatch";
+            this.Text = "Create Batch";
             this.Load += new System.EventHandler(this.frmCreateBatch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateCreate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
