@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Natsu.MyClass;
+using System;
 using System.Windows.Forms;
-using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
     public partial class FrmFreeTime : DevExpress.XtraEditors.XtraForm
     {
         private int _gio, _phut, _giay;
+
         public FrmFreeTime()
         {
             InitializeComponent();
@@ -26,11 +27,10 @@ namespace Natsu.MyForm
 
         private void frm_FreeTime_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
                 Close();
             }
-            
         }
 
         private void frm_FreeTime_FormClosing(object sender, FormClosingEventArgs e)

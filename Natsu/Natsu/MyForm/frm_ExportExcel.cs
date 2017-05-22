@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Natsu.MyClass;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
@@ -49,7 +49,7 @@ namespace Natsu.MyForm
                 MessageBox.Show(@"Not finished check or have user get but not check. Please check first");
 
                 var u = (from w in Global.Db.UserMissImagecheck(cbb_Batch.Text)
-                    select w.username).ToList();
+                         select w.username).ToList();
                 string sssss = "";
                 foreach (var item in u)
                 {
@@ -63,16 +63,16 @@ namespace Natsu.MyForm
 
                 return;
             }
-            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +"\\ExportExcel.xlsx"))
+            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\ExportExcel.xlsx"))
             {
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +"\\ExportExcel.xlsx");
-                File.WriteAllBytes((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +"/ExportExcel.xlsx"), Properties.Resources.ExportExcel);
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\ExportExcel.xlsx");
+                File.WriteAllBytes((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/ExportExcel.xlsx"), Properties.Resources.ExportExcel);
             }
             else
             {
-                File.WriteAllBytes((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +"/ExportExcel.xlsx"), Properties.Resources.ExportExcel);
+                File.WriteAllBytes((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/ExportExcel.xlsx"), Properties.Resources.ExportExcel);
             }
-            TableToExcel(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +"\\ExportExcel.xlsx");
+            TableToExcel(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\ExportExcel.xlsx");
         }
 
         private void frm_ExportExcel_Load(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace Natsu.MyForm
                 Microsoft.Office.Interop.Excel.Workbook book = App.Workbooks.Open(strfilename, 0, true, 5, "", "", false,
                     Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
                 Microsoft.Office.Interop.Excel.Worksheet wrksheet =
-                    (Microsoft.Office.Interop.Excel.Worksheet) book.ActiveSheet;
+                    (Microsoft.Office.Interop.Excel.Worksheet)book.ActiveSheet;
                 int h = 2;
                 int i = 0;
                 progressBarControl1.EditValue = 0;
@@ -107,22 +107,19 @@ namespace Natsu.MyForm
                 progressBarControl1.Properties.PercentView = true;
                 progressBarControl1.Properties.Maximum = dataGridView1.Rows.Count;
                 progressBarControl1.Properties.Minimum = 0;
-                progressBarControl1.Properties.StartColor = Color.DarkRed; // choose the color 
+                progressBarControl1.Properties.StartColor = Color.DarkRed; // choose the color
                 progressBarControl1.Properties.EndColor = Color.Green; // choose the color
-
 
                 foreach (DataGridViewRow dr in dataGridView1.Rows)
                 {
-
-
                     wrksheet.Cells[h, 1] = dr.Cells[0].Value?.ToString() ?? ""; //tên image
                     wrksheet.Cells[h, 2] = dr.Cells[1].Value?.ToString() ?? ""; //1
                     wrksheet.Cells[h, 3] = dr.Cells[2].Value?.ToString() ?? "";
                     if ((dr.Cells[3].Value?.ToString() ?? "").Length == 6)
                     {
-                        wrksheet.Cells[h, 4] = (dr.Cells[3].Value?.ToString() ?? "").Substring(0,2);
-                        wrksheet.Cells[h, 5] = (dr.Cells[3].Value?.ToString() ?? "").Substring(2,2);
-                        wrksheet.Cells[h, 6] = (dr.Cells[3].Value?.ToString() ?? "").Substring(4,2);
+                        wrksheet.Cells[h, 4] = (dr.Cells[3].Value?.ToString() ?? "").Substring(0, 2);
+                        wrksheet.Cells[h, 5] = (dr.Cells[3].Value?.ToString() ?? "").Substring(2, 2);
+                        wrksheet.Cells[h, 6] = (dr.Cells[3].Value?.ToString() ?? "").Substring(4, 2);
                     }
                     else
                     {
@@ -130,7 +127,6 @@ namespace Natsu.MyForm
                         wrksheet.Cells[h, 5] = "";
                         wrksheet.Cells[h, 6] = dr.Cells[3].Value?.ToString() ?? "";
                     }
-
 
                     wrksheet.Cells[h, 7] = dr.Cells[4].Value?.ToString() ?? "";
                     wrksheet.Cells[h, 8] = dr.Cells[5].Value?.ToString() ?? "";

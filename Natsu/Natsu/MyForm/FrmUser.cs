@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Natsu.MyClass;
+using System;
 using System.Windows.Forms;
-using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
@@ -18,6 +18,7 @@ namespace Natsu.MyForm
             cbb_idrole.DisplayMember = "RoleName";
             cbb_idrole.ValueMember = "RoleID";
         }
+
         private void btn_suauser_Click(object sender, EventArgs e)
         {
             var nhanvien = txt_FullName.Text;
@@ -37,15 +38,15 @@ namespace Natsu.MyForm
                 MessageBox.Show(@"Enter full information before saving !");
             }
         }
-        
+
         private void btn_themuser_Click(object sender, EventArgs e)
         {
             var nhanvien = txt_FullName.Text;
             var roleid = cbb_idrole.SelectedValue?.ToString() ?? "";
 
-            if (!string.IsNullOrEmpty(roleid)&&!string.IsNullOrEmpty(nhanvien)&& !string.IsNullOrEmpty(txt_username.Text)&&!string.IsNullOrEmpty(txt_password.Text))
+            if (!string.IsNullOrEmpty(roleid) && !string.IsNullOrEmpty(nhanvien) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(txt_password.Text))
             {
-                var r = Global.DbBpo.InsertUsername(txt_username.Text, txt_password.Text, roleid,nhanvien, txt_grouplevel.Text);
+                var r = Global.DbBpo.InsertUsername(txt_username.Text, txt_password.Text, roleid, nhanvien, txt_grouplevel.Text);
                 if (r == 0)
                 {
                     MessageBox.Show(@"UserName already exists, Please enter another UserName");
@@ -71,7 +72,7 @@ namespace Natsu.MyForm
             DialogResult thongbao = MessageBox.Show(@"You want to delete the UserName'" + username + @"'", @"Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (thongbao == DialogResult.Yes)
             {
-                if(!string.IsNullOrEmpty(username))
+                if (!string.IsNullOrEmpty(username))
                 {
                     Global.DbBpo.DeleteUsername(username);
                     frm_User_Load(sender, e);
@@ -82,7 +83,7 @@ namespace Natsu.MyForm
                 }
             }
         }
-        
+
         private void gridView1_GotFocus(object sender, EventArgs e)
         {
             //string Username, Password, grouplevel, roleid, idnhanvien;
@@ -103,7 +104,7 @@ namespace Natsu.MyForm
             //cbb_idrole.ValueMember = "RoleID";
             //cbb_idrole.SelectedValue = roleid;
         }
-        
+
         private void gridView1_RowCellDefaultAlignment(object sender, DevExpress.XtraGrid.Views.Base.RowCellAlignmentEventArgs e)
         {
             try
@@ -113,13 +114,11 @@ namespace Natsu.MyForm
                 txt_password.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString() : "";
                 cbb_idrole.SelectedValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IDRole") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IDRole").ToString() : "";
                 txt_FullName.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FullName") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FullName").ToString() : "";
-
             }
             catch (Exception)
             {
                 // ignored
             }
         }
-        
     }
 }

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Natsu.MyClass;
+using Natsu.Properties;
+using System;
 using System.Linq;
 using System.Windows.Forms;
-using Natsu.MyClass;
-using Natsu.Properties;
 
 namespace Natsu.MyForm
 {
@@ -45,7 +45,6 @@ namespace Natsu.MyForm
                         {
                             UcPictureBox1.imageBox1.Image = Resources.svn_deleted;
                             return "Error";
-
                         }
                         UcNatsu1.UcNatsuItem1.txt_TruongSo01.Focus();
                     }
@@ -80,7 +79,7 @@ namespace Natsu.MyForm
                 lb_TongSoHinh.Text = (from w in Global.Db.tbl_Images where w.fbatchname == Global.StrBatch select w.idimage).Count().ToString();
                 lb_SoHinhConLai.Text = (from w in Global.Db.tbl_Images where w.ReadImageDESo < 2 && w.fbatchname == Global.StrBatch && (w.UserNameDESo != Global.StrUsername || w.UserNameDESo == null || w.UserNameDESo == "") select w.idimage).Count().ToString();
                 lb_SoHinhLamDuoc.Text = (from w in Global.Db.tbl_MissImage_DESOs where w.UserName == Global.StrUsername && w.fBatchName == Global.StrBatch select w.IdImage).Count().ToString();
-                
+
                 bar_Manager.Enabled = false;
                 if (Global.StrRole == "DESO")
                 {
@@ -99,7 +98,7 @@ namespace Natsu.MyForm
                 MessageBox.Show(@"Error Load Main: " + i.Message);
             }
         }
-        
+
         private void btn_Start_Submit_Click(object sender, EventArgs e)
         {
             try
@@ -136,7 +135,7 @@ namespace Natsu.MyForm
                                 (from w in Global.Db.tbl_Images where w.fbatchname == Global.StrBatch select w.idimage).Count().ToString();
                                 lb_SoHinhConLai.Text = (from w in Global.Db.tbl_Images where w.ReadImageDESo < 2 && w.fbatchname == Global.StrBatch && (w.UserNameDESo != Global.StrUsername || w.UserNameDESo == null || w.UserNameDESo == "") select w.idimage).Count().ToString();
                                 lb_SoHinhLamDuoc.Text = (from w in Global.Db.tbl_MissImage_DESOs where w.UserName == Global.StrUsername && w.fBatchName == Global.StrBatch select w.IdImage).Count().ToString();
-                                
+
                                 SetValue();
                                 btn_Start_Submit.Text = @"Start";
                                 btn_Start_Submit_Click(null, null);
@@ -158,7 +157,7 @@ namespace Natsu.MyForm
                         btn_Logout_ItemClick(null, null);
                     }
                     UcNatsu1.ResetData();
-                    
+
                     btn_Start_Submit.Text = @"Submit";
                     btn_Submit_Logout.Visible = true;
                 }
@@ -179,7 +178,7 @@ namespace Natsu.MyForm
                             var listResult = Global.Db.GetBatNotFinishDeSo(Global.StrUsername).ToList();
                             if (listResult.Count > 0)
                             {
-                                if (MessageBox.Show(@"Batch next is: " + listResult[0].fbatchname +"\nWould you like to continue??", @"Notification!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                if (MessageBox.Show(@"Batch next is: " + listResult[0].fbatchname + "\nWould you like to continue??", @"Notification!", MessageBoxButtons.YesNo) == DialogResult.Yes)
                                 {
                                     Global.StrBatch = listResult[0].fbatchname;
                                     lb_fBatchName.Text = Global.StrBatch;
@@ -188,7 +187,7 @@ namespace Natsu.MyForm
                                     (from w in Global.Db.tbl_Images where w.fbatchname == Global.StrBatch select w.idimage).Count().ToString();
                                     lb_SoHinhConLai.Text = (from w in Global.Db.tbl_Images where w.ReadImageDESo < 2 && w.fbatchname == Global.StrBatch && (w.UserNameDESo != Global.StrUsername || w.UserNameDESo == null || w.UserNameDESo == "") select w.idimage).Count().ToString();
                                     lb_SoHinhLamDuoc.Text = (from w in Global.Db.tbl_MissImage_DESOs where w.UserName == Global.StrUsername && w.fBatchName == Global.StrBatch select w.IdImage).Count().ToString();
-                                    
+
                                     SetValue();
                                     btn_Start_Submit.Text = @"Start";
                                     btn_Start_Submit_Click(null, null);

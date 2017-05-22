@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Natsu.MyClass;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
-using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
@@ -10,6 +10,7 @@ namespace Natsu.MyForm
     {
         private DateTime _firstDateTime;
         private DateTime _lastDateTime;
+
         public FrmNangSuat()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace Natsu.MyForm
             _lastDateTime = DateTime.Parse(lastdate);
             LoadDataGrid(_firstDateTime, _lastDateTime);
         }
+
         private void LoadDataGrid(DateTime tuNgay, DateTime denNgay)
         {
             gridControl_LoaiAE.DataSource = Global.Db.NangSuatDeSo_Getsu(tuNgay, denNgay);
@@ -63,8 +65,8 @@ namespace Natsu.MyForm
             {
                 LoadDataGrid(_firstDateTime, _lastDateTime);
             }
-
         }
+
         public bool TableToExcel(string strfilename)
         {
             try
@@ -73,7 +75,7 @@ namespace Natsu.MyForm
                 dataGridView1.DataSource = Global.Db.NangSuatDeSo_Getsu(_firstDateTime, _lastDateTime);
                 Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel.Workbook book = app.Workbooks.Open(strfilename, 0, true, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
-                Microsoft.Office.Interop.Excel.Worksheet wrksheet =(Microsoft.Office.Interop.Excel.Worksheet) book.ActiveSheet;
+                Microsoft.Office.Interop.Excel.Worksheet wrksheet = (Microsoft.Office.Interop.Excel.Worksheet)book.ActiveSheet;
                 int h = 1;
                 foreach (DataGridViewRow dr in dataGridView1.Rows)
                 {
@@ -89,13 +91,13 @@ namespace Natsu.MyForm
 
                     h++;
                 }
-            
+
                 string savePath;
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
                 saveFileDialog1.Title = @"Save Excel Files";
                 saveFileDialog1.Filter = @"Excel files (*.xls)|*.xls";
                 saveFileDialog1.FileName = "NangSuat_Natsu_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
-                
+
                 saveFileDialog1.RestoreDirectory = true;
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
@@ -118,7 +120,7 @@ namespace Natsu.MyForm
                 return false;
             }
         }
-        
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             string firstdate = dtp_FirstDay.Value.ToString("yyyy-MM-dd") + " 00:00:00";
@@ -126,7 +128,7 @@ namespace Natsu.MyForm
 
             _firstDateTime = DateTime.Parse(firstdate);
             _lastDateTime = DateTime.Parse(lastdate);
-            
+
             dataGridView1.DataSource = Global.Db.NangSuatDeSo_Getsu(_firstDateTime, _lastDateTime);
             if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Productivity.xls"))
             {

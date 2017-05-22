@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Natsu.MyClass;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
@@ -23,6 +23,7 @@ namespace Natsu.MyForm
             new FrmCreateBatch().ShowDialog();
             RefreshBatch();
         }
+
         private void RefreshBatch()
         {
             var temp = from var in Global.Db.tbl_Batches orderby var.fdatecreated select var;
@@ -40,15 +41,11 @@ namespace Natsu.MyForm
                     Global.Db.XoaBatch(fbatchname);
                     Directory.Delete(temp, true);
                     MessageBox.Show(@"Deleted batch successfully!");
-
                 }
                 catch (Exception)
                 {
-
                     MessageBox.Show(@"Delete batch error!");
-
                 }
-
             }
             RefreshBatch();
         }

@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace Natsu.MyUserControl
 {
     public partial class UcNatsu : UserControl
     {
         public event AllTextChange Changed;
+
         public UcNatsu()
         {
             InitializeComponent();
         }
+
         public void ResetData()
         {
             UcNatsuItem1.ResetData();
@@ -26,6 +22,7 @@ namespace Natsu.MyUserControl
             UcNatsuItem5.ResetData();
             UcNatsuItem1.txt_TruongSo01.Focus();
         }
+
         public bool IsEmpty()
         {
             bool empty = UcNatsuItem1.IsEmpty() &&

@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-using DevExpress.XtraCharts;
+﻿using DevExpress.XtraCharts;
 using DevExpress.XtraEditors;
 using Natsu.MyClass;
+using System;
+using System.Linq;
 
 namespace Natsu.MyForm
 {
@@ -30,6 +30,7 @@ namespace Natsu.MyForm
                 btn_ChiTiet.Visible = true;
             }
         }
+
         private void ThongKe()
         {
             try
@@ -41,9 +42,9 @@ namespace Natsu.MyForm
                 series1.ArgumentScaleType = ScaleType.Qualitative;
                 series1.ArgumentDataMember = "name";
                 series1.ValueScaleType = ScaleType.Numerical;
-                series1.ValueDataMembers.AddRange( "soluong" );
+                series1.ValueDataMembers.AddRange("soluong");
                 chartControl1.Series.Add(series1);
-                ((PiePointOptions)series1.Label.PointOptions).PointView = PointView.ArgumentAndValues;
+                ((PiePointOptions) series1.Label.PointOptions).PointView = PointView.ArgumentAndValues;
                 chartControl1.PaletteName = "Palette 1";
             }
             catch (Exception)
@@ -59,7 +60,7 @@ namespace Natsu.MyForm
 
         private void btn_ChiTiet_Click(object sender, EventArgs e)
         {
-            FrmChiTietTienDo frm = new FrmChiTietTienDo {lb_fBatchName = {Text = cbb_Batch.Text}};
+            FrmChiTietTienDo frm = new FrmChiTietTienDo { lb_fBatchName = { Text = cbb_Batch.Text } };
             frm.ShowDialog();
         }
     }

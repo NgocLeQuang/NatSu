@@ -1,22 +1,22 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.UserSkins;
+﻿using DevExpress.LookAndFeel;
 using DevExpress.Skins;
-using DevExpress.LookAndFeel;
+using DevExpress.UserSkins;
 using LibraryLogin;
 using Natsu.MyClass;
 using Natsu.MyForm;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Natsu
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -31,7 +31,7 @@ namespace Natsu
             {
                 temp = false;
                 Frm_Login a = new Frm_Login();
-                a.lb_programName.Text = @"           NATSU Project";
+                a.lb_programName.Text = @"           GETSU Project";
 
                 a.lb_vision.Text = @"Version :";
                 a.grb_1.Text = @"Information PC";
@@ -70,6 +70,7 @@ namespace Natsu
             }
             while (temp);
         }
+
         private static void a_ButtonLoginEven(int iLogin, string strMachine, string strUserWindow, string strIpAddress, string strUsername, string password, string strBatch, string strRole, string strToken, ref bool loginOk)
         {
             if (iLogin == 1)
@@ -113,6 +114,7 @@ namespace Natsu
                 }
             }
         }
+
         private static void a_LoginEvent(string username, string password, ref string strVersion, ref int iKiemtraLogin, ref string role, ref ComboBox cbb)
         {
             try
@@ -124,11 +126,9 @@ namespace Natsu
                     role = role.ToUpper();
                 if (iKiemtraLogin == 1 && role == "ADMIN")
                 {
-
                     cbb.DataSource = Global.Db.GetBatch();
                     cbb.DisplayMember = "fBatchName";
                 }
-
                 else if (iKiemtraLogin == 1 && role == "DESO")
                 {
                     cbb.DataSource = Global.Db.GetBatNotFinishDeSo(username);

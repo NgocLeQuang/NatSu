@@ -1,9 +1,9 @@
-﻿using System;
+﻿using DevExpress.XtraGrid.Views.Grid;
+using Natsu.MyClass;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraGrid.Views.Grid;
-using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
@@ -16,7 +16,7 @@ namespace Natsu.MyForm
 
         private void frm_ChiTietTienDo_Load(object sender, EventArgs e)
         {
-            lb_TongSoHinh.Text =(from w in Global.Db.tbl_Images where w.fbatchname == lb_fBatchName.Text select w.idimage).Count().ToString();
+            lb_TongSoHinh.Text = (from w in Global.Db.tbl_Images where w.fbatchname == lb_fBatchName.Text select w.idimage).Count().ToString();
 
             lb_SoHinhChuaNhap.Text = (from w in Global.Db.tbl_Images where w.fbatchname == lb_fBatchName.Text && w.TienDoDESO == "Hình chưa nhập" select w.idimage).Count().ToString();
             lb_SoHinhDangNhap.Text = (from w in Global.Db.tbl_Images where w.fbatchname == lb_fBatchName.Text && w.TienDoDESO == "Hình đang nhập" select w.idimage).Count().ToString();
@@ -60,14 +60,13 @@ namespace Natsu.MyForm
 
         private void popupContainerControl1_Paint(object sender, PaintEventArgs e)
         {
-           
         }
 
         private void repositoryItemPopupContainerEdit1_Click(object sender, EventArgs e)
         {
             string idimage = gridView1.GetFocusedRowCellValue("idimage").ToString();
             gridControl2.DataSource = null;
-            
+
             gridControl2.DataSource = Global.Db.ChiTietUserDeSo(lb_fBatchName.Text, idimage);
         }
     }

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using Natsu.MyClass;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using Natsu.MyClass;
 
 namespace Natsu.MyForm
 {
@@ -12,6 +12,7 @@ namespace Natsu.MyForm
     {
         private string[] _lFileNames;
         private int _soluonghinh;
+
         public FrmCreateBatch()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace Natsu.MyForm
         {
             UpLoadSingle();
         }
+
         private void UpLoadSingle()
         {
             progressBarControl1.EditValue = 0;
@@ -72,14 +74,9 @@ namespace Natsu.MyForm
                         fSoLuongAnh = _soluonghinh.ToString(),
                         LoaiBatch = "Getsu"
                         //LoaiBatch = rg_LoaiBatch.Properties.Items[rg_LoaiBatch.SelectedIndex].Description
-
                     };
                     Global.Db.tbl_Batches.InsertOnSubmit(fBatch);
                     Global.Db.SubmitChanges();
-
-
-
-
                 }
                 else
                 {
@@ -119,7 +116,6 @@ namespace Natsu.MyForm
                 Global.Db.tbl_Images.InsertOnSubmit(tempImage);
                 Global.Db.SubmitChanges();
 
-
                 string des = temp + @"\" + Path.GetFileName(fi.ToString());
                 fi.CopyTo(des);
                 progressBarControl1.PerformStep();
@@ -131,6 +127,7 @@ namespace Natsu.MyForm
             txt_ImagePath.Text = "";
             lb_SoLuongHinh.Text = "";
         }
+
         public static string[] GetFilesFrom(string searchFolder, string[] filters, bool isRecursive)
         {
             List<string> filesFound = new List<string>();

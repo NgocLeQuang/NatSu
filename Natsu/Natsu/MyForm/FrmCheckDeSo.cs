@@ -1,10 +1,10 @@
 ﻿using DevExpress.XtraEditors;
+using Natsu.MyClass;
+using Natsu.Properties;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Natsu.MyClass;
-using Natsu.Properties;
 
 namespace Natsu.MyForm
 {
@@ -31,7 +31,8 @@ namespace Natsu.MyForm
                 if (t1.Text != t2.Text)
                 {
                     t1.BackColor = Color.PaleVioletRed;
-                    t2.BackColor = Color.PaleVioletRed;}
+                    t2.BackColor = Color.PaleVioletRed;
+                }
             }
             else
             {
@@ -41,10 +42,10 @@ namespace Natsu.MyForm
                 t2.ForeColor = Color.Black;
             }
         }
-        
+
         public void LoadBatchMoi()
         {
-            if (MessageBox.Show(@"You want to do the next batch?", @"Notification", MessageBoxButtons.YesNo) ==DialogResult.No)
+            if (MessageBox.Show(@"You want to do the next batch?", @"Notification", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 ResetData();
                 btn_Luu_DeSo1.Visible = false;
@@ -79,22 +80,21 @@ namespace Natsu.MyForm
         {
             try
             {
-                cbb_Batch_Check.DataSource=(from w in Global.Db.GetBatNotFinishCheckerDeSo(Global.StrUsername) select w.fBatchName).ToList();
+                cbb_Batch_Check.DataSource = (from w in Global.Db.GetBatNotFinishCheckerDeSo(Global.StrUsername) select w.fBatchName).ToList();
                 cbb_Batch_Check.DisplayMember = "fBatchName";
                 cbb_Batch_Check.Text = Global.StrBatch;
                 Global.StrBatch = cbb_Batch_Check.Text;
                 var soloi = (from w in Global.Db.GetSoLoi_CheckDeSo(cbb_Batch_Check.Text) select w.Column1).FirstOrDefault();
                 lb_Loi.Text = soloi + @" Error";
-               
+
                 //tp_Natsu_DeSo1.PageVisible = false;
                 //tp_Natsu_DeSo2.PageVisible = false;
-                
-                
+
                 btn_Luu_DeSo1.Visible = false;
                 btn_Luu_DeSo2.Visible = false;
                 btn_SuaVaLuu_User1.Visible = false;
                 btn_SuaVaLuu_User2.Visible = false;
-                
+
                 ucNatsu1.UcNatsuItem1.Changed += UcNatsu1Item1_Changed;
                 ucNatsu1.UcNatsuItem2.Changed += UcNatsu1Item1_Changed;
                 ucNatsu1.UcNatsuItem3.Changed += UcNatsu1Item1_Changed;
@@ -124,12 +124,12 @@ namespace Natsu.MyForm
             btn_Luu_DeSo1.Visible = false;
             btn_SuaVaLuu_User1.Visible = true;
         }
-        
+
         private void btn_Start_Click(object sender, EventArgs e)
         {
             try
             {
-                var nhap =(from w in Global.Db.tbl_Images where w.fbatchname == Global.StrBatch && w.ReadImageDESo == 2 select w.idimage).Count();
+                var nhap = (from w in Global.Db.tbl_Images where w.fbatchname == Global.StrBatch && w.ReadImageDESo == 2 select w.idimage).Count();
                 var sohinh = (from w in Global.Db.tbl_Images where w.fbatchname == Global.StrBatch select w.idimage).Count();
                 var check = (from w in Global.Db.tbl_MissImage_DESOs where w.fBatchName == Global.StrBatch && w.Submit == 0 select w.IdImage).Count();
                 if (sohinh > nhap)
@@ -156,7 +156,7 @@ namespace Natsu.MyForm
                 string temp = GetImage_DeSo();
                 if (temp == "NULL")
                 {
-                    ucPictureBox1.imageBox1.Image=null;
+                    ucPictureBox1.imageBox1.Image = null;
                     MessageBox.Show(@"Picture is out!");
                     return;
                 }
@@ -183,7 +183,8 @@ namespace Natsu.MyForm
         {
             try
             {
-                var deso = (from w in Global.Db.tbl_DESOs where w.fBatchName == strBatch && w.IdImage == idimage
+                var deso = (from w in Global.Db.tbl_DESOs
+                            where w.fBatchName == strBatch && w.IdImage == idimage
                             select new
                             {
                                 w.UserName,
@@ -267,7 +268,7 @@ namespace Natsu.MyForm
                 ucNatsu1.UcNatsuItem2.txt_TruongSo23.Text = deso[1].Truong_23;
                 ucNatsu1.UcNatsuItem2.txt_TruongSo24.Text = deso[1].Truong_24;
                 ucNatsu1.UcNatsuItem2.txt_TruongSo25.Text = deso[1].Truong_25;
-           
+
                 ucNatsu1.UcNatsuItem3.txt_TruongSo01.Text = deso[2].Truong_01;
                 ucNatsu1.UcNatsuItem3.txt_TruongSo02.Text = deso[2].Truong_02;
                 ucNatsu1.UcNatsuItem3.txt_TruongSo03.Text = deso[2].Truong_03;
@@ -293,7 +294,7 @@ namespace Natsu.MyForm
                 ucNatsu1.UcNatsuItem3.txt_TruongSo23.Text = deso[2].Truong_23;
                 ucNatsu1.UcNatsuItem3.txt_TruongSo24.Text = deso[2].Truong_24;
                 ucNatsu1.UcNatsuItem3.txt_TruongSo25.Text = deso[2].Truong_25;
-            
+
                 ucNatsu1.UcNatsuItem4.txt_TruongSo01.Text = deso[3].Truong_01;
                 ucNatsu1.UcNatsuItem4.txt_TruongSo02.Text = deso[3].Truong_02;
                 ucNatsu1.UcNatsuItem4.txt_TruongSo03.Text = deso[3].Truong_03;
@@ -607,7 +608,6 @@ namespace Natsu.MyForm
                 Compare_TextBox(ucNatsu1.UcNatsuItem5.txt_TruongSo24, ucNatsu2.UcNatsuItem5.txt_TruongSo24);
                 Compare_TextBox(ucNatsu1.UcNatsuItem5.txt_TruongSo25, ucNatsu2.UcNatsuItem5.txt_TruongSo25);
 
-
                 var soloi = (from w in Global.Db.GetSoLoi_CheckDeSo(Global.StrBatch) select w.Column1).FirstOrDefault();
                 lb_Loi.Text = soloi + @" Error";
             }
@@ -625,13 +625,13 @@ namespace Natsu.MyForm
                 var getFilename = (from w in Global.Db.GetImageCheck_DeSo(Global.StrBatch, Global.StrUsername) select w.Column1).FirstOrDefault();
                 if (string.IsNullOrEmpty(getFilename))
                     return "NULL";
-                    lb_Image.Text = getFilename;
-                    ucPictureBox1.imageBox1.Image = null;
-                    if (ucPictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
-                    {
-                        ucPictureBox1.imageBox1.Image = Resources.svn_deleted;
-                        return "Error";
-                    }
+                lb_Image.Text = getFilename;
+                ucPictureBox1.imageBox1.Image = null;
+                if (ucPictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename, getFilename, Settings.Default.ZoomImage) == "Error")
+                {
+                    ucPictureBox1.imageBox1.Image = Resources.svn_deleted;
+                    return "Error";
+                }
             }
             else
             {
@@ -645,12 +645,13 @@ namespace Natsu.MyForm
             }
             return "Ok";
         }
+
         private void btn_Luu_DeSo1_Click(object sender, EventArgs e)
         {
             try
             {
                 Global.DbBpo.UpdateTimeLastRequest(Global.StrToken);
-                Global.Db.LuuDESo(lb_Image.Text, Global.StrBatch, lb_username1.Text, lb_username2.Text,Global.StrUsername);
+                Global.Db.LuuDESo(lb_Image.Text, Global.StrBatch, lb_username1.Text, lb_username2.Text, Global.StrUsername);
                 ResetData();
 
                 var soloi = (from w in Global.Db.GetSoLoi_CheckDeSo(Global.StrBatch) select w.Column1).FirstOrDefault();
@@ -659,11 +660,10 @@ namespace Natsu.MyForm
 
                 if (temp == "NULL")
                 {
-                    ucPictureBox1.imageBox1.Image=null;
+                    ucPictureBox1.imageBox1.Image = null;
                     MessageBox.Show(@"Picture is out!");
                     LoadBatchMoi();
                     return;
-
                 }
                 if (temp == "Error")
                 {
@@ -784,7 +784,7 @@ namespace Natsu.MyForm
                 MessageBox.Show(@"Error : " + i.Message);
             }
         }
-        
+
         private void cbb_Batch_Check_SelectedIndexChanged(object sender, EventArgs e)
         {
             //tp_Natsu_DeSo1.PageVisible = false;
@@ -804,7 +804,6 @@ namespace Natsu.MyForm
 
         private void btn_Screen_Click(object sender, EventArgs e)
         {
-
         }
 
         private void ucNatsu1_Scroll(object sender, ScrollEventArgs e)
@@ -821,6 +820,14 @@ namespace Natsu.MyForm
                 ucNatsu2.HorizontalScroll.Value = e.NewValue;
             else if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.VerticalScroll)
                 ucNatsu1.VerticalScroll.Value = e.NewValue;
+        }
+
+        private void FrmCheckDeSo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.PageUp)
+                ucPictureBox1.btn_Xoaytrai_Click(null, null);
+            if (e.Control && e.KeyCode == Keys.PageDown)
+                ucPictureBox1.btn_xoayphai_Click(null, null);
         }
     }
 }

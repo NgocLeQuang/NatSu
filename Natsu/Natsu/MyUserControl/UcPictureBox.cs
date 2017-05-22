@@ -1,23 +1,26 @@
-﻿using System;
+﻿using Natsu.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Natsu.Properties;
 
 namespace Natsu.MyUserControl
 {
     public partial class UcPictureBox : UserControl
     {
-        Image _temp ;
+        private Image _temp;
         public int ZoomMinimum = 10;
         public int ZoomMax = 500;
+
         public UcPictureBox()
         {
             InitializeComponent();
         }
+
         public void AllowZoom(bool b)
         {
             imageBox1.AllowZoom = b;
         }
+
         public string LoadImage(string strUrl, string strFileName, int iZoomValue)
         {
             try
@@ -33,7 +36,7 @@ namespace Natsu.MyUserControl
                 Bitmap newmap = bmap.Clone(new Rectangle(0, 0, bmap.Width, bmap.Height), System.Drawing.Imaging.PixelFormat.DontCare);
                 bmap.Dispose();
                 imageBox1.Image = null;
-                imageBox1.Image = _temp= newmap;
+                imageBox1.Image = _temp = newmap;
                 imageBox1.Zoom = iZoomValue;
                 imageBox1.ZoomChanged += imageBox1_ZoomChanged;
             }
@@ -50,7 +53,7 @@ namespace Natsu.MyUserControl
             ZoomMax = max;
         }
 
-        void imageBox1_ZoomChanged(object sender, EventArgs e)
+        private void imageBox1_ZoomChanged(object sender, EventArgs e)
         {
             if (imageBox1.Zoom < ZoomMinimum)
                 imageBox1.Zoom = ZoomMinimum;
@@ -75,7 +78,7 @@ namespace Natsu.MyUserControl
 
         public void btn_Xoaytrai_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show(trackBar_Ngang.Value.ToString() + "/" + trackBar_Doc.Value.ToString());
+            // MessageBox.Show(trackBar_Ngang.Value.ToString() + "/" + trackBar_Doc.Value.ToString());
             if (imageBox1.Image != null)
             {
                 trackBar_Ngang.Value = imageBox1.Image.Height;
@@ -83,7 +86,7 @@ namespace Natsu.MyUserControl
 
                 Bitmap bmp = new Bitmap(imageBox1.Image);
                 bmp.RotateFlip(RotateFlipType.Rotate90FlipXY);
-                imageBox1.Image = _temp= bmp;
+                imageBox1.Image = _temp = bmp;
             }
         }
 
@@ -96,7 +99,7 @@ namespace Natsu.MyUserControl
 
                 Bitmap bmp = new Bitmap(imageBox1.Image);
                 bmp.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                imageBox1.Image =_temp=  bmp;
+                imageBox1.Image = _temp = bmp;
             }
         }
 
@@ -116,7 +119,6 @@ namespace Natsu.MyUserControl
                 imageBox1.Image = newmap;
             }
             catch (Exception i) { MessageBox.Show(@"You have not loaded the image yet. Load the image before zooming! \n Error " + i.Message); }
-
         }
 
         private void uc_PictureBox_Load(object sender, EventArgs e)
@@ -139,7 +141,7 @@ namespace Natsu.MyUserControl
                 imageBox1.Image = null;
                 imageBox1.Image = newmap;
             }
-            catch(Exception i) { MessageBox.Show(@"You have not loaded the image yet. Load the image before zooming! \n Error " + i.Message); }
+            catch (Exception i) { MessageBox.Show(@"You have not loaded the image yet. Load the image before zooming! \n Error " + i.Message); }
         }
     }
 }
