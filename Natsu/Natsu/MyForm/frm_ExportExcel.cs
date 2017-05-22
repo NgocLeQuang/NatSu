@@ -167,7 +167,7 @@ namespace Natsu.MyForm
                     wrksheet.Cells[h, 29] = dr.Cells[25].Value?.ToString() ?? "";
                     
                     lb_SoDong.Text = (h - 1) + @"/" + dataGridView1.Rows.Count;
-                    Microsoft.Office.Interop.Excel.Range rowHead = wrksheet.get_Range("A2", "T" + h);
+                    Microsoft.Office.Interop.Excel.Range rowHead = wrksheet.get_Range("A1", "AC" + h);
                     rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
                     i++;
                     h++;
