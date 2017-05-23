@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManagerBatch));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -52,6 +52,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btn_TaoBatch = new DevExpress.XtraEditors.SimpleButton();
             this.repositoryItemButtonEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btn_DeleteSelectedBatch = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -67,7 +68,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -75,7 +76,7 @@
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit2.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit2.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -117,6 +118,8 @@
             this.gridColumn8});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.MultiSelect = true;
+            this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridView1.OptionsView.EnableAppearanceOddRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -126,8 +129,8 @@
             this.IDBatch.FieldName = "IDBatch";
             this.IDBatch.Name = "IDBatch";
             this.IDBatch.Visible = true;
-            this.IDBatch.VisibleIndex = 0;
-            this.IDBatch.Width = 50;
+            this.IDBatch.VisibleIndex = 1;
+            this.IDBatch.Width = 58;
             // 
             // fBatchName
             // 
@@ -135,8 +138,8 @@
             this.fBatchName.FieldName = "fBatchName";
             this.fBatchName.Name = "fBatchName";
             this.fBatchName.Visible = true;
-            this.fBatchName.VisibleIndex = 1;
-            this.fBatchName.Width = 129;
+            this.fBatchName.VisibleIndex = 2;
+            this.fBatchName.Width = 120;
             // 
             // fdatecreated
             // 
@@ -144,8 +147,8 @@
             this.fdatecreated.FieldName = "fdatecreated";
             this.fdatecreated.Name = "fdatecreated";
             this.fdatecreated.Visible = true;
-            this.fdatecreated.VisibleIndex = 3;
-            this.fdatecreated.Width = 91;
+            this.fdatecreated.VisibleIndex = 4;
+            this.fdatecreated.Width = 83;
             // 
             // fusercreate
             // 
@@ -153,8 +156,8 @@
             this.fusercreate.FieldName = "fusercreate";
             this.fusercreate.Name = "fusercreate";
             this.fusercreate.Visible = true;
-            this.fusercreate.VisibleIndex = 4;
-            this.fusercreate.Width = 91;
+            this.fusercreate.VisibleIndex = 5;
+            this.fusercreate.Width = 83;
             // 
             // fPathPicture
             // 
@@ -162,8 +165,8 @@
             this.fPathPicture.FieldName = "fPathPicture";
             this.fPathPicture.Name = "fPathPicture";
             this.fPathPicture.Visible = true;
-            this.fPathPicture.VisibleIndex = 5;
-            this.fPathPicture.Width = 107;
+            this.fPathPicture.VisibleIndex = 6;
+            this.fPathPicture.Width = 99;
             // 
             // fLocation
             // 
@@ -171,8 +174,8 @@
             this.fLocation.FieldName = "fLocation";
             this.fLocation.Name = "fLocation";
             this.fLocation.Visible = true;
-            this.fLocation.VisibleIndex = 6;
-            this.fLocation.Width = 116;
+            this.fLocation.VisibleIndex = 7;
+            this.fLocation.Width = 107;
             // 
             // fSoLuongAnh
             // 
@@ -180,8 +183,8 @@
             this.fSoLuongAnh.FieldName = "fSoLuongAnh";
             this.fSoLuongAnh.Name = "fSoLuongAnh";
             this.fSoLuongAnh.Visible = true;
-            this.fSoLuongAnh.VisibleIndex = 7;
-            this.fSoLuongAnh.Width = 74;
+            this.fSoLuongAnh.VisibleIndex = 8;
+            this.fSoLuongAnh.Width = 67;
             // 
             // LoaiBatch
             // 
@@ -189,8 +192,8 @@
             this.LoaiBatch.FieldName = "LoaiBatch";
             this.LoaiBatch.Name = "LoaiBatch";
             this.LoaiBatch.Visible = true;
-            this.LoaiBatch.VisibleIndex = 2;
-            this.LoaiBatch.Width = 91;
+            this.LoaiBatch.VisibleIndex = 3;
+            this.LoaiBatch.Width = 83;
             // 
             // gridColumn8
             // 
@@ -199,14 +202,14 @@
             this.gridColumn8.ImageAlignment = System.Drawing.StringAlignment.Center;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 8;
-            this.gridColumn8.Width = 73;
+            this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.Width = 88;
             // 
             // repositoryItemButtonEdit3
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit3.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit3.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryItemButtonEdit3.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemButtonEdit3_ButtonClick);
@@ -215,12 +218,13 @@
             // 
             this.repositoryItemButtonEdit4.AutoHeight = false;
             this.repositoryItemButtonEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit4.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit4.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.repositoryItemButtonEdit4.Name = "repositoryItemButtonEdit4";
             this.repositoryItemButtonEdit4.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btn_DeleteSelectedBatch);
             this.panelControl1.Controls.Add(this.btn_TaoBatch);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 376);
@@ -246,9 +250,22 @@
             // 
             this.repositoryItemButtonEdit5.AutoHeight = false;
             this.repositoryItemButtonEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit5.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit5.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.repositoryItemButtonEdit5.Name = "repositoryItemButtonEdit5";
             this.repositoryItemButtonEdit5.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // btn_DeleteSelectedBatch
+            // 
+            this.btn_DeleteSelectedBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_DeleteSelectedBatch.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_DeleteSelectedBatch.Appearance.Options.UseFont = true;
+            this.btn_DeleteSelectedBatch.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteSelectedBatch.Image")));
+            this.btn_DeleteSelectedBatch.Location = new System.Drawing.Point(629, 6);
+            this.btn_DeleteSelectedBatch.Name = "btn_DeleteSelectedBatch";
+            this.btn_DeleteSelectedBatch.Size = new System.Drawing.Size(199, 54);
+            this.btn_DeleteSelectedBatch.TabIndex = 1;
+            this.btn_DeleteSelectedBatch.Text = "Delete seleted Batch";
+            this.btn_DeleteSelectedBatch.Click += new System.EventHandler(this.btn_DeleteSelectedBatch_Click);
             // 
             // FrmManagerBatch
             // 
@@ -293,5 +310,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btn_TaoBatch;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit5;
+        private DevExpress.XtraEditors.SimpleButton btn_DeleteSelectedBatch;
     }
 }

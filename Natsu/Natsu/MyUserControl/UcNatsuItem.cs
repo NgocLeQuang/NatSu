@@ -321,7 +321,7 @@ namespace Natsu.MyUserControl
 
         private void txt_TruongSo03_EditValueChanged(object sender, EventArgs e)
         {
-            DoiMauTextBox((TextEdit)sender, 0, 6);
+            DoiMauTextBox((TextEdit)sender, 6, 6);
             Changed?.Invoke(sender, e);
         }
 
@@ -422,7 +422,7 @@ namespace Natsu.MyUserControl
 
         private void txt_TruongSo12_EditValueChanged(object sender, EventArgs e)
         {
-            DoiMauTextBox((TextEdit)sender, 0, 4);
+            DoiMauTextBox((TextEdit)sender, 4, 4);
             Changed?.Invoke(sender, e);
         }
 
@@ -434,7 +434,7 @@ namespace Natsu.MyUserControl
 
         private void txt_TruongSo14_EditValueChanged(object sender, EventArgs e)
         {
-            DoiMauTextBox((TextEdit)sender, 0, 2);
+            DoiMauTextBox((TextEdit)sender, 2, 2);
             Changed?.Invoke(sender, e);
         }
 

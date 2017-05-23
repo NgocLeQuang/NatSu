@@ -1,5 +1,7 @@
 ﻿using Natsu.MyClass;
 using System;
+using System.Collections;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -40,14 +42,41 @@ namespace Natsu.MyForm
                 {
                     Global.Db.XoaBatch(fbatchname);
                     Directory.Delete(temp, true);
-                    MessageBox.Show(@"Deleted batch successfully!");
-                }
+                    MessageBox.Show(@"Deleted batch successfully!");}
                 catch (Exception)
                 {
                     MessageBox.Show(@"Delete batch error!");
                 }
             }
+
+        }
+
+        private void btn_DeleteSelectedBatch_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            string s = "";
+            foreach (var rowHandle in gridView1.GetSelectedRows())
+            {
+                i += 1;
+                string fbatchname = gridView1.GetRowCellValue(rowHandle, "fBatchName").ToString();
+                s += fbatchname + "\n";
+            }
+            if (i <= 0)
+            {
+                MessageBox.Show("You have not selected batch. Please select batch before delete!");
+                return;
+            }
+            if (MessageBox.Show("You want delete " + i + " batch:\n" + s, "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                return;
+            foreach (var rowHandle in gridView1.GetSelectedRows())
+            {
+                string fbatchname = gridView1.GetRowCellValue(rowHandle, "fBatchName").ToString();
+                string temp = Global.StrPath + "\\" + fbatchname;
+                Global.Db.XoaBatch(fbatchname);
+                Directory.Delete(temp, true);
+            }
             RefreshBatch();
+
         }
     }
 }

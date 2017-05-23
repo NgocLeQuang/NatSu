@@ -70,7 +70,7 @@ namespace Natsu.MyForm
                         fusercreate = txt_UserCreate.Text,
                         fdatecreated = DateTime.Now,
                         fPathPicture = txt_ImagePath.Text,
-                        fLocation = txt_Location.Text,
+                        fLocation = txt_Location.Text+"\\"+txt_BatchName.Text+"\\",
                         fSoLuongAnh = _soluonghinh.ToString(),
                         LoaiBatch = "Getsu"
                         //LoaiBatch = rg_LoaiBatch.Properties.Items[rg_LoaiBatch.SelectedIndex].Description
