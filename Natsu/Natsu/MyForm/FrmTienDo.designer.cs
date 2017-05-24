@@ -32,22 +32,26 @@
             DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTienDo));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.ck_All = new DevExpress.XtraEditors.CheckEdit();
             this.btn_ChiTiet = new DevExpress.XtraEditors.SimpleButton();
             this.cbb_Batch = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.ck_All = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_TongSoHinh = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ck_All.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_Batch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ck_All.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.labelControl2);
+            this.panelControl1.Controls.Add(this.lb_TongSoHinh);
             this.panelControl1.Controls.Add(this.ck_All);
             this.panelControl1.Controls.Add(this.btn_ChiTiet);
             this.panelControl1.Controls.Add(this.cbb_Batch);
@@ -57,6 +61,17 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1082, 82);
             this.panelControl1.TabIndex = 1;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
+            // ck_All
+            // 
+            this.ck_All.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ck_All.Location = new System.Drawing.Point(575, 31);
+            this.ck_All.Name = "ck_All";
+            this.ck_All.Properties.Caption = "All";
+            this.ck_All.Size = new System.Drawing.Size(31, 19);
+            this.ck_All.TabIndex = 3;
+            this.ck_All.CheckedChanged += new System.EventHandler(this.ck_All_CheckedChanged);
             // 
             // btn_ChiTiet
             // 
@@ -104,22 +119,38 @@
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(64))))), System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(64))))), System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.Green, System.Drawing.Color.Green)}));
+            series1.LegendName = "Default Legend";
             series1.Name = "Series 1";
             series1.View = pieSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
             this.chartControl1.Size = new System.Drawing.Size(1082, 596);
             this.chartControl1.TabIndex = 2;
+            this.chartControl1.CustomDrawSeriesPoint += new DevExpress.XtraCharts.CustomDrawSeriesPointEventHandler(this.chartControl1_CustomDrawSeriesPoint);
             // 
-            // ck_All
+            // labelControl2
             // 
-            this.ck_All.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ck_All.Location = new System.Drawing.Point(575, 31);
-            this.ck_All.Name = "ck_All";
-            this.ck_All.Properties.Caption = "All";
-            this.ck_All.Size = new System.Drawing.Size(31, 19);
-            this.ck_All.TabIndex = 3;
-            this.ck_All.CheckedChanged += new System.EventHandler(this.ck_All_CheckedChanged);
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(919, 63);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(74, 13);
+            this.labelControl2.TabIndex = 9;
+            this.labelControl2.Text = "Tổng số hình:";
+            // 
+            // lb_TongSoHinh
+            // 
+            this.lb_TongSoHinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_TongSoHinh.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lb_TongSoHinh.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lb_TongSoHinh.Appearance.Options.UseFont = true;
+            this.lb_TongSoHinh.Appearance.Options.UseForeColor = true;
+            this.lb_TongSoHinh.Location = new System.Drawing.Point(999, 58);
+            this.lb_TongSoHinh.Name = "lb_TongSoHinh";
+            this.lb_TongSoHinh.Size = new System.Drawing.Size(40, 19);
+            this.lb_TongSoHinh.TabIndex = 8;
+            this.lb_TongSoHinh.Text = "1000";
             // 
             // FrmTienDo
             // 
@@ -136,11 +167,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ck_All.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_Batch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ck_All.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +184,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraCharts.ChartControl chartControl1;
         private DevExpress.XtraEditors.CheckEdit ck_All;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl lb_TongSoHinh;
     }
 }

@@ -80,5 +80,17 @@ namespace Natsu.Properties {
                 this["Zoom_Ngang"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastSelectedFolder {
+            get {
+                return ((string)(this["LastSelectedFolder"]));
+            }
+            set {
+                this["LastSelectedFolder"] = value;
+            }
+        }
     }
 }

@@ -108,9 +108,11 @@
             // bar2
             // 
             this.bar2.BarName = "Main menu";
+            this.bar2.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Top;
             this.bar2.DockCol = 0;
             this.bar2.DockRow = 0;
-            this.bar2.FloatLocation = new System.Drawing.Point(688, 215);
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.FloatLocation = new System.Drawing.Point(514, 148);
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.bar_System),
             new DevExpress.XtraBars.LinkPersistInfo(this.bar_Manager),
@@ -212,7 +214,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1264, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1264, 20);
             // 
             // barDockControlBottom
             // 
@@ -226,17 +228,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 646);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 626);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1264, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1264, 20);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 646);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 626);
             // 
             // pn_Top
             // 
@@ -254,7 +256,7 @@
             this.pn_Top.Controls.Add(this.lb_2);
             this.pn_Top.Controls.Add(this.lb_1);
             this.pn_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_Top.Location = new System.Drawing.Point(0, 0);
+            this.pn_Top.Location = new System.Drawing.Point(0, 20);
             this.pn_Top.Name = "pn_Top";
             this.pn_Top.Size = new System.Drawing.Size(1264, 25);
             this.pn_Top.TabIndex = 7;
@@ -377,9 +379,9 @@
             this.pn_Input.Controls.Add(this.UcNatsu1);
             this.pn_Input.Controls.Add(this.pn_Button);
             this.pn_Input.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_Input.Location = new System.Drawing.Point(749, 25);
+            this.pn_Input.Location = new System.Drawing.Point(749, 45);
             this.pn_Input.Name = "pn_Input";
-            this.pn_Input.Size = new System.Drawing.Size(515, 621);
+            this.pn_Input.Size = new System.Drawing.Size(515, 601);
             this.pn_Input.TabIndex = 8;
             // 
             // UcNatsu1
@@ -389,7 +391,7 @@
             this.UcNatsu1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UcNatsu1.Location = new System.Drawing.Point(2, 2);
             this.UcNatsu1.Name = "UcNatsu1";
-            this.UcNatsu1.Size = new System.Drawing.Size(511, 587);
+            this.UcNatsu1.Size = new System.Drawing.Size(511, 567);
             this.UcNatsu1.TabIndex = 8;
             // 
             // pn_Button
@@ -398,7 +400,7 @@
             this.pn_Button.Controls.Add(this.btn_Submit_Logout);
             this.pn_Button.Controls.Add(this.btn_Start_Submit);
             this.pn_Button.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pn_Button.Location = new System.Drawing.Point(2, 589);
+            this.pn_Button.Location = new System.Drawing.Point(2, 569);
             this.pn_Button.Name = "pn_Button";
             this.pn_Button.Size = new System.Drawing.Size(511, 30);
             this.pn_Button.TabIndex = 0;
@@ -434,9 +436,9 @@
             // 
             this.pn_Image.Controls.Add(this.UcPictureBox1);
             this.pn_Image.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Image.Location = new System.Drawing.Point(0, 25);
+            this.pn_Image.Location = new System.Drawing.Point(0, 45);
             this.pn_Image.Name = "pn_Image";
-            this.pn_Image.Size = new System.Drawing.Size(749, 621);
+            this.pn_Image.Size = new System.Drawing.Size(749, 601);
             this.pn_Image.TabIndex = 9;
             // 
             // UcPictureBox1
@@ -444,7 +446,7 @@
             this.UcPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UcPictureBox1.Location = new System.Drawing.Point(2, 2);
             this.UcPictureBox1.Name = "UcPictureBox1";
-            this.UcPictureBox1.Size = new System.Drawing.Size(745, 617);
+            this.UcPictureBox1.Size = new System.Drawing.Size(745, 597);
             this.UcPictureBox1.TabIndex = 0;
             // 
             // barButtonItem1

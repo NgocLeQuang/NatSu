@@ -236,9 +236,20 @@ namespace Natsu.MyForm
 
         private void btn_Browser_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.Reload();
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.LastSelectedFolder))
+            {
+                folderBrowserDialog1.SelectedPath = Properties.Settings.Default.LastSelectedFolder;
+            }
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 txt_PathFolder.Text = folderBrowserDialog1.SelectedPath;
+                if (!string.IsNullOrEmpty(txt_PathFolder.Text))
+                {
+                    Properties.Settings.Default.LastSelectedFolder = txt_PathFolder.Text;
+                    Properties.Settings.Default.Save();
+                }
+               
             }
         }
 

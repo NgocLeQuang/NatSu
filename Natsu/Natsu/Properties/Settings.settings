@@ -27,5 +27,8 @@
     <Setting Name="Zoom_Ngang" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1700</Value>
     </Setting>
+    <Setting Name="LastSelectedFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
