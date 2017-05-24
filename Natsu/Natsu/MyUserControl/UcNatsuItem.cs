@@ -242,40 +242,48 @@ namespace Natsu.MyUserControl
 
         private void curency(TextEdit txt)
         {
-            string t;
-            if (txt.Text.Length > 0)
+            try
             {
-                if (txt.Text.Substring(0, 1) == "-")
+                string t;
+                if (txt.Text.Length > 0)
                 {
-                    if (txt.Text.Length > 1)
+                    if (txt.Text.Substring(0, 1) == "-")
                     {
-                        t = txt.Text.Substring(1, txt.Text.Length - 1);
+                        if (txt.Text.Length > 1)
+                        {
+                            t = txt.Text.Substring(1, txt.Text.Length - 1);
+                            if (txt.SelectionLength != txt.Text.Length)
+                            {
+                                if (txt.Text != "?")
+                                {
+                                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                                    int valueBefore = Int32.Parse(t, System.Globalization.NumberStyles.AllowThousands);
+                                    txt.Text = "-" + String.Format(culture, "{0:N0}", valueBefore);
+                                    txt.Select(txt.Text.Length, 0);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
                         if (txt.SelectionLength != txt.Text.Length)
                         {
                             if (txt.Text != "?")
                             {
                                 System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-                                int valueBefore = Int32.Parse(t, System.Globalization.NumberStyles.AllowThousands);
-                                txt.Text = "-" + String.Format(culture, "{0:N0}", valueBefore);
+                                int valueBefore = Int32.Parse(txt.Text, System.Globalization.NumberStyles.AllowThousands);
+                                txt.Text = string.Format(culture, "{0:N0}", valueBefore);
                                 txt.Select(txt.Text.Length, 0);
                             }
                         }
                     }
                 }
-                else
-                {
-                    if (txt.SelectionLength != txt.Text.Length)
-                    {
-                        if (txt.Text != "?")
-                        {
-                            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-                            int valueBefore = Int32.Parse(txt.Text, System.Globalization.NumberStyles.AllowThousands);
-                            txt.Text = string.Format(culture, "{0:N0}", valueBefore);
-                            txt.Select(txt.Text.Length, 0);
-                        }
-                    }
-                }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+           
         }
 
         private void Total_Truong10(TextEdit txt1, TextEdit txt2, TextEdit txt3)
@@ -561,6 +569,15 @@ namespace Natsu.MyUserControl
             catch
             {
                 // ignored
+            }
+        }
+
+        private void txt_TruongSo01_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Add)
+            {
+                ((TextEdit)sender).Text = ((TextEdit)sender).Text + "000";
+                ((TextEdit)sender).Select(((TextEdit)sender).Text.Length, 0);
             }
         }
     }

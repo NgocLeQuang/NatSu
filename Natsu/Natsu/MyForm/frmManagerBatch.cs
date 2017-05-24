@@ -42,12 +42,18 @@ namespace Natsu.MyForm
                 {
                     Global.Db.XoaBatch(fbatchname);
                     Directory.Delete(temp, true);
-                    MessageBox.Show(@"Deleted batch successfully!");}
+                    RefreshBatch();
+                    MessageBox.Show(@"Deleted batch successfully!");
+                    
+                }
                 catch (Exception)
                 {
+                    RefreshBatch();
                     MessageBox.Show(@"Delete batch error!");
+                    
                 }
             }
+            
 
         }
 

@@ -3,6 +3,7 @@ using Natsu.Properties;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace Natsu.MyForm
 {
@@ -261,6 +262,7 @@ namespace Natsu.MyForm
                 new FrmFreeTime().ShowDialog();
                 Global.DbBpo.UpdateTimeFree(Global.StrToken, Global.FreeTime);
             }
+            
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)

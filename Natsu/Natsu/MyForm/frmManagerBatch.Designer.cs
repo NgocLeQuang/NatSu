@@ -50,9 +50,9 @@
             this.repositoryItemButtonEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btn_DeleteSelectedBatch = new DevExpress.XtraEditors.SimpleButton();
             this.btn_TaoBatch = new DevExpress.XtraEditors.SimpleButton();
             this.repositoryItemButtonEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btn_DeleteSelectedBatch = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -232,11 +232,22 @@
             this.panelControl1.Size = new System.Drawing.Size(840, 65);
             this.panelControl1.TabIndex = 3;
             // 
+            // btn_DeleteSelectedBatch
+            // 
+            this.btn_DeleteSelectedBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_DeleteSelectedBatch.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_DeleteSelectedBatch.Appearance.Options.UseFont = true;
+            this.btn_DeleteSelectedBatch.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteSelectedBatch.Image")));
+            this.btn_DeleteSelectedBatch.Location = new System.Drawing.Point(629, 6);
+            this.btn_DeleteSelectedBatch.Name = "btn_DeleteSelectedBatch";
+            this.btn_DeleteSelectedBatch.Size = new System.Drawing.Size(199, 54);
+            this.btn_DeleteSelectedBatch.TabIndex = 1;
+            this.btn_DeleteSelectedBatch.Text = "Delete seleted Batch";
+            this.btn_DeleteSelectedBatch.Click += new System.EventHandler(this.btn_DeleteSelectedBatch_Click);
+            // 
             // btn_TaoBatch
             // 
-            this.btn_TaoBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_TaoBatch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_TaoBatch.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_TaoBatch.Appearance.Options.UseFont = true;
             this.btn_TaoBatch.Location = new System.Drawing.Point(351, 5);
@@ -254,19 +265,6 @@
             this.repositoryItemButtonEdit5.Name = "repositoryItemButtonEdit5";
             this.repositoryItemButtonEdit5.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // btn_DeleteSelectedBatch
-            // 
-            this.btn_DeleteSelectedBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_DeleteSelectedBatch.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_DeleteSelectedBatch.Appearance.Options.UseFont = true;
-            this.btn_DeleteSelectedBatch.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteSelectedBatch.Image")));
-            this.btn_DeleteSelectedBatch.Location = new System.Drawing.Point(629, 6);
-            this.btn_DeleteSelectedBatch.Name = "btn_DeleteSelectedBatch";
-            this.btn_DeleteSelectedBatch.Size = new System.Drawing.Size(199, 54);
-            this.btn_DeleteSelectedBatch.TabIndex = 1;
-            this.btn_DeleteSelectedBatch.Text = "Delete seleted Batch";
-            this.btn_DeleteSelectedBatch.Click += new System.EventHandler(this.btn_DeleteSelectedBatch_Click);
-            // 
             // FrmManagerBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,6 +274,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmManagerBatch";
             this.Text = "Manager Batch";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmManagerBatch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();

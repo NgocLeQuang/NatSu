@@ -46,17 +46,21 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.btn_Browser = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_PathFolder = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateCreate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ImagePath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_UserCreate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Location.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_BatchName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_PathFolder.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_DateCreate
             // 
-            this.txt_DateCreate.Location = new System.Drawing.Point(137, 185);
+            this.txt_DateCreate.Location = new System.Drawing.Point(137, 272);
             this.txt_DateCreate.Name = "txt_DateCreate";
             this.txt_DateCreate.Properties.ReadOnly = true;
             this.txt_DateCreate.Size = new System.Drawing.Size(174, 20);
@@ -68,7 +72,7 @@
             this.lb_SoLuongHinh.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
             this.lb_SoLuongHinh.Appearance.Options.UseFont = true;
             this.lb_SoLuongHinh.Appearance.Options.UseForeColor = true;
-            this.lb_SoLuongHinh.Location = new System.Drawing.Point(137, 256);
+            this.lb_SoLuongHinh.Location = new System.Drawing.Point(137, 108);
             this.lb_SoLuongHinh.Name = "lb_SoLuongHinh";
             this.lb_SoLuongHinh.Size = new System.Drawing.Size(0, 19);
             this.lb_SoLuongHinh.TabIndex = 45;
@@ -76,7 +80,7 @@
             // progressBarControl1
             // 
             this.progressBarControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBarControl1.Location = new System.Drawing.Point(0, 363);
+            this.progressBarControl1.Location = new System.Drawing.Point(0, 384);
             this.progressBarControl1.Name = "progressBarControl1";
             this.progressBarControl1.Properties.Step = 1;
             this.progressBarControl1.Size = new System.Drawing.Size(632, 40);
@@ -84,7 +88,7 @@
             // 
             // btn_CreateBatch
             // 
-            this.btn_CreateBatch.Location = new System.Drawing.Point(221, 291);
+            this.btn_CreateBatch.Location = new System.Drawing.Point(221, 318);
             this.btn_CreateBatch.Name = "btn_CreateBatch";
             this.btn_CreateBatch.Size = new System.Drawing.Size(164, 44);
             this.btn_CreateBatch.TabIndex = 43;
@@ -93,7 +97,7 @@
             // 
             // btn_BrowserImage
             // 
-            this.btn_BrowserImage.Location = new System.Drawing.Point(499, 228);
+            this.btn_BrowserImage.Location = new System.Drawing.Point(499, 80);
             this.btn_BrowserImage.Name = "btn_BrowserImage";
             this.btn_BrowserImage.Size = new System.Drawing.Size(85, 23);
             this.btn_BrowserImage.TabIndex = 42;
@@ -102,7 +106,7 @@
             // 
             // txt_ImagePath
             // 
-            this.txt_ImagePath.Location = new System.Drawing.Point(137, 230);
+            this.txt_ImagePath.Location = new System.Drawing.Point(137, 82);
             this.txt_ImagePath.Name = "txt_ImagePath";
             this.txt_ImagePath.Properties.ReadOnly = true;
             this.txt_ImagePath.Size = new System.Drawing.Size(356, 20);
@@ -110,7 +114,7 @@
             // 
             // txt_UserCreate
             // 
-            this.txt_UserCreate.Location = new System.Drawing.Point(137, 141);
+            this.txt_UserCreate.Location = new System.Drawing.Point(137, 228);
             this.txt_UserCreate.Name = "txt_UserCreate";
             this.txt_UserCreate.Properties.ReadOnly = true;
             this.txt_UserCreate.Size = new System.Drawing.Size(174, 20);
@@ -118,10 +122,14 @@
             // 
             // txt_Location
             // 
-            this.txt_Location.Location = new System.Drawing.Point(137, 89);
+            this.txt_Location.Location = new System.Drawing.Point(137, 176);
             this.txt_Location.Name = "txt_Location";
             this.txt_Location.Size = new System.Drawing.Size(356, 20);
             this.txt_Location.TabIndex = 40;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // txt_BatchName
             // 
@@ -129,10 +137,11 @@
             this.txt_BatchName.Name = "txt_BatchName";
             this.txt_BatchName.Size = new System.Drawing.Size(356, 20);
             this.txt_BatchName.TabIndex = 37;
+            this.txt_BatchName.EditValueChanged += new System.EventHandler(this.txt_BatchName_EditValueChanged);
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(62, 234);
+            this.labelControl7.Location = new System.Drawing.Point(63, 85);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(59, 13);
             this.labelControl7.TabIndex = 34;
@@ -140,7 +149,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(31, 189);
+            this.labelControl6.Location = new System.Drawing.Point(31, 276);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(91, 13);
             this.labelControl6.TabIndex = 33;
@@ -148,7 +157,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(32, 145);
+            this.labelControl5.Location = new System.Drawing.Point(32, 232);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(90, 13);
             this.labelControl5.TabIndex = 32;
@@ -156,7 +165,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(95, 93);
+            this.labelControl4.Location = new System.Drawing.Point(95, 180);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(26, 13);
             this.labelControl4.TabIndex = 31;
@@ -164,11 +173,11 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(61, 60);
+            this.labelControl2.Location = new System.Drawing.Point(22, 59);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(61, 13);
+            this.labelControl2.Size = new System.Drawing.Size(100, 13);
             this.labelControl2.TabIndex = 35;
-            this.labelControl2.Text = "Batch Name:";
+            this.labelControl2.Text = "Batch Name (Single):";
             // 
             // labelControl1
             // 
@@ -186,17 +195,45 @@
             // 
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Gray;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(137, 115);
+            this.labelControl3.Location = new System.Drawing.Point(137, 202);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(33, 13);
+            this.labelControl3.Size = new System.Drawing.Size(31, 13);
             this.labelControl3.TabIndex = 31;
-            this.labelControl3.Text = "Z:\\abc";
+            this.labelControl3.Text = "Z:/abc";
+            // 
+            // btn_Browser
+            // 
+            this.btn_Browser.Location = new System.Drawing.Point(499, 130);
+            this.btn_Browser.Name = "btn_Browser";
+            this.btn_Browser.Size = new System.Drawing.Size(85, 23);
+            this.btn_Browser.TabIndex = 48;
+            this.btn_Browser.Text = "Browser...";
+            this.btn_Browser.Click += new System.EventHandler(this.btn_Browser_Click);
+            // 
+            // txt_PathFolder
+            // 
+            this.txt_PathFolder.Location = new System.Drawing.Point(137, 132);
+            this.txt_PathFolder.Name = "txt_PathFolder";
+            this.txt_PathFolder.Size = new System.Drawing.Size(356, 20);
+            this.txt_PathFolder.TabIndex = 47;
+            this.txt_PathFolder.EditValueChanged += new System.EventHandler(this.txt_PathFolder_EditValueChanged);
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(30, 135);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(101, 13);
+            this.labelControl8.TabIndex = 46;
+            this.labelControl8.Text = "Folder Batch (nhiều):";
             // 
             // FrmCreateBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 403);
+            this.ClientSize = new System.Drawing.Size(632, 424);
+            this.Controls.Add(this.btn_Browser);
+            this.Controls.Add(this.txt_PathFolder);
+            this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.txt_DateCreate);
             this.Controls.Add(this.lb_SoLuongHinh);
             this.Controls.Add(this.progressBarControl1);
@@ -223,6 +260,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_UserCreate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Location.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_BatchName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_PathFolder.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +285,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton btn_Browser;
+        private DevExpress.XtraEditors.TextEdit txt_PathFolder;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }

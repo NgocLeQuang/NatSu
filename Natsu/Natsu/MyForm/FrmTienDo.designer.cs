@@ -36,16 +36,19 @@
             this.cbb_Batch = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.ck_All = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_Batch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ck_All.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.ck_All);
             this.panelControl1.Controls.Add(this.btn_ChiTiet);
             this.panelControl1.Controls.Add(this.cbb_Batch);
             this.panelControl1.Controls.Add(this.labelControl1);
@@ -58,7 +61,7 @@
             // btn_ChiTiet
             // 
             this.btn_ChiTiet.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_ChiTiet.Location = new System.Drawing.Point(596, 30);
+            this.btn_ChiTiet.Location = new System.Drawing.Point(615, 29);
             this.btn_ChiTiet.Name = "btn_ChiTiet";
             this.btn_ChiTiet.Size = new System.Drawing.Size(75, 23);
             this.btn_ChiTiet.TabIndex = 2;
@@ -108,6 +111,16 @@
             this.chartControl1.Size = new System.Drawing.Size(1082, 596);
             this.chartControl1.TabIndex = 2;
             // 
+            // ck_All
+            // 
+            this.ck_All.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ck_All.Location = new System.Drawing.Point(575, 31);
+            this.ck_All.Name = "ck_All";
+            this.ck_All.Properties.Caption = "All";
+            this.ck_All.Size = new System.Drawing.Size(31, 19);
+            this.ck_All.TabIndex = 3;
+            this.ck_All.CheckedChanged += new System.EventHandler(this.ck_All_CheckedChanged);
+            // 
             // FrmTienDo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +140,7 @@
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ck_All.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,5 +152,6 @@
         private DevExpress.XtraEditors.LookUpEdit cbb_Batch;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.XtraEditors.CheckEdit ck_All;
     }
 }

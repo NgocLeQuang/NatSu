@@ -37,7 +37,15 @@ namespace Natsu.MyForm
             {
                 chartControl1.DataSource = null;
                 chartControl1.Series.Clear();
-                chartControl1.DataSource = Global.Db.ThongKeTienDo(cbb_Batch.Text);
+                if (ck_All.Checked)
+                {
+                    chartControl1.DataSource = Global.Db.ThongKeTienDo_All();
+                }
+                else
+                {
+                    chartControl1.DataSource = Global.Db.ThongKeTienDo(cbb_Batch.Text);
+                }
+                
                 Series series1 = new Series("Series1", ViewType.Pie);
                 series1.ArgumentScaleType = ScaleType.Qualitative;
                 series1.ArgumentDataMember = "name";
@@ -60,8 +68,14 @@ namespace Natsu.MyForm
 
         private void btn_ChiTiet_Click(object sender, EventArgs e)
         {
-            FrmChiTietTienDo frm = new FrmChiTietTienDo { lb_fBatchName = { Text = cbb_Batch.Text } };
+            var frm = new FrmChiTietTienDo {lb_fBatchName = {Text = ck_All.Checked ? "All" : cbb_Batch.Text}};
             frm.ShowDialog();
+        }
+
+        private void ck_All_CheckedChanged(object sender, EventArgs e)
+        {
+            cbb_Batch.Enabled = !ck_All.Checked;
+            ThongKe();
         }
     }
 }

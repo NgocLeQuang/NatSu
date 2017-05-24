@@ -495,4 +495,18 @@
       <Column Name="idphieu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ChiTietTienDo_All" Method="ChiTietTienDo_All">
+    <ElementType Name="ChiTietTienDo_AllResult">
+      <Column Name="idimage" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserNameDESo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Checker" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ThongKeTienDo_All" Method="ThongKeTienDo_All">
+    <ElementType Name="ThongKeTienDo_AllResult">
+      <Column Name="name" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

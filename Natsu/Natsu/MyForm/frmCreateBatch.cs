@@ -12,6 +12,7 @@ namespace Natsu.MyForm
     {
         private string[] _lFileNames;
         private int _soluonghinh;
+        private bool _multi;
 
         public FrmCreateBatch()
         {
@@ -49,7 +50,8 @@ namespace Natsu.MyForm
 
         private void btn_CreateBatch_Click(object sender, EventArgs e)
         {
-            UpLoadSingle();
+            backgroundWorker1.RunWorkerAsync();
+           
         }
 
         private void UpLoadSingle()
@@ -70,7 +72,7 @@ namespace Natsu.MyForm
                         fusercreate = txt_UserCreate.Text,
                         fdatecreated = DateTime.Now,
                         fPathPicture = txt_ImagePath.Text,
-                        fLocation = txt_Location.Text+"\\"+txt_BatchName.Text+"\\",
+                        fLocation = txt_Location.Text+"/"+txt_BatchName.Text+"/",
                         fSoLuongAnh = _soluonghinh.ToString(),
                         LoaiBatch = "Getsu"
                         //LoaiBatch = rg_LoaiBatch.Properties.Items[rg_LoaiBatch.SelectedIndex].Description
@@ -127,6 +129,67 @@ namespace Natsu.MyForm
             txt_ImagePath.Text = "";
             lb_SoLuongHinh.Text = "";
         }
+        private void UpLoadMulti()
+        {
+            List<string> lStrBath = new List<string>();
+            lStrBath.AddRange(Directory.GetDirectories(txt_PathFolder.Text));
+            progressBarControl1.EditValue = 0;
+            progressBarControl1.Properties.Step = 1;
+            progressBarControl1.Properties.PercentView = true;
+            progressBarControl1.Properties.Maximum = lStrBath.Count;
+            progressBarControl1.Properties.Minimum = 0;
+            foreach (string item in lStrBath)
+            {
+                string batchName = new DirectoryInfo(item).Name;
+                var fBatch = new tbl_Batch
+                {
+                    
+                    fBatchName = batchName,
+                    fusercreate = txt_UserCreate.Text,
+                    fdatecreated = DateTime.Now,
+                    fPathPicture = item,
+                    fLocation = txt_Location.Text + "/" + batchName + "/",
+                    fSoLuongAnh = Directory.GetFiles(item).Length.ToString(),
+                    LoaiBatch = "Getsu"
+                };
+                Global.Db.tbl_Batches.InsertOnSubmit(fBatch);
+                Global.Db.SubmitChanges();
+
+                string searchFolder = txt_PathFolder.Text + "\\" + new DirectoryInfo(item).Name;
+                var filters = new String[] { "jpg", "jpeg", "png", "gif", "tiff", "bmp" };
+                string[] tmp = GetFilesFrom(searchFolder, filters, false);
+                string temp = Global.StrPath + "\\" + batchName;
+                Directory.CreateDirectory(temp);
+                string imageJPG = "";
+                foreach (string i in tmp)
+                {
+                    FileInfo fi = new FileInfo(i);
+                    tbl_Image tempImage = new tbl_Image
+                    {
+                        fbatchname = batchName,
+                        idimage = Path.GetFileName(fi.ToString()),
+                        ReadImageDESo = 0,
+                        CheckedDESo = 0,
+                        TienDoDESO = "Hình chưa nhập",
+                        ReadImageDESO_Good = 1,
+                        ReadImageDESO_NotGood = 1
+                    };
+                    Global.Db.tbl_Images.InsertOnSubmit(tempImage);
+                    Global.Db.SubmitChanges();
+                    string des = temp + @"\" + Path.GetFileName(fi.ToString());
+                    fi.CopyTo(des);
+                    progressBarControl1.PerformStep();
+                    progressBarControl1.Update();
+                }
+                progressBarControl1.PerformStep();
+                progressBarControl1.Update();
+            }
+            MessageBox.Show(@"Create a new batch successfully!");
+            progressBarControl1.EditValue = 0;
+            txt_BatchName.Text = "";
+            txt_ImagePath.Text = "";
+            lb_SoLuongHinh.Text = "";
+        }
 
         public static string[] GetFilesFrom(string searchFolder, string[] filters, bool isRecursive)
         {
@@ -137,6 +200,58 @@ namespace Natsu.MyForm
                 filesFound.AddRange(Directory.GetFiles(searchFolder, $"*.{filter}", searchOption));
             }
             return filesFound.ToArray();
+        }
+
+        private void txt_BatchName_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_BatchName.Text))
+            {
+                _multi = false;
+                txt_PathFolder.Enabled = false;
+                btn_Browser.Enabled = false;
+            }
+            else
+            {
+                txt_PathFolder.Enabled = true;
+                btn_Browser.Enabled = true;
+            }
+        }
+
+        private void txt_PathFolder_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_PathFolder.Text))
+            {
+                _multi = true;
+                txt_BatchName.Enabled = false;
+                txt_ImagePath.Enabled = false;
+                btn_BrowserImage.Enabled = false;
+            }
+            else
+            {
+                txt_BatchName.Enabled = true;
+                txt_ImagePath.Enabled = true;
+                btn_BrowserImage.Enabled = true;
+            }
+        }
+
+        private void btn_Browser_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                txt_PathFolder.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            if (_multi)
+            {
+                UpLoadMulti();
+            }
+            else
+            {
+                UpLoadSingle();
+            }
         }
     }
 }

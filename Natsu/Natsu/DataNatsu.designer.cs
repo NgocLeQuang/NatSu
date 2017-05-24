@@ -411,6 +411,20 @@ namespace Natsu
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
 			return ((ISingleResult<ExportExcel_GetsuResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDo_All")]
+		public ISingleResult<ChiTietTienDo_AllResult> ChiTietTienDo_All()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ChiTietTienDo_AllResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeTienDo_All")]
+		public ISingleResult<ThongKeTienDo_AllResult> ThongKeTienDo_All()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ThongKeTienDo_AllResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Batch")]
@@ -5524,6 +5538,130 @@ namespace Natsu
 				if ((this._idphieu != value))
 				{
 					this._idphieu = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChiTietTienDo_AllResult
+	{
+		
+		private string _idimage;
+		
+		private string _UserNameDESo;
+		
+		private string _Checker;
+		
+		private string _ThongTin;
+		
+		public ChiTietTienDo_AllResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idimage", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string idimage
+		{
+			get
+			{
+				return this._idimage;
+			}
+			set
+			{
+				if ((this._idimage != value))
+				{
+					this._idimage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserNameDESo", DbType="NVarChar(200)")]
+		public string UserNameDESo
+		{
+			get
+			{
+				return this._UserNameDESo;
+			}
+			set
+			{
+				if ((this._UserNameDESo != value))
+				{
+					this._UserNameDESo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Checker", DbType="NVarChar(255)")]
+		public string Checker
+		{
+			get
+			{
+				return this._Checker;
+			}
+			set
+			{
+				if ((this._Checker != value))
+				{
+					this._Checker = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTin", DbType="NVarChar(100)")]
+		public string ThongTin
+		{
+			get
+			{
+				return this._ThongTin;
+			}
+			set
+			{
+				if ((this._ThongTin != value))
+				{
+					this._ThongTin = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ThongKeTienDo_AllResult
+	{
+		
+		private string _name;
+		
+		private int _soluong;
+		
+		public ThongKeTienDo_AllResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
+		public int soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
 				}
 			}
 		}

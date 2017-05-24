@@ -96,7 +96,7 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1038, 583);
@@ -104,15 +104,15 @@
             // 
             // progressBarControl1
             // 
-            this.progressBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressBarControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.progressBarControl1.Location = new System.Drawing.Point(0, 61);
             this.progressBarControl1.Name = "progressBarControl1";
             this.progressBarControl1.Properties.ShowTitle = true;
             this.progressBarControl1.ShowProgressInTaskBar = true;
-            this.progressBarControl1.Size = new System.Drawing.Size(1038, 616);
+            this.progressBarControl1.Size = new System.Drawing.Size(1038, 33);
             this.progressBarControl1.TabIndex = 11;
             // 
-            // frm_ExportExcel
+            // FrmExportExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
