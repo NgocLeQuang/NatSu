@@ -47,7 +47,7 @@ namespace Natsu.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("40")]
+        [global::System.Configuration.DefaultSettingValueAttribute("55")]
         public int ZoomImage {
             get {
                 return ((int)(this["ZoomImage"]));

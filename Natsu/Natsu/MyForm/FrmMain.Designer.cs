@@ -42,6 +42,7 @@
             this.btn_Productivity = new DevExpress.XtraBars.BarButtonItem();
             this.btn_ExportExcel = new DevExpress.XtraBars.BarButtonItem();
             this.btn_ZoomImage = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -68,7 +69,6 @@
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
             this.pn_Image = new DevExpress.XtraEditors.PanelControl();
             this.UcPictureBox1 = new Natsu.MyUserControl.UcPictureBox();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pn_Top)).BeginInit();
             this.pn_Top.SuspendLayout();
@@ -208,6 +208,12 @@
             this.btn_ZoomImage.Name = "btn_ZoomImage";
             this.btn_ZoomImage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ZoomImage_ItemClick);
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Feedback";
+            this.barButtonItem1.Id = 11;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -332,6 +338,7 @@
             this.lb_IdImage.Size = new System.Drawing.Size(6, 13);
             this.lb_IdImage.TabIndex = 7;
             this.lb_IdImage.Text = "0";
+            this.lb_IdImage.Click += new System.EventHandler(this.lb_IdImage_Click);
             // 
             // lb_6
             // 
@@ -448,12 +455,6 @@
             this.UcPictureBox1.Name = "UcPictureBox1";
             this.UcPictureBox1.Size = new System.Drawing.Size(745, 597);
             this.UcPictureBox1.TabIndex = 0;
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Feedback";
-            this.barButtonItem1.Id = 11;
-            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // FrmMain
             // 

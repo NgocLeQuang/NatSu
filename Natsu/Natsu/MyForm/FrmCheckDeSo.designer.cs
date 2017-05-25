@@ -304,6 +304,7 @@
             this.lb_Image.Size = new System.Drawing.Size(6, 13);
             this.lb_Image.TabIndex = 10;
             this.lb_Image.Text = "0";
+            this.lb_Image.Click += new System.EventHandler(this.lb_Image_Click);
             // 
             // labelControl2
             // 

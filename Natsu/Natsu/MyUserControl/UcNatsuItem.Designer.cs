@@ -169,7 +169,7 @@
             // 
             this.txt_TruongSo03.Location = new System.Drawing.Point(125, 2);
             this.txt_TruongSo03.Name = "txt_TruongSo03";
-            this.txt_TruongSo03.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo03.Properties.Mask.EditMask = "[0-9*? ]+";
             this.txt_TruongSo03.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txt_TruongSo03.Size = new System.Drawing.Size(50, 20);
             this.txt_TruongSo03.TabIndex = 3;
@@ -389,7 +389,7 @@
             this.txt_TruongSo12.EditValue = "";
             this.txt_TruongSo12.Location = new System.Drawing.Point(435, 28);
             this.txt_TruongSo12.Name = "txt_TruongSo12";
-            this.txt_TruongSo12.Properties.Mask.EditMask = "[0-9*?]+";
+            this.txt_TruongSo12.Properties.Mask.EditMask = "[0-9*? ]+";
             this.txt_TruongSo12.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txt_TruongSo12.Size = new System.Drawing.Size(40, 20);
             this.txt_TruongSo12.TabIndex = 21;
@@ -399,7 +399,7 @@
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl13.Appearance.Options.UseFont = true;
             this.labelControl13.Appearance.Options.UseForeColor = true;
             this.labelControl13.Location = new System.Drawing.Point(334, 83);
@@ -425,7 +425,7 @@
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl14.Appearance.Options.UseFont = true;
             this.labelControl14.Appearance.Options.UseForeColor = true;
             this.labelControl14.Location = new System.Drawing.Point(419, 83);
@@ -596,10 +596,10 @@
             // labelControl21
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl21.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.labelControl21.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl21.Appearance.Options.UseFont = true;
             this.labelControl21.Appearance.Options.UseForeColor = true;
-            this.labelControl21.Location = new System.Drawing.Point(462, 83);
+            this.labelControl21.Location = new System.Drawing.Point(463, 83);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(14, 13);
             this.labelControl21.TabIndex = 0;

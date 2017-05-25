@@ -286,6 +286,8 @@ namespace Natsu.MyForm
         private void btn_ZoomImage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             new FrmChangeZoom().ShowDialog();
+            Settings.Default.Reload();
+            GetImage();
         }
 
         private void btn_Pause_Click(object sender, EventArgs e)
@@ -322,6 +324,12 @@ namespace Natsu.MyForm
         private void btn_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             new FrmExportExcel().ShowDialog();
+        }
+
+        private void lb_IdImage_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(lb_IdImage.Text);
+            XtraMessageBox.Show("Copy Success!");
         }
     }
 }

@@ -197,9 +197,9 @@
             this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.Location = new System.Drawing.Point(137, 202);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(31, 13);
+            this.labelControl3.Size = new System.Drawing.Size(33, 13);
             this.labelControl3.TabIndex = 31;
-            this.labelControl3.Text = "Z:/abc";
+            this.labelControl3.Text = "Z:\\abc";
             // 
             // btn_Browser
             // 

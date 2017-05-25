@@ -72,7 +72,7 @@ namespace Natsu.MyForm
                         fusercreate = txt_UserCreate.Text,
                         fdatecreated = DateTime.Now,
                         fPathPicture = txt_ImagePath.Text,
-                        fLocation = txt_Location.Text+"/"+txt_BatchName.Text+"/",
+                        fLocation = txt_Location.Text+"\\"+txt_BatchName.Text+"\\",
                         fSoLuongAnh = _soluonghinh.ToString(),
                         LoaiBatch = "Getsu"
                         //LoaiBatch = rg_LoaiBatch.Properties.Items[rg_LoaiBatch.SelectedIndex].Description
@@ -148,7 +148,7 @@ namespace Natsu.MyForm
                     fusercreate = txt_UserCreate.Text,
                     fdatecreated = DateTime.Now,
                     fPathPicture = item,
-                    fLocation = txt_Location.Text + "/" + batchName + "/",
+                    fLocation = txt_Location.Text + "\\" + batchName + "\\",
                     fSoLuongAnh = Directory.GetFiles(item).Length.ToString(),
                     LoaiBatch = "Getsu"
                 };

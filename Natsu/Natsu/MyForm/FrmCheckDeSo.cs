@@ -829,5 +829,11 @@ namespace Natsu.MyForm
             if (e.Control && e.KeyCode == Keys.PageDown)
                 ucPictureBox1.btn_xoayphai_Click(null, null);
         }
+
+        private void lb_Image_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(lb_Image.Text);
+            XtraMessageBox.Show("Copy Success!");
+        }
     }
 }
