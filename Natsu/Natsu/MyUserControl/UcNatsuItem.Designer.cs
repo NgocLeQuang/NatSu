@@ -78,6 +78,7 @@
             this.txt_TruongSo24 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.txt_TruongSo25 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo01.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo02.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo03.Properties)).BeginInit();
@@ -128,6 +129,7 @@
             this.txt_TruongSo01.TabIndex = 1;
             this.txt_TruongSo01.EditValueChanged += new System.EventHandler(this.txt_TruongSo01_EditValueChanged);
             this.txt_TruongSo01.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyUp);
             // 
             // labelControl2
             // 
@@ -152,6 +154,7 @@
             this.txt_TruongSo02.TabIndex = 2;
             this.txt_TruongSo02.EditValueChanged += new System.EventHandler(this.txt_TruongSo02_EditValueChanged);
             this.txt_TruongSo02.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo02_KeyUp);
             // 
             // labelControl3
             // 
@@ -175,6 +178,7 @@
             this.txt_TruongSo03.TabIndex = 3;
             this.txt_TruongSo03.EditValueChanged += new System.EventHandler(this.txt_TruongSo03_EditValueChanged);
             this.txt_TruongSo03.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo03.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo03_KeyUp);
             // 
             // labelControl4
             // 
@@ -198,6 +202,7 @@
             this.txt_TruongSo04.TabIndex = 4;
             this.txt_TruongSo04.EditValueChanged += new System.EventHandler(this.txt_TruongSo04_EditValueChanged);
             this.txt_TruongSo04.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo04.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo04_KeyUp);
             // 
             // labelControl5
             // 
@@ -222,6 +227,7 @@
             this.txt_TruongSo05.TabIndex = 5;
             this.txt_TruongSo05.EditValueChanged += new System.EventHandler(this.txt_TruongSo05_EditValueChanged);
             this.txt_TruongSo05.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo05.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo05_KeyUp);
             // 
             // labelControl6
             // 
@@ -246,6 +252,7 @@
             this.txt_TruongSo06.TabIndex = 6;
             this.txt_TruongSo06.EditValueChanged += new System.EventHandler(this.txt_TruongSo06_EditValueChanged);
             this.txt_TruongSo06.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo06.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo06_KeyUp);
             // 
             // labelControl7
             // 
@@ -269,6 +276,7 @@
             this.txt_TruongSo07.TabIndex = 7;
             this.txt_TruongSo07.EditValueChanged += new System.EventHandler(this.txt_TruongSo07_EditValueChanged);
             this.txt_TruongSo07.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo07.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo07_KeyUp);
             // 
             // labelControl8
             // 
@@ -319,7 +327,7 @@
             this.txt_TruongSo09.TabIndex = 9;
             this.txt_TruongSo09.EditValueChanged += new System.EventHandler(this.txt_TruongSo09_EditValueChanged);
             this.txt_TruongSo09.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo09.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo09.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo09_KeyUp);
             // 
             // labelControl10
             // 
@@ -345,7 +353,7 @@
             this.txt_TruongSo10.TabIndex = 10;
             this.txt_TruongSo10.EditValueChanged += new System.EventHandler(this.txt_TruongSo10_EditValueChanged);
             this.txt_TruongSo10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo10.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo10.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo10_KeyUp);
             // 
             // labelControl11
             // 
@@ -370,7 +378,7 @@
             this.txt_TruongSo11.TabIndex = 19;
             this.txt_TruongSo11.EditValueChanged += new System.EventHandler(this.txt_TruongSo11_EditValueChanged);
             this.txt_TruongSo11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo11_KeyUp);
             // 
             // labelControl12
             // 
@@ -395,6 +403,7 @@
             this.txt_TruongSo12.TabIndex = 21;
             this.txt_TruongSo12.EditValueChanged += new System.EventHandler(this.txt_TruongSo12_EditValueChanged);
             this.txt_TruongSo12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo12.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo12_KeyUp);
             // 
             // labelControl13
             // 
@@ -420,7 +429,7 @@
             this.txt_TruongSo13.TabIndex = 23;
             this.txt_TruongSo13.EditValueChanged += new System.EventHandler(this.txt_TruongSo13_EditValueChanged);
             this.txt_TruongSo13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo13.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo13.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo13_KeyUp);
             // 
             // labelControl14
             // 
@@ -444,6 +453,7 @@
             this.txt_TruongSo14.TabIndex = 24;
             this.txt_TruongSo14.EditValueChanged += new System.EventHandler(this.txt_TruongSo14_EditValueChanged);
             this.txt_TruongSo14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo14.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo14_KeyUp);
             // 
             // labelControl15
             // 
@@ -467,6 +477,7 @@
             this.txt_TruongSo15.TabIndex = 11;
             this.txt_TruongSo15.EditValueChanged += new System.EventHandler(this.txt_TruongSo15_EditValueChanged);
             this.txt_TruongSo15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo15.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo15_KeyUp);
             // 
             // labelControl16
             // 
@@ -491,7 +502,7 @@
             this.txt_TruongSo16.TabIndex = 12;
             this.txt_TruongSo16.EditValueChanged += new System.EventHandler(this.txt_TruongSo16_EditValueChanged);
             this.txt_TruongSo16.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo16.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo16.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo16_KeyUp);
             // 
             // labelControl17
             // 
@@ -516,7 +527,7 @@
             this.txt_TruongSo17.TabIndex = 13;
             this.txt_TruongSo17.EditValueChanged += new System.EventHandler(this.txt_TruongSo17_EditValueChanged);
             this.txt_TruongSo17.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo17.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo17.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo17_KeyUp);
             // 
             // labelControl18
             // 
@@ -541,7 +552,7 @@
             this.txt_TruongSo18.TabIndex = 14;
             this.txt_TruongSo18.EditValueChanged += new System.EventHandler(this.txt_TruongSo18_EditValueChanged);
             this.txt_TruongSo18.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo18.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo18.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo18_KeyUp);
             // 
             // labelControl19
             // 
@@ -578,7 +589,7 @@
             this.txt_TruongSo19.TabIndex = 20;
             this.txt_TruongSo19.EditValueChanged += new System.EventHandler(this.txt_TruongSo19_EditValueChanged);
             this.txt_TruongSo19.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo19.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo19.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo19_KeyUp);
             // 
             // txt_TruongSo20
             // 
@@ -591,7 +602,7 @@
             this.txt_TruongSo20.TabIndex = 22;
             this.txt_TruongSo20.EditValueChanged += new System.EventHandler(this.txt_TruongSo20_EditValueChanged);
             this.txt_TruongSo20.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo20.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo20.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo20_KeyUp);
             // 
             // labelControl21
             // 
@@ -615,6 +626,7 @@
             this.txt_TruongSo21.TabIndex = 25;
             this.txt_TruongSo21.EditValueChanged += new System.EventHandler(this.txt_TruongSo21_EditValueChanged);
             this.txt_TruongSo21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo21.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo21_KeyUp);
             // 
             // labelControl22
             // 
@@ -638,6 +650,7 @@
             this.txt_TruongSo22.TabIndex = 15;
             this.txt_TruongSo22.EditValueChanged += new System.EventHandler(this.txt_TruongSo22_EditValueChanged);
             this.txt_TruongSo22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
+            this.txt_TruongSo22.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo22_KeyUp);
             // 
             // labelControl23
             // 
@@ -674,7 +687,7 @@
             this.txt_TruongSo23.TabIndex = 16;
             this.txt_TruongSo23.EditValueChanged += new System.EventHandler(this.txt_TruongSo23_EditValueChanged);
             this.txt_TruongSo23.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo23.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo23.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo23_KeyUp);
             // 
             // txt_TruongSo24
             // 
@@ -687,7 +700,7 @@
             this.txt_TruongSo24.TabIndex = 17;
             this.txt_TruongSo24.EditValueChanged += new System.EventHandler(this.txt_TruongSo24_EditValueChanged);
             this.txt_TruongSo24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo24.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo24.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo24_KeyUp);
             // 
             // labelControl25
             // 
@@ -712,13 +725,26 @@
             this.txt_TruongSo25.TabIndex = 18;
             this.txt_TruongSo25.EditValueChanged += new System.EventHandler(this.txt_TruongSo25_EditValueChanged);
             this.txt_TruongSo25.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo01_KeyDown);
-            this.txt_TruongSo25.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo08_KeyUp);
+            this.txt_TruongSo25.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_TruongSo25_KeyUp);
+            // 
+            // labelControl26
+            // 
+            this.labelControl26.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.labelControl26.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl26.Appearance.Options.UseFont = true;
+            this.labelControl26.Appearance.Options.UseForeColor = true;
+            this.labelControl26.Location = new System.Drawing.Point(350, 2);
+            this.labelControl26.Name = "labelControl26";
+            this.labelControl26.Size = new System.Drawing.Size(103, 22);
+            this.labelControl26.TabIndex = 26;
+            this.labelControl26.Text = "21.  短  =  3";
             // 
             // UcNatsuItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.labelControl26);
             this.Controls.Add(this.txt_TruongSo25);
             this.Controls.Add(this.txt_TruongSo21);
             this.Controls.Add(this.txt_TruongSo10);
@@ -854,5 +880,6 @@
         public DevExpress.XtraEditors.TextEdit txt_TruongSo24;
         public DevExpress.XtraEditors.LabelControl labelControl25;
         public DevExpress.XtraEditors.TextEdit txt_TruongSo25;
+        private DevExpress.XtraEditors.LabelControl labelControl26;
     }
 }

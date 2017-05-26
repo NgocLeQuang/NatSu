@@ -477,6 +477,7 @@ namespace Natsu.MyForm
                 ucNatsu2.UcNatsuItem5.txt_TruongSo24.Text = deso[9].Truong_24;
                 ucNatsu2.UcNatsuItem5.txt_TruongSo25.Text = deso[9].Truong_25;
 
+                loadCurency();
                 //Compare
                 Compare_TextBox(ucNatsu1.UcNatsuItem1.txt_TruongSo01, ucNatsu2.UcNatsuItem1.txt_TruongSo01);
                 Compare_TextBox(ucNatsu1.UcNatsuItem1.txt_TruongSo02, ucNatsu2.UcNatsuItem1.txt_TruongSo02);
@@ -616,7 +617,189 @@ namespace Natsu.MyForm
                 MessageBox.Show(@"Error loading data: " + i.Message);
             }
         }
+        private void loadCurency()
+        {
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo08);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo09);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo10);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo11);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo13);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo16);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo17);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo18);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo19);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo20);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo23);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo24);
+            curency(ucNatsu1.UcNatsuItem1.txt_TruongSo25);
 
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo08);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo09);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo10);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo11);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo13);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo16);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo17);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo18);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo19);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo20);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo23);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo24);
+            curency(ucNatsu1.UcNatsuItem2.txt_TruongSo25);
+
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo08);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo09);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo10);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo11);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo16);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo17);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo18);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo19);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo20);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo23);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo24);
+            curency(ucNatsu1.UcNatsuItem3.txt_TruongSo25);
+
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo08);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo09);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo10);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo11);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo16);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo17);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo18);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo19);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo20);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo23);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo24);
+            curency(ucNatsu1.UcNatsuItem4.txt_TruongSo25);
+
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo08);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo09);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo10);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo11);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo16);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo17);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo18);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo19);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo20);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo23);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo24);
+            curency(ucNatsu1.UcNatsuItem5.txt_TruongSo25);
+
+            //UC 2
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo08);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo09);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo10);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo11);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo13);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo16);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo17);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo18);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo19);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo20);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo23);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo24);
+            curency(ucNatsu2.UcNatsuItem1.txt_TruongSo25);
+
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo08);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo09);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo10);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo11);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo13);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo16);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo17);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo18);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo19);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo20);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo23);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo24);
+            curency(ucNatsu2.UcNatsuItem2.txt_TruongSo25);
+
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo08);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo09);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo10);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo11);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo16);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo17);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo18);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo19);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo20);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo23);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo24);
+            curency(ucNatsu2.UcNatsuItem3.txt_TruongSo25);
+
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo08);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo09);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo10);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo11);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo16);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo17);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo18);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo19);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo20);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo23);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo24);
+            curency(ucNatsu2.UcNatsuItem4.txt_TruongSo25);
+
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo08);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo09);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo10);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo11);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo16);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo17);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo18);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo19);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo20);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo23);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo24);
+            curency(ucNatsu2.UcNatsuItem5.txt_TruongSo25);
+
+        }
+        private void curency(TextEdit txt)
+        {
+            try
+            {
+                string t;
+                if (txt.Text.Length > 0)
+                {
+                    if (txt.Text.Substring(0, 1) == "-")
+                    {
+                        if (txt.Text.Length > 1)
+                        {
+                            t = txt.Text.Substring(1, txt.Text.Length - 1);
+                            if (txt.SelectionLength != txt.Text.Length)
+                            {
+                                if (txt.Text != "?")
+                                {
+                                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                                    int valueBefore = Int32.Parse(t, System.Globalization.NumberStyles.AllowThousands);
+                                    txt.Text = "-" + String.Format(culture, "{0:N0}", valueBefore);
+                                    txt.Select(txt.Text.Length, 0);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (txt.SelectionLength != txt.Text.Length)
+                        {
+                            if (txt.Text != "?")
+                            {
+                                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                                int valueBefore = Int32.Parse(txt.Text, System.Globalization.NumberStyles.AllowThousands);
+                                txt.Text = string.Format(culture, "{0:N0}", valueBefore);
+                                txt.Select(txt.Text.Length, 0);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(e.Message);
+            }
+
+        }
         private string GetImage_DeSo()
         {
             var temp = (from w in Global.Db.tbl_MissCheck_DESOs where w.fBatchName == Global.StrBatch && w.UserName == Global.StrUsername && w.Submit == 0 select w.IdImage).FirstOrDefault();

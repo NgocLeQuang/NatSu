@@ -112,7 +112,7 @@
             this.bar2.DockCol = 0;
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.FloatLocation = new System.Drawing.Point(514, 148);
+            this.bar2.FloatLocation = new System.Drawing.Point(1710, 189);
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.bar_System),
             new DevExpress.XtraBars.LinkPersistInfo(this.bar_Manager),
@@ -470,7 +470,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.KeyPreview = true;
             this.Name = "FrmMain";
-            this.Text = "Natsu";
+            this.Text = "Getsu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

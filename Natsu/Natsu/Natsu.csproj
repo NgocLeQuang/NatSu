@@ -97,6 +97,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataNatsu.dbml</DependentUpon>
     </Compile>
+    <Compile Include="MyClass\Logfile.cs" />
     <Compile Include="MyForm\FrmChangeZoom.cs">
       <SubType>Form</SubType>
     </Compile>

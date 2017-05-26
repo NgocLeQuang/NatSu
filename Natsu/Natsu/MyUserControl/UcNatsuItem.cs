@@ -630,8 +630,99 @@ namespace Natsu.MyUserControl
             Changed?.Invoke(sender, e);
         }
 
+      
+
+        private void txt_TruongSo01_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Add)
+            {
+                ((TextEdit)sender).Text = ((TextEdit)sender).Text + "000";
+                ((TextEdit)sender).Select(((TextEdit)sender).Text.Length, 0);
+            }
+            else if (e.KeyCode==Keys.Enter)
+            {
+                SendKeys.Send("{Tab}");
+            }
+            else if (e.KeyCode==Keys.Right)
+            {
+                SendKeys.Send("{Tab}");
+            }
+            else if (e.KeyCode == Keys.Left)
+            {
+                SendKeys.Send("+{Tab}");
+            }
+        }
+
+        private void txt_TruongSo01_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Down)
+            {
+                txt_TruongSo06.Focus();
+            }
+        }
+
+        private void txt_TruongSo02_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo07.Focus();
+            }
+        }
+
+        private void txt_TruongSo03_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo08.Focus();
+            }
+        }
+
+        private void txt_TruongSo04_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo09.Focus();
+            }
+        }
+
+        private void txt_TruongSo05_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo10.Focus();
+            }
+        }
+
+        private void txt_TruongSo06_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo01.Focus();
+            }
+        }
+
+        private void txt_TruongSo07_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo02.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo15.Focus();
+            }
+        }
+
         private void txt_TruongSo08_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo03.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo16.Focus();
+            }
             try
             {
                 curency((TextEdit)sender);
@@ -642,13 +733,275 @@ namespace Natsu.MyUserControl
             }
         }
 
-        private void txt_TruongSo01_KeyDown(object sender, KeyEventArgs e)
+        private void txt_TruongSo09_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Add)
+            if (e.KeyCode == Keys.Up)
             {
-                ((TextEdit)sender).Text = ((TextEdit)sender).Text + "000";
-                ((TextEdit)sender).Select(((TextEdit)sender).Text.Length, 0);
+                txt_TruongSo04.Focus();
             }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo17.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo10_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo05.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo18.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo11_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+            if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo19.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo12_KeyUp(object sender, KeyEventArgs e)
+        {
+           
+            if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo20.Focus();
+            }
+           
+        }
+
+        private void txt_TruongSo15_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo07.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo22.Focus();
+            }
+           
+        }
+
+        private void txt_TruongSo16_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo08.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo23.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo17_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo09.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo24.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo18_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo10.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo25.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo19_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo11.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo13.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo20_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo12.Focus();
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                txt_TruongSo14.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo22_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo15.Focus();
+            }
+           
+        }
+
+        private void txt_TruongSo23_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo16.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo24_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo17.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo25_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo18.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo13_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo19.Focus();
+            }
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+                // ignored
+            }
+        }
+
+        private void txt_TruongSo14_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo20.Focus();
+            }
+           
+        }
+
+        private void txt_TruongSo21_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txt_TruongSo20.Focus();
+            }
+         
         }
     }
 }
