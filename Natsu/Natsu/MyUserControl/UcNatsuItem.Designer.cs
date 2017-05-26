@@ -729,13 +729,13 @@
             // 
             // labelControl26
             // 
-            this.labelControl26.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.labelControl26.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.labelControl26.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl26.Appearance.Options.UseFont = true;
             this.labelControl26.Appearance.Options.UseForeColor = true;
-            this.labelControl26.Location = new System.Drawing.Point(350, 2);
+            this.labelControl26.Location = new System.Drawing.Point(350, 5);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(103, 22);
+            this.labelControl26.Size = new System.Drawing.Size(85, 18);
             this.labelControl26.TabIndex = 26;
             this.labelControl26.Text = "21.  短  =  3";
             // 
