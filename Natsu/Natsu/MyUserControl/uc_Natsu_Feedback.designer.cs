@@ -1,6 +1,6 @@
 ﻿namespace Natsu.MyUserControl
 {
-    partial class uc_Natsu_Feedback
+    partial class UcNatsuFeedback
     {
         /// <summary> 
         /// Required designer variable.
@@ -64,16 +64,16 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(36, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(957, 500);
+            this.panelControl3.Size = new System.Drawing.Size(908, 500);
             this.panelControl3.TabIndex = 12;
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.UcNatsuItemFeedback31);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl1.Location = new System.Drawing.Point(993, 0);
+            this.panelControl1.Location = new System.Drawing.Point(944, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(507, 500);
+            this.panelControl1.Size = new System.Drawing.Size(556, 500);
             this.panelControl1.TabIndex = 10;
             // 
             // ucPictureBox1
@@ -81,17 +81,18 @@
             this.ucPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucPictureBox1.Location = new System.Drawing.Point(2, 2);
             this.ucPictureBox1.Name = "ucPictureBox1";
-            this.ucPictureBox1.Size = new System.Drawing.Size(953, 496);
+            this.ucPictureBox1.Size = new System.Drawing.Size(904, 496);
             this.ucPictureBox1.TabIndex = 0;
             // 
             // UcNatsuItemFeedback31
             // 
             this.UcNatsuItemFeedback31.AutoScroll = true;
             this.UcNatsuItemFeedback31.AutoSize = true;
+            this.UcNatsuItemFeedback31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UcNatsuItemFeedback31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UcNatsuItemFeedback31.Location = new System.Drawing.Point(2, 2);
             this.UcNatsuItemFeedback31.Name = "UcNatsuItemFeedback31";
-            this.UcNatsuItemFeedback31.Size = new System.Drawing.Size(503, 496);
+            this.UcNatsuItemFeedback31.Size = new System.Drawing.Size(552, 496);
             this.UcNatsuItemFeedback31.TabIndex = 0;
             // 
             // uc_Natsu_Feedback
@@ -103,7 +104,7 @@
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Name = "uc_Natsu_Feedback";
+            this.Name = "UcNatsuFeedback";
             this.Size = new System.Drawing.Size(1500, 500);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);

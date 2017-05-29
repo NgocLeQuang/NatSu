@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucNatsuItemFeedback_21 = new Natsu.MyUserControl.UcNatsuItemFeedback_2();
-            this.ucNatsuItemFeedback_22 = new Natsu.MyUserControl.UcNatsuItemFeedback_2();
             this.ucNatsuItemFeedback_23 = new Natsu.MyUserControl.UcNatsuItemFeedback_2();
+            this.ucNatsuItemFeedback_22 = new Natsu.MyUserControl.UcNatsuItemFeedback_2();
+            this.ucNatsuItemFeedback_21 = new Natsu.MyUserControl.UcNatsuItemFeedback_2();
             this.SuspendLayout();
-            // 
-            // ucNatsuItemFeedback_21
-            // 
-            this.ucNatsuItemFeedback_21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucNatsuItemFeedback_21.Location = new System.Drawing.Point(3, 3);
-            this.ucNatsuItemFeedback_21.Name = "ucNatsuItemFeedback_21";
-            this.ucNatsuItemFeedback_21.Size = new System.Drawing.Size(161, 1503);
-            this.ucNatsuItemFeedback_21.TabIndex = 0;
-            // 
-            // ucNatsuItemFeedback_22
-            // 
-            this.ucNatsuItemFeedback_22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucNatsuItemFeedback_22.Location = new System.Drawing.Point(163, 3);
-            this.ucNatsuItemFeedback_22.Name = "ucNatsuItemFeedback_22";
-            this.ucNatsuItemFeedback_22.Size = new System.Drawing.Size(161, 1503);
-            this.ucNatsuItemFeedback_22.TabIndex = 1;
             // 
             // ucNatsuItemFeedback_23
             // 
-            this.ucNatsuItemFeedback_23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucNatsuItemFeedback_23.Location = new System.Drawing.Point(323, 3);
+            this.ucNatsuItemFeedback_23.AutoSize = true;
+            this.ucNatsuItemFeedback_23.Location = new System.Drawing.Point(353, 3);
             this.ucNatsuItemFeedback_23.Name = "ucNatsuItemFeedback_23";
-            this.ucNatsuItemFeedback_23.Size = new System.Drawing.Size(161, 1503);
+            this.ucNatsuItemFeedback_23.Size = new System.Drawing.Size(180, 1415);
             this.ucNatsuItemFeedback_23.TabIndex = 2;
+            // 
+            // ucNatsuItemFeedback_22
+            // 
+            this.ucNatsuItemFeedback_22.AutoSize = true;
+            this.ucNatsuItemFeedback_22.Location = new System.Drawing.Point(178, 3);
+            this.ucNatsuItemFeedback_22.Name = "ucNatsuItemFeedback_22";
+            this.ucNatsuItemFeedback_22.Size = new System.Drawing.Size(180, 1415);
+            this.ucNatsuItemFeedback_22.TabIndex = 1;
+            // 
+            // ucNatsuItemFeedback_21
+            // 
+            this.ucNatsuItemFeedback_21.AutoSize = true;
+            this.ucNatsuItemFeedback_21.Location = new System.Drawing.Point(3, 3);
+            this.ucNatsuItemFeedback_21.Name = "ucNatsuItemFeedback_21";
+            this.ucNatsuItemFeedback_21.Size = new System.Drawing.Size(180, 1415);
+            this.ucNatsuItemFeedback_21.TabIndex = 0;
             // 
             // UcNatsuItemFeedback3
             // 
@@ -63,12 +63,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.ucNatsuItemFeedback_23);
             this.Controls.Add(this.ucNatsuItemFeedback_22);
             this.Controls.Add(this.ucNatsuItemFeedback_21);
             this.Name = "UcNatsuItemFeedback3";
-            this.Size = new System.Drawing.Size(487, 1509);
+            this.Size = new System.Drawing.Size(536, 1421);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

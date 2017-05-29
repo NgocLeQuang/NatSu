@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
+﻿using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ImageGlass;
@@ -12,9 +7,9 @@ using Natsu.MyClass;
 
 namespace Natsu.MyUserControl
 {
-    public partial class uc_Natsu_Feedback : UserControl
+    public partial class UcNatsuFeedback : UserControl
     {
-        public uc_Natsu_Feedback()
+        public UcNatsuFeedback()
         {
             InitializeComponent();
         }
@@ -64,10 +59,33 @@ namespace Natsu.MyUserControl
             UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.LoadDataChecker(deso[4]);
         }
 
+        public void LoadImageUser(string user, string fbatchname, string urlImage, string idimage)
+        {
+            ucPictureBox1.LoadImage(urlImage, idimage, 50);
+            ucPictureBox1.imageBox1.SizeMode = ImageBoxSizeMode.Fit;
+            LoadText_User(user, fbatchname, idimage);
+            LoadChecker_User(fbatchname, idimage);
+            SoSanhTextBoxSingle();
+        }
+
+        public void LoadText_User(string user, string fbatchname, string idimage)
+        {
+            var deso = (from w in Global.Db.tbl_DESO_Backups
+                        where w.fBatchName == fbatchname && w.IdImage == idimage && w.UserName == user
+                        select w).ToList();
+
+            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.lb_user.Text = deso[0].UserName;
+            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.LoadData(deso[0]);
+            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.LoadData(deso[1]);
+            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.LoadData(deso[2]);
+            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.LoadData(deso[3]);
+            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.LoadData(deso[4]);
+        }
+
         public void LoadChecker_User(string fbatchname, string idimage)
         {
             var deso = (from w in Global.Db.tbl_DESOs
-                        where w.fBatchName == fbatchname && w.IdImage == idimage && w.True == 1
+                        where w.fBatchName == fbatchname && w.IdImage == idimage && w.UserName == "Checker"
                         select w).ToList();
 
             UcNatsuItemFeedback31.ucNatsuItemFeedback_23.lb_user.Text = deso[0].UserName;
@@ -214,135 +232,135 @@ namespace Natsu.MyUserControl
 
         private void SoSanhTextBoxSingle()
         {
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo01);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo02);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo03);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo04);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo05);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo06);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo07);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo08);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo09);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo10);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo11);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo12);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo13);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo14);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo15);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo16);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo17);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo18);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo19);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo20);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo21);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo22);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo23);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo24);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo25);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo01);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo02);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo03);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo04);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo05);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo06);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo07);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo08);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo09);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo10);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo11);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo12);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo13);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo14);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo15);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo16);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo17);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo18);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo19);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo20);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo21);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo22);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo23);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo24);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback1.txt_TruongSo25);
 
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo01);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo02);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo03);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo04);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo05);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo06);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo07);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo08);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo09);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo10);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo11);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo12);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo13);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo14);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo15);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo16);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo17);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo18);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo19);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo20);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo21);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo22);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo23);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo24);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo25);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo01);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo02);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo03);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo04);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo05);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo06);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo07);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo08);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo09);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo10);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo11);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo12);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo13);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo14);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo15);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo16);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo17);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo18);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo19);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo20);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo21);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo22);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo23);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo24);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback2.txt_TruongSo25);
 
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo01);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo02);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo03);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo04);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo05);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo06);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo07);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo08);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo09);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo10);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo11);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo12);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo13);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo14);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo15);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo16);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo17);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo18);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo19);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo20);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo21);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo22);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo23);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo24);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo25);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo01);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo02);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo03);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo04);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo05);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo06);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo07);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo08);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo09);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo10);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo11);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo12);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo13);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo14);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo15);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo16);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo17);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo18);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo19);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo20);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo21);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo22);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo23);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo24);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback3.txt_TruongSo25);
 
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo01);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo02);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo03);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo04);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo05);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo06);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo07);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo08);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo09);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo10);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo11);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo12);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo13);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo14);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo15);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo16);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo17);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo18);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo19);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo20);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo21);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo22);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo23);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo24);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo25);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo01);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo02);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo03);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo04);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo05);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo06);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo07);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo08);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo09);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo10);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo11);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo12);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo13);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo14);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo15);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo16);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo17);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo18);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo19);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo20);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo21);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo22);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo23);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo24);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback4.txt_TruongSo25);
 
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo01);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo02);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo03);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo04);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo05);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo06);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo07);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo08);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo09);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo10);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo11);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo12);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo13);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo14);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo15);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo16);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo17);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo18);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo19);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo20);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo21);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo22);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo23);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo24);
-            changeColorUser(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo25);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo01, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo01);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo02, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo02);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo03, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo03);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo04, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo04);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo05, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo05);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo06, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo06);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo07, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo07);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo08, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo08);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo09, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo09);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo10, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo10);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo11, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo11);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo12, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo12);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo13, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo13);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo14, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo14);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo15, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo15);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo16, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo16);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo17, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo17);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo18, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo18);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo19, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo19);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo20, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo20);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo21, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo21);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo22, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo22);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo23, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo23);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo24, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo24);
+            changeColorUser_Single(UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo25);
 
         }
 
@@ -479,28 +497,6 @@ namespace Natsu.MyUserControl
             changeColorChecker(UcNatsuItemFeedback31.ucNatsuItemFeedback_21.ucNatsuItemFeedback5.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.txt_TruongSo25, UcNatsuItemFeedback31.ucNatsuItemFeedback_23.ucNatsuItemFeedback5.txt_TruongSo25);
         }
 
-        public void LoadImageUser(string user, string fbatchname, string urlImage, string idimage)
-        {
-            ucPictureBox1.LoadImage(urlImage, idimage, 50);
-            ucPictureBox1.imageBox1.SizeMode = ImageBoxSizeMode.Fit;
-            LoadText_User(user, fbatchname, idimage);
-            LoadChecker_User(fbatchname, idimage);
-            SoSanhTextBoxSingle();}
-
-        public void LoadText_User(string user, string fbatchname, string idimage)
-        {
-            var deso = (from w in Global.Db.tbl_DESO_Backups
-                        where w.fBatchName == fbatchname && w.IdImage == idimage && w.UserName == user
-                        select w).ToList();
-
-            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.lb_user.Text = deso[0].UserName;
-            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback1.LoadData(deso[0]);
-            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback2.LoadData(deso[1]);
-            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback3.LoadData(deso[2]);
-            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback4.LoadData(deso[3]);
-            UcNatsuItemFeedback31.ucNatsuItemFeedback_22.ucNatsuItemFeedback5.LoadData(deso[4]);
-        }
-
         private void changeColorUser(TextEdit txt1, TextEdit txt2)
         {
             if (txt1.Text != txt2.Text)
@@ -509,6 +505,23 @@ namespace Natsu.MyUserControl
                 txt1.BackColor = Color.Red;
                 txt2.ForeColor = Color.White;
                 txt2.BackColor = Color.Red;
+            }
+            else
+            {
+                txt1.ForeColor = Color.Black;
+                txt1.BackColor = Color.White;
+                txt2.ForeColor = Color.Black;
+                txt2.BackColor = Color.White;
+            }
+        }
+        private void changeColorUser_Single(TextEdit txt1, TextEdit txt2)
+        {
+            if (txt1.Text != txt2.Text)
+            {
+                txt1.ForeColor = Color.White;
+                txt1.BackColor = Color.Red;
+                txt2.ForeColor = Color.White;
+                txt2.BackColor = Color.Green;
             }
             else
             {

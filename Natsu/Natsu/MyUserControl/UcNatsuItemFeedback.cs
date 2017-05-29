@@ -1059,5 +1059,10 @@ namespace Natsu.MyUserControl
             txt_TruongSo24.Text = data.Truong_24;
             txt_TruongSo25.Text = data.Truong_25;
         }
+
+        private void labelControl12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,7 +45,7 @@ namespace Natsu.MyForm
                 for (int j = n; j <= n + 19; j++)
                 {
                     string id = idimage[j];
-                    uc_Natsu_Feedback ucF = new uc_Natsu_Feedback();
+                    UcNatsuFeedback ucF = new UcNatsuFeedback();
                     string url = Global.Webservice + cbb_batch.Text + "/" + id;
                     ucF.LoadImage(cbb_batch.Text, url, id);
 
@@ -66,7 +66,7 @@ namespace Natsu.MyForm
                 for (int j = n; j <= idimage.Count - 1; j++)
                 {
                     string id = idimage[j];
-                    uc_Natsu_Feedback ucF = new uc_Natsu_Feedback();
+                    UcNatsuFeedback ucF = new UcNatsuFeedback();
                     string url = Global.Webservice + cbb_batch.Text + "/" + id;
                     ucF.LoadImage(cbb_batch.Text, url, id);
 
@@ -94,7 +94,7 @@ namespace Natsu.MyForm
                 for (int j = n; j <= n + 19; j++)
                 {
                     string id = idimage[j];
-                    uc_Natsu_Feedback ucF = new uc_Natsu_Feedback();
+                    UcNatsuFeedback ucF = new UcNatsuFeedback();
                     string url = Global.Webservice + cbb_batch.Text + "/" + id;
 
                     ucF.LoadImageUser(cbb_username.Text, cbb_batch.Text, url, id);
@@ -105,7 +105,7 @@ namespace Natsu.MyForm
                         p = ct.Location;
                         p.Y += ct.Size.Height;
                     }
-                    ucF.UcNatsuItemFeedback31.ucNatsuItemFeedback_23.Visible = false;
+                    ucF.UcNatsuItemFeedback31.ucNatsuItemFeedback_21.Visible = false;
                     ucF.Location = p;
                     ucF.textBox1.Text = (j + 1).ToString();
                     pnl_Mainfeedback1.Controls.Add(ucF);
@@ -117,7 +117,7 @@ namespace Natsu.MyForm
                 for (int j = n; j <= idimage.Count - 1; j++)
                 {
                     string id = idimage[j];
-                    uc_Natsu_Feedback ucF = new uc_Natsu_Feedback();
+                    UcNatsuFeedback ucF = new UcNatsuFeedback();
                     string url = Global.Webservice + cbb_batch.Text + "/" + id;
                     ucF.LoadImageUser(cbb_username.Text, cbb_batch.Text, url, id);
 
@@ -127,7 +127,7 @@ namespace Natsu.MyForm
                         p = ct.Location;
                         p.Y += ct.Size.Height;
                     }
-                    ucF.UcNatsuItemFeedback31.ucNatsuItemFeedback_23.Visible = false;
+                    ucF.UcNatsuItemFeedback31.ucNatsuItemFeedback_21.Visible = false;
                     ucF.Location = p;
                     ucF.textBox1.Text = (j + 1).ToString();
                     pnl_Mainfeedback1.Controls.Add(ucF);
@@ -145,8 +145,8 @@ namespace Natsu.MyForm
 
         private void btn_hienthi_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 Num = 0;
                 lb_soloi.Text = @"0";
                 pnl_Mainfeedback1.Controls.Clear();
@@ -161,8 +161,8 @@ namespace Natsu.MyForm
                 {
                     GetImageDeso(Num);
                 }
-            }
-            catch (Exception w) { MessageBox.Show(@"Can not retrieve data. Error:" + w); }
+            //}
+            //catch (Exception w) { MessageBox.Show(@"Can not retrieve data. Error:" + w); }
         }
 
         private void btn_next_Click(object sender, EventArgs e)

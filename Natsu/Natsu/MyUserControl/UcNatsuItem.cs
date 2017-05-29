@@ -639,7 +639,7 @@ namespace Natsu.MyUserControl
                 ((TextEdit)sender).Text = ((TextEdit)sender).Text + "000";
                 ((TextEdit)sender).Select(((TextEdit)sender).Text.Length, 0);
             }
-            else if (e.KeyCode==Keys.Enter)
+            else if (!e.Control && e.KeyCode==Keys.Enter)
             {
                 SendKeys.Send("{Tab}");
             }
