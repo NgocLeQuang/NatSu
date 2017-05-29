@@ -42,7 +42,7 @@
             this.btn_Productivity = new DevExpress.XtraBars.BarButtonItem();
             this.btn_ExportExcel = new DevExpress.XtraBars.BarButtonItem();
             this.btn_ZoomImage = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_feedback = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -101,7 +101,7 @@
             this.btn_Productivity,
             this.btn_ExportExcel,
             this.btn_ZoomImage,
-            this.barButtonItem1});
+            this.btn_feedback});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 12;
             // 
@@ -117,7 +117,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.bar_System),
             new DevExpress.XtraBars.LinkPersistInfo(this.bar_Manager),
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_ZoomImage),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_feedback)});
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -208,11 +208,12 @@
             this.btn_ZoomImage.Name = "btn_ZoomImage";
             this.btn_ZoomImage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ZoomImage_ItemClick);
             // 
-            // barButtonItem1
+            // btn_feedback
             // 
-            this.barButtonItem1.Caption = "Feedback";
-            this.barButtonItem1.Id = 11;
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btn_feedback.Caption = "Feedback";
+            this.btn_feedback.Id = 11;
+            this.btn_feedback.Name = "btn_feedback";
+            this.btn_feedback.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_feedback_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -531,7 +532,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_Start_Submit;
         private MyUserControl.UcNatsu UcNatsu1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btn_feedback;
     }
 }
 

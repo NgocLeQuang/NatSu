@@ -158,7 +158,7 @@
             this.Controls.Add(this.UcNatsuItem2);
             this.Controls.Add(this.UcNatsuItem1);
             this.Name = "UcNatsu";
-            this.Size = new System.Drawing.Size(514, 555);
+            this.Size = new System.Drawing.Size(512, 548);
             this.ResumeLayout(false);
             this.PerformLayout();
 

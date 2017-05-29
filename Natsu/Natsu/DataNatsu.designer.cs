@@ -425,6 +425,34 @@ namespace Natsu
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<ThongKeTienDo_AllResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatch_Feedback_Getsu")]
+		public ISingleResult<GetBatch_Feedback_GetsuResult> GetBatch_Feedback_Getsu()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetBatch_Feedback_GetsuResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetImageFailUserDeSo_Getsu")]
+		public ISingleResult<GetImageFailUserDeSo_GetsuResult> GetImageFailUserDeSo_Getsu([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Batch", DbType="NVarChar(255)")] string batch)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, batch);
+			return ((ISingleResult<GetImageFailUserDeSo_GetsuResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetImageFail_Getsu")]
+		public ISingleResult<GetImageFail_GetsuResult> GetImageFail_Getsu([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserNameCheck", DbType="NVarChar(255)")] string userNameCheck, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Batch", DbType="NVarChar(255)")] string batch)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userNameCheck, batch);
+			return ((ISingleResult<GetImageFail_GetsuResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetUserFailDeSo_Getsu")]
+		public ISingleResult<GetUserFailDeSo_GetsuResult> GetUserFailDeSo_Getsu([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string fBatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchname);
+			return ((ISingleResult<GetUserFailDeSo_GetsuResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Batch")]
@@ -5662,6 +5690,254 @@ namespace Natsu
 				if ((this._soluong != value))
 				{
 					this._soluong = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatch_Feedback_GetsuResult
+	{
+		
+		private long _IDBatch;
+		
+		private string _fBatchName;
+		
+		private System.Nullable<System.DateTime> _fdatecreated;
+		
+		private string _fusercreate;
+		
+		private string _fPathPicture;
+		
+		private string _fLocation;
+		
+		private string _fSoLuongAnh;
+		
+		private string _LoaiBatch;
+		
+		public GetBatch_Feedback_GetsuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDBatch", DbType="BigInt NOT NULL")]
+		public long IDBatch
+		{
+			get
+			{
+				return this._IDBatch;
+			}
+			set
+			{
+				if ((this._IDBatch != value))
+				{
+					this._IDBatch = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this._fBatchName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fdatecreated", DbType="DateTime")]
+		public System.Nullable<System.DateTime> fdatecreated
+		{
+			get
+			{
+				return this._fdatecreated;
+			}
+			set
+			{
+				if ((this._fdatecreated != value))
+				{
+					this._fdatecreated = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fusercreate", DbType="NVarChar(200)")]
+		public string fusercreate
+		{
+			get
+			{
+				return this._fusercreate;
+			}
+			set
+			{
+				if ((this._fusercreate != value))
+				{
+					this._fusercreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fPathPicture", DbType="NVarChar(200)")]
+		public string fPathPicture
+		{
+			get
+			{
+				return this._fPathPicture;
+			}
+			set
+			{
+				if ((this._fPathPicture != value))
+				{
+					this._fPathPicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fLocation", DbType="NVarChar(200)")]
+		public string fLocation
+		{
+			get
+			{
+				return this._fLocation;
+			}
+			set
+			{
+				if ((this._fLocation != value))
+				{
+					this._fLocation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fSoLuongAnh", DbType="NVarChar(200)")]
+		public string fSoLuongAnh
+		{
+			get
+			{
+				return this._fSoLuongAnh;
+			}
+			set
+			{
+				if ((this._fSoLuongAnh != value))
+				{
+					this._fSoLuongAnh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoaiBatch", DbType="NVarChar(200)")]
+		public string LoaiBatch
+		{
+			get
+			{
+				return this._LoaiBatch;
+			}
+			set
+			{
+				if ((this._LoaiBatch != value))
+				{
+					this._LoaiBatch = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetImageFailUserDeSo_GetsuResult
+	{
+		
+		private string _IdImage;
+		
+		private string _UserName;
+		
+		public GetImageFailUserDeSo_GetsuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string IdImage
+		{
+			get
+			{
+				return this._IdImage;
+			}
+			set
+			{
+				if ((this._IdImage != value))
+				{
+					this._IdImage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetImageFail_GetsuResult
+	{
+		
+		private string _IdImage;
+		
+		public GetImageFail_GetsuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdImage", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string IdImage
+		{
+			get
+			{
+				return this._IdImage;
+			}
+			set
+			{
+				if ((this._IdImage != value))
+				{
+					this._IdImage = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetUserFailDeSo_GetsuResult
+	{
+		
+		private string _UserName;
+		
+		public GetUserFailDeSo_GetsuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
 				}
 			}
 		}

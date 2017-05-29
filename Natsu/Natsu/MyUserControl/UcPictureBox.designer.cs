@@ -80,7 +80,7 @@
             this.trackBar_Ngang.Location = new System.Drawing.Point(5, 3);
             this.trackBar_Ngang.Maximum = 3000;
             this.trackBar_Ngang.Name = "trackBar_Ngang";
-            this.trackBar_Ngang.Size = new System.Drawing.Size(300, 45);
+            this.trackBar_Ngang.Size = new System.Drawing.Size(272, 45);
             this.trackBar_Ngang.TabIndex = 2;
             this.trackBar_Ngang.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar_Ngang.MouseUp += new System.Windows.Forms.MouseEventHandler(this.trackBar_Ngang_MouseUp);
@@ -88,7 +88,7 @@
             // btn_xoayphai
             // 
             this.btn_xoayphai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_xoayphai.Location = new System.Drawing.Point(597, 4);
+            this.btn_xoayphai.Location = new System.Drawing.Point(633, 4);
             this.btn_xoayphai.Name = "btn_xoayphai";
             this.btn_xoayphai.Size = new System.Drawing.Size(75, 23);
             this.btn_xoayphai.TabIndex = 5;
@@ -98,7 +98,7 @@
             // btn_Xoaytrai
             // 
             this.btn_Xoaytrai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Xoaytrai.Location = new System.Drawing.Point(516, 4);
+            this.btn_Xoaytrai.Location = new System.Drawing.Point(552, 4);
             this.btn_Xoaytrai.Name = "btn_Xoaytrai";
             this.btn_Xoaytrai.Size = new System.Drawing.Size(75, 23);
             this.btn_Xoaytrai.TabIndex = 4;
@@ -135,11 +135,11 @@
             // 
             // trackBar_Doc
             // 
-            this.trackBar_Doc.Location = new System.Drawing.Point(3, 67);
+            this.trackBar_Doc.Location = new System.Drawing.Point(3, 92);
             this.trackBar_Doc.Maximum = 3000;
             this.trackBar_Doc.Name = "trackBar_Doc";
             this.trackBar_Doc.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar_Doc.Size = new System.Drawing.Size(45, 300);
+            this.trackBar_Doc.Size = new System.Drawing.Size(45, 275);
             this.trackBar_Doc.TabIndex = 3;
             this.trackBar_Doc.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar_Doc.MouseUp += new System.Windows.Forms.MouseEventHandler(this.trackBar_Doc_MouseUp);

@@ -331,5 +331,10 @@ namespace Natsu.MyForm
             Clipboard.SetText(lb_IdImage.Text);
             XtraMessageBox.Show("Copy Success!");
         }
+
+        private void btn_feedback_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new FrmFeedback().ShowDialog();
+        }
     }
 }
