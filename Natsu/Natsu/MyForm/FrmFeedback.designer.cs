@@ -160,7 +160,7 @@
             this.pnl_Mainfeedback1.Size = new System.Drawing.Size(1117, 532);
             this.pnl_Mainfeedback1.TabIndex = 6;
             // 
-            // frm_Feedback
+            // FrmFeedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

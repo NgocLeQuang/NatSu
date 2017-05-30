@@ -5,8 +5,11 @@ using System.Windows.Forms;
 
 namespace Natsu.MyUserControl
 {
+    public delegate void FocusPictureBox(object sender, EventArgs e);
     public partial class UcPictureBox : UserControl
     {
+        public event FocusPictureBox FocusPicture;
+        public event FocusPictureBox FocusPictureLeave;
         private Image _temp;
         public int ZoomMinimum = 10;
         public int ZoomMax = 500;
@@ -69,11 +72,13 @@ namespace Natsu.MyUserControl
         private void imageBox1_MouseHover(object sender, EventArgs e)
         {
             imageBox1.AllowZoom = true;
-        }
+            FocusPicture?.Invoke(sender,e);
+    }
 
         private void imageBox1_MouseLeave(object sender, EventArgs e)
         {
             imageBox1.AllowZoom = false;
+            FocusPictureLeave?.Invoke(sender,e);
         }
 
         public void btn_Xoaytrai_Click(object sender, EventArgs e)

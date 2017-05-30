@@ -31,8 +31,8 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.ucPictureBox1 = new Natsu.MyUserControl.UcPictureBox();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.UcNatsuItemFeedback31 = new Natsu.MyUserControl.UcNatsuItemFeedback3();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -67,6 +67,16 @@
             this.panelControl3.Size = new System.Drawing.Size(908, 500);
             this.panelControl3.TabIndex = 12;
             // 
+            // ucPictureBox1
+            // 
+            this.ucPictureBox1.AutoScroll = true;
+            this.ucPictureBox1.AutoSize = true;
+            this.ucPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucPictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.ucPictureBox1.Name = "ucPictureBox1";
+            this.ucPictureBox1.Size = new System.Drawing.Size(904, 496);
+            this.ucPictureBox1.TabIndex = 0;
+            // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.UcNatsuItemFeedback31);
@@ -75,14 +85,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(556, 500);
             this.panelControl1.TabIndex = 10;
-            // 
-            // ucPictureBox1
-            // 
-            this.ucPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.ucPictureBox1.Name = "ucPictureBox1";
-            this.ucPictureBox1.Size = new System.Drawing.Size(904, 496);
-            this.ucPictureBox1.TabIndex = 0;
             // 
             // UcNatsuItemFeedback31
             // 
@@ -95,7 +97,7 @@
             this.UcNatsuItemFeedback31.Size = new System.Drawing.Size(552, 496);
             this.UcNatsuItemFeedback31.TabIndex = 0;
             // 
-            // uc_Natsu_Feedback
+            // UcNatsuFeedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,6 +113,7 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
+            this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();

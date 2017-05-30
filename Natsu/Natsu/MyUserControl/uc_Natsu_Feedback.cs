@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
@@ -16,7 +17,7 @@ namespace Natsu.MyUserControl
 
         public void LoadImage(string fbatchname,string url_image,string idimage)
         {
-            ucPictureBox1.LoadImage(url_image, idimage, 50);
+            ucPictureBox1.LoadImage(url_image, idimage, 100);
             ucPictureBox1.imageBox1.SizeMode = ImageBoxSizeMode.Fit;
             LoadText_User(fbatchname, idimage);
             LoadChecker(fbatchname, idimage);
@@ -61,7 +62,7 @@ namespace Natsu.MyUserControl
 
         public void LoadImageUser(string user, string fbatchname, string urlImage, string idimage)
         {
-            ucPictureBox1.LoadImage(urlImage, idimage, 50);
+            ucPictureBox1.LoadImage(urlImage, idimage, 100);
             ucPictureBox1.imageBox1.SizeMode = ImageBoxSizeMode.Fit;
             LoadText_User(user, fbatchname, idimage);
             LoadChecker_User(fbatchname, idimage);
