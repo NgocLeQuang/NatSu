@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Getsu", "Natsu\Getsu.csproj", "{49061F56-B738-45A1-AE59-9A92348D7E7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sokatu", "..\..\Sokatu\Natsu\Sokatu.csproj", "{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santei", "..\..\Santei\Santei\Natsu\Santei.csproj", "{86DD20A9-7141-43EE-B911-B46F405DC79E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santei", "..\..\Santei\Natsu\Santei.csproj", "{86DD20A9-7141-43EE-B911-B46F405DC79E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sokatu", "..\..\Sokatu\Sokatu\Natsu\Sokatu.csproj", "{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{49061F56-B738-45A1-AE59-9A92348D7E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49061F56-B738-45A1-AE59-9A92348D7E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49061F56-B738-45A1-AE59-9A92348D7E7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86DD20A9-7141-43EE-B911-B46F405DC79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86DD20A9-7141-43EE-B911-B46F405DC79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86DD20A9-7141-43EE-B911-B46F405DC79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86DD20A9-7141-43EE-B911-B46F405DC79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D79D2D-247F-44A4-A4D2-5A8361D1E6B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
